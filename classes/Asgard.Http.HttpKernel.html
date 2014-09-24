@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/Asgard.html">\Asgard</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">292</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1036169743"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1036169743" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-716066531"></a>
+                                <a href="../namespaces/Asgard.html" style="margin-left: 30px; padding-left: 0">Asgard</a>
+            </div>
+            <div id="namespace-716066531" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-350712887"></a>
+                                <a href="../namespaces/Asgard.Cache.html" style="margin-left: 30px; padding-left: 0">Cache</a>
+            </div>
+            <div id="namespace-350712887" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Cache.Cache.html">Cache</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Cache.NullCache.html">NullCache</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-751591113"></a>
+                                <a href="../namespaces/Asgard.Common.html" style="margin-left: 30px; padding-left: 0">Common</a>
+            </div>
+            <div id="namespace-751591113" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Common.ArrayUtils.html">ArrayUtils</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Common.Bag.html">Bag</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Common.Paginator.html">Paginator</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Common.Tools.html">Tools</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Common.Zip.html">Zip</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1061867312"></a>
+                                <a href="../namespaces/Asgard.Config.html" style="margin-left: 30px; padding-left: 0">Config</a>
+            </div>
+            <div id="namespace-1061867312" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Config.Config.html">Config</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-626174879"></a>
+                                <a href="../namespaces/Asgard.Console.html" style="margin-left: 30px; padding-left: 0">Console</a>
+            </div>
+            <div id="namespace-626174879" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Console.Application.html">Application</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Console.Command.html">Command</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-211034536"></a>
+                                <a href="../namespaces/Asgard.Container.html" style="margin-left: 30px; padding-left: 0">Container</a>
+            </div>
+            <div id="namespace-211034536" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                            <li class="trait"><a href="../classes/Asgard.Container.ContainerAwareTrait.html">ContainerAwareTrait</a></li>
+                                                                            <li class="class"><a href="../classes/Asgard.Container.Container.html">Container</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Container.Facade.html">Facade</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Container.Factory.html">Factory</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1774432073"></a>
+                                <a href="../namespaces/Asgard.Core.html" style="margin-left: 30px; padding-left: 0">Core</a>
+            </div>
+            <div id="namespace-1774432073" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Core.Bundle.html">Bundle</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Core.BundleLoader.html">BundleLoader</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Core.Kernel.html">Kernel</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Core.Publisher.html">Publisher</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1130484542"></a>
+                                <a href="../namespaces/Asgard.Db.html" style="margin-left: 30px; padding-left: 0">Db</a>
+            </div>
+            <div id="namespace-1130484542" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Db.BuildCol.html">BuildCol</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Db.BuildTable.html">BuildTable</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Db.Column.html">Column</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Db.DAL.html">DAL</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Db.DB.html">DB</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Db.DBException.html">DBException</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Db.MySQL.html">MySQL</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Db.Query.html">Query</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Db.Schema.html">Schema</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Db.Table.html">Table</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-307453809"></a>
+                                <a href="../namespaces/Asgard.Debug.html" style="margin-left: 30px; padding-left: 0">Debug</a>
+            </div>
+            <div id="namespace-307453809" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Debug.Debug.html">Debug</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Debug.ErrorHandler.html">ErrorHandler</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Debug.FatalErrorException.html">FatalErrorException</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Debug.PSRException.html">PSRException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-611447534"></a>
+                                <a href="../namespaces/Asgard.Email.html" style="margin-left: 30px; padding-left: 0">Email</a>
+            </div>
+            <div id="namespace-611447534" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Asgard.Email.DriverInterface.html">DriverInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Email.FakeEmail.html">FakeEmail</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Email.SwiftEmail.html">SwiftEmail</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Email.SwiftMessage.html">SwiftMessage</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-312616991"></a>
+                                <a href="../namespaces/Asgard.Entity.html" style="margin-left: 30px; padding-left: 0">Entity</a>
+            </div>
+            <div id="namespace-312616991" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1424571578"></a>
+                                <a href="../namespaces/Asgard.Entity.Properties.html" style="margin-left: 30px; padding-left: 0">Properties</a>
+            </div>
+            <div id="namespace-1424571578" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Entity.Properties.BooleanProperty.html">BooleanProperty</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entity.Properties.DateProperty.html">DateProperty</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entity.Properties.DatetimeProperty.html">DatetimeProperty</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entity.Properties.DoubleProperty.html">DoubleProperty</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entity.Properties.EmailProperty.html">EmailProperty</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entity.Properties.EntityProperty.html">EntityProperty</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entity.Properties.FileProperty.html">FileProperty</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entity.Properties.IntegerProperty.html">IntegerProperty</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entity.Properties.LongtextProperty.html">LongtextProperty</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entity.Properties.TextProperty.html">TextProperty</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Asgard.Entity.Collection.html">Collection</a></li>
+                                                    <li class="interface"><a href="../classes/Asgard.Entity.EntityExceptionInterface.html">EntityExceptionInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Asgard.Entity.PersistenceBehavior.html">PersistenceBehavior</a></li>
+                                                    <li class="interface"><a href="../classes/Asgard.Entity.RelationsBehavior.html">RelationsBehavior</a></li>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Entity.Behavior.html">Behavior</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entity.EntitiesManager.html">EntitiesManager</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entity.Entity.html">Entity</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entity.EntityDefinition.html">EntityDefinition</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entity.File.html">File</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entity.ManyCollection.html">ManyCollection</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entity.Property.html">Property</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1418110186"></a>
+                                <a href="../namespaces/Asgard.Entityform.html" style="margin-left: 30px; padding-left: 0">Entityform</a>
+            </div>
+            <div id="namespace-1418110186" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Entityform.EntityFieldsSolver.html">EntityFieldsSolver</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Entityform.EntityForm.html">EntityForm</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-197534971"></a>
+                                <a href="../namespaces/Asgard.File.html" style="margin-left: 30px; padding-left: 0">File</a>
+            </div>
+            <div id="namespace-197534971" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-849377657"></a>
+                                <a href="../namespaces/Asgard.File.Rules.html" style="margin-left: 30px; padding-left: 0">Rules</a>
+            </div>
+            <div id="namespace-849377657" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.File.Rules.Extension.html">Extension</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.File.Rules.Image.html">Image</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.File.File.html">File</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.File.FileSystem.html">FileSystem</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1842000672"></a>
+                                <a href="../namespaces/Asgard.Form.html" style="margin-left: 30px; padding-left: 0">Form</a>
+            </div>
+            <div id="namespace-1842000672" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1160954811"></a>
+                                <a href="../namespaces/Asgard.Form.Fields.html" style="margin-left: 30px; padding-left: 0">Fields</a>
+            </div>
+            <div id="namespace-1160954811" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Form.Fields.BooleanField.html">BooleanField</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Fields.CountryField.html">CountryField</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Fields.CSRFField.html">CSRFField</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Fields.DateField.html">DateField</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Fields.DatetimeField.html">DatetimeField</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Fields.DayField.html">DayField</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Fields.FileField.html">FileField</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Fields.HiddenField.html">HiddenField</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Fields.MonthField.html">MonthField</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Fields.MultipleSelectField.html">MultipleSelectField</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Fields.SelectField.html">SelectField</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Fields.TextField.html">TextField</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Fields.TimeField.html">TimeField</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Fields.YearField.html">YearField</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1333579922"></a>
+                                <a href="../namespaces/Asgard.Form.Widgets.html" style="margin-left: 30px; padding-left: 0">Widgets</a>
+            </div>
+            <div id="namespace-1333579922" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Form.Widgets.CheckboxesWidget.html">CheckboxesWidget</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Widgets.CheckboxWidget.html">CheckboxWidget</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Widgets.DatetimeWidget.html">DatetimeWidget</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Widgets.DateWidget.html">DateWidget</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Widgets.FileWidget.html">FileWidget</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Widgets.HiddenWidget.html">HiddenWidget</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Widgets.MultipleselectWidget.html">MultipleselectWidget</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Widgets.PasswordWidget.html">PasswordWidget</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Widgets.RadiosWidget.html">RadiosWidget</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Widgets.RadioWidget.html">RadioWidget</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Widgets.SelectWidget.html">SelectWidget</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Widgets.SubmitWidget.html">SubmitWidget</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Widgets.TextareaWidget.html">TextareaWidget</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Widgets.TextWidget.html">TextWidget</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Widgets.TimeWidget.html">TimeWidget</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Form.DynamicGroup.html">DynamicGroup</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Field.html">Field</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Form.html">Form</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.FormException.html">FormException</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Group.html">Group</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.HTMLHelper.html">HTMLHelper</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.Widget.html">Widget</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Form.WidgetsManager.html">WidgetsManager</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-579275036"></a>
+                                <a href="../namespaces/Asgard.Hook.html" style="margin-left: 30px; padding-left: 0">Hook</a>
+            </div>
+            <div id="namespace-579275036" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                            <li class="trait"><a href="../classes/Asgard.Hook.HookableTrait.html">HookableTrait</a></li>
+                                                                            <li class="class"><a href="../classes/Asgard.Hook.AnnotationsReader.html">AnnotationsReader</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Hook.HookChain.html">HookChain</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Hook.HooksContainer.html">HooksContainer</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Hook.HooksManager.html">HooksManager</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1364080894"></a>
+                                <a href="../namespaces/Asgard.Http.html" style="margin-left: 30px; padding-left: 0">Http</a>
+            </div>
+            <div id="namespace-1364080894" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2130329663"></a>
+                                <a href="../namespaces/Asgard.Http.Browser.html" style="margin-left: 30px; padding-left: 0">Browser</a>
+            </div>
+            <div id="namespace-2130329663" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Http.Browser.Browser.html">Browser</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.Browser.Field.html">Field</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.Browser.FormParser.html">FormParser</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-4080457"></a>
+                                <a href="../namespaces/Asgard.Http.Exceptions.html" style="margin-left: 30px; padding-left: 0">Exceptions</a>
+            </div>
+            <div id="namespace-4080457" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Http.Exceptions.NotFoundException.html">NotFoundException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-833057645"></a>
+                                <a href="../namespaces/Asgard.Http.Filters.html" style="margin-left: 30px; padding-left: 0">Filters</a>
+            </div>
+            <div id="namespace-833057645" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Http.Filters.PageLayout.html">PageLayout</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-183548074"></a>
+                                <a href="../namespaces/Asgard.Http.Utils.html" style="margin-left: 30px; padding-left: 0">Utils</a>
+            </div>
+            <div id="namespace-183548074" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Http.Utils.Flash.html">Flash</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.Utils.HTML.html">HTML</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Http.AnnotationsReader.html">AnnotationsReader</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.Controller.html">Controller</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.ControllerException.html">ControllerException</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.CookieManager.html">CookieManager</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.Filter.html">Filter</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.HttpFile.html">HttpFile</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.HttpKernel.html">HttpKernel</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.LambdaController.html">LambdaController</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.Request.html">Request</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.Resolver.html">Resolver</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.Response.html">Response</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.Route.html">Route</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.SessionManager.html">SessionManager</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.Test.html">Test</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Http.URL.html">URL</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2024272709"></a>
+                                <a href="../namespaces/Asgard.Migration.html" style="margin-left: 30px; padding-left: 0">Migration</a>
+            </div>
+            <div id="namespace-2024272709" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Migration.DBMigration.html">DBMigration</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Migration.Migration.html">Migration</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Migration.MigrationsManager.html">MigrationsManager</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Migration.Tracker.html">Tracker</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1854296832"></a>
+                                <a href="../namespaces/Asgard.Orm.html" style="margin-left: 30px; padding-left: 0">Orm</a>
+            </div>
+            <div id="namespace-1854296832" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-797870327"></a>
+                                <a href="../namespaces/Asgard.Orm.Rules.html" style="margin-left: 30px; padding-left: 0">Rules</a>
+            </div>
+            <div id="namespace-797870327" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Orm.Rules.Lessthan.html">Lessthan</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Orm.Rules.Morethan.html">Morethan</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Orm.Rules.Relationrequired.html">Relationrequired</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Orm.Rules.Unique.html">Unique</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Orm.CollectionORM.html">CollectionORM</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Orm.DataMapper.html">DataMapper</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Orm.EntityException.html">EntityException</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Orm.EntityRelation.html">EntityRelation</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Orm.ORM.html">ORM</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Orm.ORMBehavior.html">ORMBehavior</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Orm.ORMMigrations.html">ORMMigrations</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1164478329"></a>
+                                <a href="../namespaces/Asgard.Templating.html" style="margin-left: 30px; padding-left: 0">Templating</a>
+            </div>
+            <div id="namespace-1164478329" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Asgard.Templating.TemplateEngineInterface.html">TemplateEngineInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Asgard.Templating.TemplateInterface.html">TemplateInterface</a></li>
+                                                                            <li class="trait"><a href="../classes/Asgard.Templating.ViewableTrait.html">ViewableTrait</a></li>
+                                                                            <li class="class"><a href="../classes/Asgard.Templating.PHPTemplate.html">PHPTemplate</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-50214356"></a>
+                                <a href="../namespaces/Asgard.Validation.html" style="margin-left: 30px; padding-left: 0">Validation</a>
+            </div>
+            <div id="namespace-50214356" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1244880086"></a>
+                                <a href="../namespaces/Asgard.Validation.Rules.html" style="margin-left: 30px; padding-left: 0">Rules</a>
+            </div>
+            <div id="namespace-1244880086" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.All.html">All</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Any.html">Any</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Callback.html">Callback</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Contains.html">Contains</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Date.html">Date</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Each.html">Each</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Email.html">Email</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Equal.html">Equal</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Haslessthan.html">Haslessthan</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Hasmorethan.html">Hasmorethan</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.In.html">In</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Int.html">Int</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Isinstanceof.html">Isinstanceof</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Length.html">Length</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Lengthbetween.html">Lengthbetween</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Max.html">Max</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Maxlength.html">Maxlength</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Min.html">Min</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Minlength.html">Minlength</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Regex.html">Regex</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rules.Same.html">Same</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Asgard.Validation.InputBag.html">InputBag</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Report.html">Report</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Rule.html">Rule</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.RulesRegistry.html">RulesRegistry</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.Validator.html">Validator</a></li>
+                                                    <li class="class"><a href="../classes/Asgard.Validation.ValidatorException.html">ValidatorException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/Asgard.Http.html">\Asgard\Http</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\Asgard\Http</small>HttpKernel</h1>
+                    <p><em>HTTP Kernel.</em></p>
+                    
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Asgard.Container.ContainerAwareTrait.html#method_setContainer" class="">setContainer()</a><br />
+                                                                    <a href="../classes/Asgard.Container.ContainerAwareTrait.html#method_getContainer" class="">getContainer()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_start" class="">start()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_end" class="">end()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_run" class="">run()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_process" class="">process()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_getLastRequest" class="">getLastRequest()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_runController" class="">runController()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_addTemplatePathSolver" class="">addTemplatePathSolver()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_filterAll" class="">filterAll()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_filter" class="">filter()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_filterBeforeAll" class="">filterBeforeAll()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_filterBefore" class="">filterBefore()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_filterAfterAll" class="">filterAfterAll()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_filterAfter" class="">filterAfter()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_processRaw" class="">processRaw()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_getExceptionResponse" class="">getExceptionResponse()</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_addFilters" class="">addFilters()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Asgard.Container.ContainerAwareTrait.html#property_container" class="">$container</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#property_loaded" class="">$loaded</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#property_requests" class="">$requests</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#property_start" class="">$start</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#property_end" class="">$end</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#property_templatePathSolvers" class="">$templatePathSolvers</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#property_filters" class="">$filters</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#property_beforeFilters" class="">$beforeFilters</a><br />
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#property_afterFilters" class="">$afterFilters</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <a href="../classes/Asgard.Http.HttpKernel.html#method_setRequest" class="">setRequest()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Http.HttpKernel.html"><div class="path-wrapper">Http\HttpKernel.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Default</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\Asgard\Http\HttpKernel</div>
+                            </dd>
+
+                        
+                                                                                    <dt>Uses traits</dt>
+                                                        <dd>
+                                <a href="../classes/Asgard.Container.ContainerAwareTrait.html">                                    <div class="namespace-wrapper">\Asgard\Container\ContainerAwareTrait</div>
+                                </a>                            </dd>
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_container" name="property_container" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$container</h3>
+                <pre class="signature">$container : \Asgard\Container\Container</pre>
+                <p><em>Container instance.</em></p>
+                
+
+                                <h4>Type</h4>
+                <a href="../classes/Asgard.Container.Container.html">\Asgard\Container\Container</a>
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Asgard.Container.ContainerAwareTrait.html"><div class="path-wrapper">\Asgard\Container\ContainerAwareTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_loaded" name="property_loaded" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$loaded</h3>
+                <pre class="signature">$loaded : boolean</pre>
+                <p><em>Variable to check if the kernel was already loaded.</em></p>
+                
+
+                                <h4>Type</h4>
+                boolean
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_requests" name="property_requests" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$requests</h3>
+                <pre class="signature">$requests : array</pre>
+                <p><em>Nested requests.</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_start" name="property_start" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$start</h3>
+                <pre class="signature">$start : string</pre>
+                <p><em>File to be included at startup.</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_end" name="property_end" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$end</h3>
+                <pre class="signature">$end : string</pre>
+                <p><em>File to be included on shutdown.</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_templatePathSolvers" name="property_templatePathSolvers" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$templatePathSolvers</h3>
+                <pre class="signature">$templatePathSolvers : array</pre>
+                <p><em>Template path solvers.</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_filters" name="property_filters" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$filters</h3>
+                <pre class="signature">$filters : array</pre>
+                <p><em>Controller filters.</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_beforeFilters" name="property_beforeFilters" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$beforeFilters</h3>
+                <pre class="signature">$beforeFilters : array</pre>
+                <p><em>Controller before filters.</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_afterFilters" name="property_afterFilters" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$afterFilters</h3>
+                <pre class="signature">$afterFilters : array</pre>
+                <p><em>Controller after filters.</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setContainer" name="method_setContainer" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setContainer()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setContainer(\Asgard\Container\Container  <span class="argument">$container = null</span>) </pre>
+                <p><em>Set the container.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Asgard.Container.Container.html">\Asgard\Container\Container</a></td>
+                                <td>$container </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Asgard.Container.ContainerAwareTrait.html"><div class="path-wrapper">\Asgard\Container\ContainerAwareTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getContainer" name="method_getContainer" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getContainer()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getContainer() : \Asgard\Container\Container</pre>
+                <p><em>Get the container.</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Asgard.Container.Container.html">\Asgard\Container\Container</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Asgard.Container.ContainerAwareTrait.html"><div class="path-wrapper">\Asgard\Container\ContainerAwareTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct(\Asgard\Container\Container  <span class="argument">$container</span>) </pre>
+                <p><em>Constructor.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Asgard.Container.Container.html">\Asgard\Container\Container</a></td>
+                                <td>$container </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_start" name="method_start" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">start()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">start(string  <span class="argument">$start</span>) </pre>
+                <p><em>Set the start file.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$start </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_end" name="method_end" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">end()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">end(string  <span class="argument">$end</span>) </pre>
+                <p><em>Set the end file.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$end </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_run" name="method_run" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">run()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">run() : \Asgard\Http\Response</pre>
+                <p><em>Run the kernel and return a response.</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Asgard.Http.Response.html">\Asgard\Http\Response</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_process" name="method_process" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">process()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">process(\Asgard\Http\Request  <span class="argument">$request</span>, boolean  <span class="argument">$catch = true</span>) : \Asgard\Http\Response</pre>
+                <p><em>Process the request.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Asgard.Http.Request.html">\Asgard\Http\Request</a></td>
+                                <td>$request </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$catch </td>
+                                <td><p>true to catch exceptions.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Asgard.Http.Response.html">\Asgard\Http\Response</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getLastRequest" name="method_getLastRequest" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getLastRequest()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getLastRequest() : \Asgard\Http\Request|null</pre>
+                <p><em>Get the last given request.</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Asgard.Http.Request.html">\Asgard\Http\Request</a>|null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_runController" name="method_runController" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">runController()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">runController(string  <span class="argument">$controllerClass</span>, string  <span class="argument">$action</span>, \Asgard\Http\Request  <span class="argument">$request</span>, \Asgard\Http\Route  <span class="argument">$route = null</span>) : mixed</pre>
+                <p><em>Run the controller and action.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$controllerClass </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$action </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td><a href="../classes/Asgard.Http.Request.html">\Asgard\Http\Request</a></td>
+                                <td>$request </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td><a href="../classes/Asgard.Http.Route.html">\Asgard\Http\Route</a></td>
+                                <td>$route </td>
+                                <td><p>Route prefix to match.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_addTemplatePathSolver" name="method_addTemplatePathSolver" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">addTemplatePathSolver()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">addTemplatePathSolver(callable  <span class="argument">$cb</span>) </pre>
+                <p><em>Add a template path solver.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>callable</td>
+                                <td>$cb </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_filterAll" name="method_filterAll" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">filterAll()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">filterAll(string  <span class="argument">$filter</span>, array  <span class="argument">$args = array()</span>) : \Asgard\Http\HttpKernel</pre>
+                <p><em>Filter all controllers and actions.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$filter </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$args </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Asgard.Http.HttpKernel.html">\Asgard\Http\HttpKernel</a>
+                                            &mdash; <p>$this</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_filter" name="method_filter" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">filter()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">filter(array  <span class="argument">$criteria</span>, string  <span class="argument">$filter</span>, array  <span class="argument">$args = array()</span>) : \Asgard\Http\HttpKernel</pre>
+                <p><em>Fillter controllers and actions with criteria.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$criteria </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$filter </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$args </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Asgard.Http.HttpKernel.html">\Asgard\Http\HttpKernel</a>
+                                            &mdash; <p>$this</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_filterBeforeAll" name="method_filterBeforeAll" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">filterBeforeAll()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">filterBeforeAll(callable  <span class="argument">$filter</span>) : \Asgard\Http\HttpKernel</pre>
+                <p><em>Filter before all controllers and actions.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>callable</td>
+                                <td>$filter </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Asgard.Http.HttpKernel.html">\Asgard\Http\HttpKernel</a>
+                                            &mdash; <p>$this</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_filterBefore" name="method_filterBefore" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">filterBefore()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">filterBefore(array  <span class="argument">$criteria</span>, callable  <span class="argument">$filter</span>) : \Asgard\Http\HttpKernel</pre>
+                <p><em>Filter before controllers and actions with criteria.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$criteria </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>callable</td>
+                                <td>$filter </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Asgard.Http.HttpKernel.html">\Asgard\Http\HttpKernel</a>
+                                            &mdash; <p>$this</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_filterAfterAll" name="method_filterAfterAll" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">filterAfterAll()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">filterAfterAll(callable  <span class="argument">$filter</span>) : \Asgard\Http\HttpKernel</pre>
+                <p><em>Filter after all controllers and actions.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>callable</td>
+                                <td>$filter </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Asgard.Http.HttpKernel.html">\Asgard\Http\HttpKernel</a>
+                                            &mdash; <p>$this</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_filterAfter" name="method_filterAfter" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">filterAfter()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">filterAfter(array  <span class="argument">$criteria</span>, callable  <span class="argument">$filter</span>) : \Asgard\Http\HttpKernel</pre>
+                <p><em>Filter after controllers and actions with criteria.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$criteria </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>callable</td>
+                                <td>$filter </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Asgard.Http.HttpKernel.html">\Asgard\Http\HttpKernel</a>
+                                            &mdash; <p>$this</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_processRaw" name="method_processRaw" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">processRaw()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">processRaw(\Asgard\Http\Request  <span class="argument">$request</span>, boolean  <span class="argument">$catch = true</span>) : mixed</pre>
+                <p><em>Return a raw response.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Asgard.Http.Request.html">\Asgard\Http\Request</a></td>
+                                <td>$request </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$catch </td>
+                                <td><p>true to catch exceptions.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Asgard\Http\Exceptions\NotFoundException</dt>
+                            <dd><p>If route not found.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getExceptionResponse" name="method_getExceptionResponse" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">getExceptionResponse()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getExceptionResponse(\Exception  <span class="argument">$e</span>) : \Asgard\Http\Response</pre>
+                <p><em>Get a response from an exception.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\Exception</td>
+                                <td>$e </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Asgard.Http.Response.html">\Asgard\Http\Response</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_addFilters" name="method_addFilters" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">addFilters()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">addFilters(\Asgard\Http\Controller  <span class="argument">$controller</span>, string  <span class="argument">$action</span>, \Asgard\Http\Request  <span class="argument">$request</span>, \Asgard\Http\Route  <span class="argument">$route = null</span>) </pre>
+                <p><em>Add filters to the controller.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Asgard.Http.Controller.html">\Asgard\Http\Controller</a></td>
+                                <td>$controller </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$action </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td><a href="../classes/Asgard.Http.Request.html">\Asgard\Http\Request</a></td>
+                                <td>$request </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td><a href="../classes/Asgard.Http.Route.html">\Asgard\Http\Route</a></td>
+                                <td>$route </td>
+                                <td><p>Route prefix to match.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setRequest" name="method_setRequest" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setRequest()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setRequest(\Asgard\Http\Request  <span class="argument">$request</span>) </pre>
+                <p><em>Set the HTTP request.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Asgard.Http.Request.html">\Asgard\Http\Request</a></td>
+                                <td>$request </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">HttpKernel.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Http\HttpKernel.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/Asgard.html">\Asgard</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on September 24th, 2014 at 12:39.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>
