@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Http\Browser\FormParser | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Asgard/Http/Browser.html">Asgard\Http\Browser</a>\FormParser</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>FormParser</strong></p>
+
+            <div class="description">
+            <p>Form parser.</p>
+            <p>Credit to Symfony.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<abbr title="Asgard\Http\Browser\DOMNode">DOMNode</abbr> $node)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_has">has</a>(string $name)
+                    <p>Check if it contains a field.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Asgard/Http/Browser/Field.html"><abbr title="Asgard\Http\Browser\Field">Field</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $name)
+                    <p>Return a field.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_set">set</a>(string $name, <a href="../../../Asgard/Http/Browser/Field.html"><abbr title="Asgard\Http\Browser\Field">Field</abbr></a> $value)
+                    <p>Set a field.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getFields">getFields</a>()
+                    <p>Set the fields.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_add">add</a>(<abbr title="Asgard\Http\Browser\DOMElement">DOMElement</abbr> $node)
+                    <p>Add a field.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_values">values</a>()
+                    <p>Get form values.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_clickOn">clickOn</a>(string $submit)
+                    <p>Simulate the click on a form button.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_parse">parse</a>(string $html, string $xpath)
+                    <p>Parse the HTML form.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 154</div>
+        <code>            public            
+    <strong>__construct</strong>(<abbr title="Asgard\Http\Browser\DOMNode">DOMNode</abbr> $node)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Http\Browser\DOMNode">DOMNode</abbr></td>
+                <td>$node</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_has">
+        <div class="location">at line 173</div>
+        <code>            public            boolean
+    <strong>has</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Check if it contains a field.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">at line 182</div>
+        <code>            public            <a href="../../../Asgard/Http/Browser/Field.html"><abbr title="Asgard\Http\Browser\Field">Field</abbr></a>
+    <strong>get</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Return a field.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Asgard/Http/Browser/Field.html"><abbr title="Asgard\Http\Browser\Field">Field</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_set">
+        <div class="location">at line 191</div>
+        <code>            public            
+    <strong>set</strong>(string $name, <a href="../../../Asgard/Http/Browser/Field.html"><abbr title="Asgard\Http\Browser\Field">Field</abbr></a> $value)</code>
+    </h3>
+    <div class="details">
+        <p>Set a field.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Asgard/Http/Browser/Field.html"><abbr title="Asgard\Http\Browser\Field">Field</abbr></a></td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFields">
+        <div class="location">at line 199</div>
+        <code>            public            array
+    <strong>getFields</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Set the fields.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_add">
+        <div class="location">at line 207</div>
+        <code>            public            
+    <strong>add</strong>(<abbr title="Asgard\Http\Browser\DOMElement">DOMElement</abbr> $node)</code>
+    </h3>
+    <div class="details">
+        <p>Add a field.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Http\Browser\DOMElement">DOMElement</abbr></td>
+                <td>$node</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_values">
+        <div class="location">at line 235</div>
+        <code>            public            array
+    <strong>values</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get form values.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clickOn">
+        <div class="location">at line 263</div>
+        <code>            public            
+    <strong>clickOn</strong>(string $submit)</code>
+    </h3>
+    <div class="details">
+        <p>Simulate the click on a form button.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$submit</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parse">
+        <div class="location">at line 272</div>
+        <code>        static    public            
+    <strong>parse</strong>(string $html, string $xpath)</code>
+    </h3>
+    <div class="details">
+        <p>Parse the HTML form.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$html</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$xpath</td>
+                <td>xpath to form</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

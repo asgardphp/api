@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Orm\CollectionORMInterface | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../Asgard/Orm.html">Asgard\Orm</a>\CollectionORMInterface</h1>
+    </div>
+        <div class="content">
+                <p>    interface
+    <strong>CollectionORMInterface</strong>        implements
+        <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></p>
+
+            <div class="description">
+            <p>ORM for related entities.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/ORM.html"><abbr title="Asgard\Orm\ORM">ORM</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method___call">__call</a>(string $relationName, array $args)
+                    <p>Magic method.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method___call"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method___get">__get</a>(string $name)
+                    <p>Magic Method.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method___get"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_joinToEntity">joinToEntity</a>(<a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>|string $relation, <abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity)
+                    <p>Limits the search to the entities related to the given entity.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_joinToEntity"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_join">join</a>(string|<a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>|array $relation, array $subrelations = null)
+                    <p>Joins a relation to the search.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_join"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTable">getTable</a>()
+                    <p>Returns the name of the table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_getTable"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTranslationTable">getTranslationTable</a>()
+                    <p>Returns the name of the i18n table.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_getTranslationTable"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_next">next</a>()
+                    <p>Returns the next entity in the search list.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_next"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_ids">ids</a>()
+                    <p>Returns all the ids of the selected entities.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_ids"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_values">values</a>(string $property)
+                    <p>Returns an array with all the values of a specific property from the selected entities.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_values"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_first">first</a>()
+                    <p>Returns the first entity from the search list.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_first"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_all">all</a>()
+                    <p>Returns all the entities from the search list.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_all"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDAL">getDAL</a>()
+                    <p>Returns the DAL object used to build queries.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_getDAL"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>()
+                    <p>Returns the array of entities from the search list.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_get"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_selectQuery">selectQuery</a>(string $sql, array $args = array())
+                    <p>Performs an SQL query and returns the entities.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_selectQuery"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_paginate">paginate</a>(integer $page = 1, integer $per_page = 10)
+                    <p>Paginates the search list.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_paginate"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Common/PaginatorInterface.html"><abbr title="Asgard\Common\PaginatorInterface">PaginatorInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getPaginator">getPaginator</a>()
+                    <p>Returns the paginator tool.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_getPaginator"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_with">with</a>(array|string $with, <abbr title="Asgard\Orm\Closure">Closure</abbr> $closure = null)
+                    <p>Retrieves the related entities along with the selected entities.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_with"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_where">where</a>(array|string $conditions, string $val = null)
+                    <p>Add new conditions to the query.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_where"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_offset">offset</a>(integer $offset)
+                    <p>Sets the offset.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_offset"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_limit">limit</a>(integer $limit)
+                    <p>Sets the limit.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_limit"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_orderBy">orderBy</a>(string $orderBy)
+                    <p>Sets the order.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_orderBy"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>()
+                    <p>Deletes all the selected entities.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_delete"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_update">update</a>(array $values)
+                    <p>Updates entities properties.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_update"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer|array
+                </td>
+                <td class="last">
+                    <a href="#method_count">count</a>(string $group_by = null)
+                    <p>Counts the number of selected entities.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_count"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string|array
+                </td>
+                <td class="last">
+                    <a href="#method_min">min</a>(string $what, string $group_by = null)
+                    <p>Returns the minimum value of a property.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_min"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string|array
+                </td>
+                <td class="last">
+                    <a href="#method_max">max</a>(string $what, string $group_by = null)
+                    <p>Returns the maximum value of a property.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_max"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string|array
+                </td>
+                <td class="last">
+                    <a href="#method_avg">avg</a>(string $what, string $group_by = null)
+                    <p>Returns the average value of a property.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_avg"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string|array
+                </td>
+                <td class="last">
+                    <a href="#method_sum">sum</a>(string $what, string $group_by = null)
+                    <p>Returns the sum of a property.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_sum"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_reset">reset</a>()
+                    <p>Resets all conditions, order, offset, and limit.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Orm/ORMInterface.html#method_reset"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_sync">sync</a>(array $ids, array|null $groups = array())
+                    <p>Update the related entities.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_add">add</a>(array $ids)
+                    <p>Add new entities to the relation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(array $params = array())
+                    <p>Create a new entity and add it to the relation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_remove">remove</a>(integer|array $ids)
+                    <p>Remove entities from the relation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_clear">clear</a>()
+                    <p>Clear the relation entities.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___call">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method___call"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 24</div>
+        <code>            public            <a href="../../Asgard/Orm/ORM.html"><abbr title="Asgard\Orm\ORM">ORM</abbr></a>
+    <strong>__call</strong>(string $relationName, array $args)</code>
+    </h3>
+    <div class="details">
+        <p>Magic method.</p>
+        <p>Lets you access relations of the entity.
+For example:
+$orm = new ORM('News');
+$orm->categories()->all();</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$relationName</td>
+                <td>The name of the relation.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Not used.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/ORM.html"><abbr title="Asgard\Orm\ORM">ORM</abbr></a></td>
+            <td>A new ORMInterface instance of the related entities.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>If the relation does not exist.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method___get">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method___get"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 38</div>
+        <code>            public            array
+    <strong>__get</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Magic Method.</p>
+        <p>Lets you retrieve related entities.
+For example:
+$orm = new ORM('News');
+$categories = $orm->categories;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The name of the relation.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>Array of entities.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_joinToEntity">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_joinToEntity"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 48</div>
+        <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+    <strong>joinToEntity</strong>(<a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>|string $relation, <abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity)</code>
+    </h3>
+    <div class="details">
+        <p>Limits the search to the entities related to the given entity.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>|string</td>
+                <td>$relation</td>
+                <td>The name of the relation.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr></td>
+                <td>$entity</td>
+                <td>The related entity.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_join">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_join"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 58</div>
+        <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+    <strong>join</strong>(string|<a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>|array $relation, array $subrelations = null)</code>
+    </h3>
+    <div class="details">
+        <p>Joins a relation to the search.</p>
+        <p>Useful when having conditions involving relations.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|<a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>|array</td>
+                <td>$relation</td>
+                <td>The name of the relation or an array of relations.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$subrelations</td>
+                <td>Nested relations.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTable">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_getTable"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 65</div>
+        <code>            public            string
+    <strong>getTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTranslationTable">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_getTranslationTable"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 72</div>
+        <code>            public            string
+    <strong>getTranslationTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the i18n table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_next">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_next"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 79</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>next</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the next entity in the search list.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_ids">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_ids"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 86</div>
+        <code>            public            array
+    <strong>ids</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all the ids of the selected entities.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_values">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_values"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 95</div>
+        <code>            public            array
+    <strong>values</strong>(string $property)</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array with all the values of a specific property from the selected entities.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_first">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_first"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 102</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>first</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the first entity from the search list.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_all">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_all"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 109</div>
+        <code>            public            array
+    <strong>all</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all the entities from the search list.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDAL">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_getDAL"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 116</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>getDAL</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the DAL object used to build queries.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_get"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 125</div>
+        <code>            public            array
+    <strong>get</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the array of entities from the search list.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>Array of \Asgard\Entity\Entity</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>If one the "with" relations does not exist.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_selectQuery">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_selectQuery"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 135</div>
+        <code>            public            array
+    <strong>selectQuery</strong>(string $sql, array $args = array())</code>
+    </h3>
+    <div class="details">
+        <p>Performs an SQL query and returns the entities.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td>SQL query</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>SQL parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>Array of \Asgard\Entity\Entity</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_paginate">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_paginate"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 145</div>
+        <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+    <strong>paginate</strong>(integer $page = 1, integer $per_page = 10)</code>
+    </h3>
+    <div class="details">
+        <p>Paginates the search list.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$page</td>
+                <td>Current page.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$per_page</td>
+                <td>Number of elements per page.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPaginator">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_getPaginator"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 152</div>
+        <code>            public            <a href="../../Asgard/Common/PaginatorInterface.html"><abbr title="Asgard\Common\PaginatorInterface">PaginatorInterface</abbr></a>
+    <strong>getPaginator</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the paginator tool.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Common/PaginatorInterface.html"><abbr title="Asgard\Common\PaginatorInterface">PaginatorInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_with">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_with"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 162</div>
+        <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+    <strong>with</strong>(array|string $with, <abbr title="Asgard\Orm\Closure">Closure</abbr> $closure = null)</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves the related entities along with the selected entities.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array|string</td>
+                <td>$with</td>
+                <td>Array of relation names or the name of the relation.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Closure">Closure</abbr></td>
+                <td>$closure</td>
+                <td>Code to be executed on the relation's ORM.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_where">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_where"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 172</div>
+        <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+    <strong>where</strong>(array|string $conditions, string $val = null)</code>
+    </h3>
+    <div class="details">
+        <p>Add new conditions to the query.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array|string</td>
+                <td>$conditions</td>
+                <td>Array of conditions or name of a property.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$val</td>
+                <td>Value of the property.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offset">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_offset"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 181</div>
+        <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+    <strong>offset</strong>(integer $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the offset.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_limit">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_limit"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 190</div>
+        <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+    <strong>limit</strong>(integer $limit)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the limit.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$limit</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderBy">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_orderBy"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 199</div>
+        <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+    <strong>orderBy</strong>(string $orderBy)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the order.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$orderBy</td>
+                <td>e.g. position ASC</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_delete"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 206</div>
+        <code>            public            integer
+    <strong>delete</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Deletes all the selected entities.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>The number of deleted entities.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_update">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_update"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 215</div>
+        <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+    <strong>update</strong>(array $values)</code>
+    </h3>
+    <div class="details">
+        <p>Updates entities properties.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td>Array of properties.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_count">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_count"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 224</div>
+        <code>            public            integer|array
+    <strong>count</strong>(string $group_by = null)</code>
+    </h3>
+    <div class="details">
+        <p>Counts the number of selected entities.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$group_by</td>
+                <td>To split the result according to a specific property.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer|array</td>
+            <td>The total or an array of total per value.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_min">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_min"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 234</div>
+        <code>            public            string|array
+    <strong>min</strong>(string $what, string $group_by = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the minimum value of a property.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$what</td>
+                <td>The property to count from.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$group_by</td>
+                <td>To split the result according to a specific property.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|array</td>
+            <td>The total or an array of total per value.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_max">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_max"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 244</div>
+        <code>            public            string|array
+    <strong>max</strong>(string $what, string $group_by = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the maximum value of a property.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$what</td>
+                <td>The property to count from.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$group_by</td>
+                <td>To split the result according to a specific property.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|array</td>
+            <td>The total or an array of total per value.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_avg">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_avg"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 254</div>
+        <code>            public            string|array
+    <strong>avg</strong>(string $what, string $group_by = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the average value of a property.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$what</td>
+                <td>The property to count from.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$group_by</td>
+                <td>To split the result according to a specific property.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|array</td>
+            <td>The total or an array of total per value.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sum">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_sum"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 264</div>
+        <code>            public            string|array
+    <strong>sum</strong>(string $what, string $group_by = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the sum of a property.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$what</td>
+                <td>The property to count from.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$group_by</td>
+                <td>To split the result according to a specific property.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|array</td>
+            <td>The total or an array of total per value.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_reset">
+        <div class="location">in <a href="../../Asgard/Orm/ORMInterface.html#method_reset"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a> at line 271</div>
+        <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+    <strong>reset</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Resets all conditions, order, offset, and limit.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sync">
+        <div class="location">at line 15</div>
+        <code>            public            <a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a>
+    <strong>sync</strong>(array $ids, array|null $groups = array())</code>
+    </h3>
+    <div class="details">
+        <p>Update the related entities.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td>array of entity ids</td>
+            </tr>
+                    <tr>
+                <td>array|null</td>
+                <td>$groups</td>
+                <td>validation groups</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_add">
+        <div class="location">at line 22</div>
+        <code>            public            integer
+    <strong>add</strong>(array $ids)</code>
+    </h3>
+    <div class="details">
+        <p>Add new entities to the relation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>number of added elements</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 29</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>create</strong>(array $params = array())</code>
+    </h3>
+    <div class="details">
+        <p>Create a new entity and add it to the relation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>entity default attributes</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_remove">
+        <div class="location">at line 36</div>
+        <code>            public            <a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a>
+    <strong>remove</strong>(integer|array $ids)</code>
+    </h3>
+    <div class="details">
+        <p>Remove entities from the relation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer|array</td>
+                <td>$ids</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clear">
+        <div class="location">at line 42</div>
+        <code>            public            <a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a>
+    <strong>clear</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clear the relation entities.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

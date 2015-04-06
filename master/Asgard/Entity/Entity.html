@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Entity\Entity | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Asgard/Entity.html">Asgard\Entity</a>\Entity</h1>
+    </div>
+        <div class="content">
+                <p>abstract     class
+    <strong>Entity</strong></p>
+
+            <div class="description">
+            <p>Entity.</p>
+            <p>
+</p>
+        </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_data">
+                                                            array
+                </td>
+                <td>$data</td>
+                <td class="last">Entity data.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_id">
+                                                            integer
+                </td>
+                <td>$id</td>
+                <td class="last">integer$id</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(array $attrs = null, string $locale = null)
+                    <p>Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getLocale">getLocale</a>()
+                    <p>Return the default locale.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setEntityManager">setEntityManager</a>(<a href="../../Asgard/Entity/EntityManager.html"><abbr title="Asgard\Entity\EntityManager">EntityManager</abbr></a> $em)
+                    <p>Set the entity manager.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setLocale">setLocale</a>(string $locale)
+                    <p>Set the default locale.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___sleep">__sleep</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___set">__set</a>(string $name, mixed $value)
+                    <p>__set magic method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method___get">__get</a>(string $name)
+                    <p>__get magic method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method___isset">__isset</a>(string $name)
+                    <p>__isset magic method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___unset">__unset</a>(string $name)
+                    <p>__unset magic method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;mixed
+                </td>
+                <td class="last">
+                    <a href="#method___callStatic">__callStatic</a>(string $name, array $arguments)
+                    <p>__callStatic magic method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method___call">__call</a>(string $name, array $arguments)
+                    <p>__call magic method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_definition">definition</a>(<a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a> $Definition)
+                    <p>Initialize the configuration.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getDefinition">getDefinition</a>()
+                    <p>Return the definition.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getStaticDefinition">getStaticDefinition</a>()
+                    <p>Return a static definition, if entity used like active-record.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadDefault">loadDefault</a>()
+                    <p>Load default data.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isNew">isNew</a>()
+                    <p>Check if the entity has no id.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isOld">isOld</a>()
+                    <p>Check if the entity has an id.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Validation/ValidatorInterface.html"><abbr title="Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getValidator">getValidator</a>(array $locales = array())
+                    <p>Get a validator.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Validation/ValidatorInterface.html"><abbr title="Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_prepareValidator">prepareValidator</a>(<abbr title="Asgard\Entity\Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr> $validator, array $locales = array())
+                    <p>Prepare the validator.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_valid">valid</a>(array $groups = array())
+                    <p>Check if entity is valid.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_errors">errors</a>(array|string|null $groups = array())
+                    <p>Return entity errors.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__set">_set</a>(array|string $name, mixed $value = null, string $locale = null, boolean $change = true)
+                    <p>Hard set data.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_set">set</a>(array|string $name, mixed $value = null, string $locale = null, boolean $hook = true, boolean $change = true)
+                    <p>Soft set data.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method__get">_get</a>(string $name, string|array $locale = null)
+                    <p>Hard get data.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $name, string|array $locale = null, boolean $hook = true)
+                    <p>Hard get data.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_toArrayRaw">toArrayRaw</a>(integer $depth)
+                    <p>Convert entity to a raw array.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_toArray">toArray</a>(integer $depth)
+                    <p>Convert entity to a formatted array.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_toJSON">toJSON</a>(integer $depth)
+                    <p>Convert entity to json.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_translate">translate</a>(string $locale)
+                    <p>Return entity in another language.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getLocales">getLocales</a>()
+                    <p>Get entity locales.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_toArrayRawI18N">toArrayRawI18N</a>(array $locales = array(), integer $depth)
+                    <p>Convert entity to a raw array with translations.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_toArrayI18N">toArrayI18N</a>(array $locales = array(), integer $depth)
+                    <p>Convert entity to a formatted array with translations.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_toJSONI18N">toJSONI18N</a>(array $locales = array(), integer $depth)
+                    <p>Convert entity to JSON with translations.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_validI18N">validI18N</a>(array $locales = array(), array $groups = array())
+                    <p>Check if entity and translations are valid.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_errorsI18N">errorsI18N</a>(array $locales = array(), array $groups = array())
+                    <p>Return errors for entity and translations.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getchanged">getchanged</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getchangedI18N">getchangedI18N</a>($locale = null)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resetchanged">resetchanged</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 44</div>
+        <code>            public            
+    <strong>__construct</strong>(array $attrs = null, string $locale = null)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$attrs</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLocale">
+        <div class="location">at line 55</div>
+        <code>            public            string
+    <strong>getLocale</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the default locale.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setEntityManager">
+        <div class="location">at line 65</div>
+        <code>            public            
+    <strong>setEntityManager</strong>(<a href="../../Asgard/Entity/EntityManager.html"><abbr title="Asgard\Entity\EntityManager">EntityManager</abbr></a> $em)</code>
+    </h3>
+    <div class="details">
+        <p>Set the entity manager.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Entity/EntityManager.html"><abbr title="Asgard\Entity\EntityManager">EntityManager</abbr></a></td>
+                <td>$em</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setLocale">
+        <div class="location">at line 74</div>
+        <code>            public            
+    <strong>setLocale</strong>(string $locale)</code>
+    </h3>
+    <div class="details">
+        <p>Set the default locale.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___sleep">
+        <div class="location">at line 78</div>
+        <code>            public            
+    <strong>__sleep</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___set">
+        <div class="location">at line 87</div>
+        <code>            public            
+    <strong>__set</strong>(string $name, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>__set magic method.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___get">
+        <div class="location">at line 96</div>
+        <code>            public            mixed
+    <strong>__get</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>__get magic method.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___isset">
+        <div class="location">at line 105</div>
+        <code>            public            boolean
+    <strong>__isset</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>__isset magic method.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___unset">
+        <div class="location">at line 114</div>
+        <code>            public            
+    <strong>__unset</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>__unset magic method.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___callStatic">
+        <div class="location">at line 125</div>
+        <code>        static    public            mixed
+    <strong>__callStatic</strong>(string $name, array $arguments)</code>
+    </h3>
+    <div class="details">
+        <p>__callStatic magic method.</p>
+        <p>For active-record-like entities only.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___call">
+        <div class="location">at line 135</div>
+        <code>            public            mixed
+    <strong>__call</strong>(string $name, array $arguments)</code>
+    </h3>
+    <div class="details">
+        <p>__call magic method.</p>
+        <p>For active-record-like entities only.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_definition">
+        <div class="location">at line 143</div>
+        <code>        static    public            
+    <strong>definition</strong>(<a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a> $Definition)</code>
+    </h3>
+    <div class="details">
+        <p>Initialize the configuration.</p>
+        <p>To be overwritten in the entity class.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a></td>
+                <td>$Definition</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDefinition">
+        <div class="location">at line 149</div>
+        <code>            public            <a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a>
+    <strong>getDefinition</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the definition.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getStaticDefinition">
+        <div class="location">at line 159</div>
+        <code>        static    public            <a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a>
+    <strong>getStaticDefinition</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return a static definition, if entity used like active-record.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadDefault">
+        <div class="location">at line 168</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>loadDefault</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Load default data.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isNew">
+        <div class="location">at line 178</div>
+        <code>            public            boolean
+    <strong>isNew</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the entity has no id.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if entity has no id</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isOld">
+        <div class="location">at line 186</div>
+        <code>            public            boolean
+    <strong>isOld</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the entity has an id.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if entity has an id</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getValidator">
+        <div class="location">at line 195</div>
+        <code>            public            <a href="../../Asgard/Validation/ValidatorInterface.html"><abbr title="Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></a>
+    <strong>getValidator</strong>(array $locales = array())</code>
+    </h3>
+    <div class="details">
+        <p>Get a validator.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$locales</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Validation/ValidatorInterface.html"><abbr title="Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_prepareValidator">
+        <div class="location">at line 206</div>
+        <code>            public            <a href="../../Asgard/Validation/ValidatorInterface.html"><abbr title="Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></a>
+    <strong>prepareValidator</strong>(<abbr title="Asgard\Entity\Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr> $validator, array $locales = array())</code>
+    </h3>
+    <div class="details">
+        <p>Prepare the validator.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Entity\Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></td>
+                <td>$validator</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$locales</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Validation/ValidatorInterface.html"><abbr title="Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_valid">
+        <div class="location">at line 268</div>
+        <code>            public            boolean
+    <strong>valid</strong>(array $groups = array())</code>
+    </h3>
+    <div class="details">
+        <p>Check if entity is valid.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$groups</td>
+                <td>validation groups</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_errors">
+        <div class="location">at line 281</div>
+        <code>            public            array
+    <strong>errors</strong>(array|string|null $groups = array())</code>
+    </h3>
+    <div class="details">
+        <p>Return entity errors.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array|string|null</td>
+                <td>$groups</td>
+                <td>validation groups</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__set">
+        <div class="location">at line 304</div>
+        <code>            public            
+    <strong>_set</strong>(array|string $name, mixed $value = null, string $locale = null, boolean $change = true)</code>
+    </h3>
+    <div class="details">
+        <p>Hard set data.</p>
+        <p>No pre-processing.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array|string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$change</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_set">
+        <div class="location">at line 370</div>
+        <code>            public            
+    <strong>set</strong>(array|string $name, mixed $value = null, string $locale = null, boolean $hook = true, boolean $change = true)</code>
+    </h3>
+    <div class="details">
+        <p>Soft set data.</p>
+        <p>With pre-processing.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array|string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$hook</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$change</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__get">
+        <div class="location">at line 449</div>
+        <code>            public            mixed
+    <strong>_get</strong>(string $name, string|array $locale = null)</code>
+    </h3>
+    <div class="details">
+        <p>Hard get data.</p>
+        <p>With no pre-processing.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$locale</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">at line 487</div>
+        <code>            public            mixed
+    <strong>get</strong>(string $name, string|array $locale = null, boolean $hook = true)</code>
+    </h3>
+    <div class="details">
+        <p>Hard get data.</p>
+        <p>With pre-processing.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$locale</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$hook</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toArrayRaw">
+        <div class="location">at line 510</div>
+        <code>            public            array
+    <strong>toArrayRaw</strong>(integer $depth)</code>
+    </h3>
+    <div class="details">
+        <p>Convert entity to a raw array.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$depth</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toArray">
+        <div class="location">at line 519</div>
+        <code>            public            array
+    <strong>toArray</strong>(integer $depth)</code>
+    </h3>
+    <div class="details">
+        <p>Convert entity to a formatted array.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$depth</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toJSON">
+        <div class="location">at line 528</div>
+        <code>            public            string
+    <strong>toJSON</strong>(integer $depth)</code>
+    </h3>
+    <div class="details">
+        <p>Convert entity to json.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$depth</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_translate">
+        <div class="location">at line 537</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>translate</strong>(string $locale)</code>
+    </h3>
+    <div class="details">
+        <p>Return entity in another language.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLocales">
+        <div class="location">at line 552</div>
+        <code>            public            array
+    <strong>getLocales</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get entity locales.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toArrayRawI18N">
+        <div class="location">at line 562</div>
+        <code>            public            array
+    <strong>toArrayRawI18N</strong>(array $locales = array(), integer $depth)</code>
+    </h3>
+    <div class="details">
+        <p>Convert entity to a raw array with translations.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$locales</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$depth</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toArrayI18N">
+        <div class="location">at line 572</div>
+        <code>            public            array
+    <strong>toArrayI18N</strong>(array $locales = array(), integer $depth)</code>
+    </h3>
+    <div class="details">
+        <p>Convert entity to a formatted array with translations.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$locales</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$depth</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toJSONI18N">
+        <div class="location">at line 582</div>
+        <code>            public            string
+    <strong>toJSONI18N</strong>(array $locales = array(), integer $depth)</code>
+    </h3>
+    <div class="details">
+        <p>Convert entity to JSON with translations.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$locales</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$depth</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_validI18N">
+        <div class="location">at line 592</div>
+        <code>            public            boolean
+    <strong>validI18N</strong>(array $locales = array(), array $groups = array())</code>
+    </h3>
+    <div class="details">
+        <p>Check if entity and translations are valid.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$locales</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$groups</td>
+                <td>validation groups</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_errorsI18N">
+        <div class="location">at line 608</div>
+        <code>            public            array
+    <strong>errorsI18N</strong>(array $locales = array(), array $groups = array())</code>
+    </h3>
+    <div class="details">
+        <p>Return errors for entity and translations.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$locales</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$groups</td>
+                <td>validation groups</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getchanged">
+        <div class="location">at line 626</div>
+        <code>            public            
+    <strong>getchanged</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getchangedI18N">
+        <div class="location">at line 630</div>
+        <code>            public            
+    <strong>getchangedI18N</strong>($locale = null)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$locale</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetchanged">
+        <div class="location">at line 639</div>
+        <code>            public            
+    <strong>resetchanged</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

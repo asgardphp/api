@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Debug\Debug | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Asgard/Debug.html">Asgard\Debug</a>\Debug</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Debug</strong></p>
+
+            <div class="description">
+            <p>Debugging utils.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_d">d</a>()
+                    <p>Create the backtrace and forward it to dWithTrace.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_dWithTrace">dWithTrace</a>(array $trace)
+                    <p>Print out the backtrace and the given arguments.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_setURL">setURL</a>(string $url)
+                    <p>Set the URL dependency.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_getReport">getReport</a>(array $backtrace)
+                    <p>Return the HTML or CLI debug report.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_getHTMLBacktrace">getHTMLBacktrace</a>(<abbr title="Asgard\Debug\Asgard\Http\Request">Request</abbr> $request, array $backtrace = null)
+                    <p>Format the backtrace in HTML.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_getCLIBacktrace">getCLIBacktrace</a>(array $backtrace = null)
+                    <p>Return the backtrace formatted for CLI.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_getHTMLRequest">getHTMLRequest</a>(<abbr title="Asgard\Debug\Asgard\Http\Request">Request</abbr> $r)
+                    <p>Return the request formatted for HTML.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_d">
+        <div class="location">at line 20</div>
+        <code>        static    public            
+    <strong>d</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Create the backtrace and forward it to dWithTrace.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_dWithTrace">
+        <div class="location">at line 29</div>
+        <code>        static    public            
+    <strong>dWithTrace</strong>(array $trace)</code>
+    </h3>
+    <div class="details">
+        <p>Print out the backtrace and the given arguments.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$trace</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setURL">
+        <div class="location">at line 48</div>
+        <code>        static    public            
+    <strong>setURL</strong>(string $url)</code>
+    </h3>
+    <div class="details">
+        <p>Set the URL dependency.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getReport">
+        <div class="location">at line 57</div>
+        <code>        static    public            string
+    <strong>getReport</strong>(array $backtrace)</code>
+    </h3>
+    <div class="details">
+        <p>Return the HTML or CLI debug report.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$backtrace</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHTMLBacktrace">
+        <div class="location">at line 77</div>
+        <code>        static    public            string
+    <strong>getHTMLBacktrace</strong>(<abbr title="Asgard\Debug\Asgard\Http\Request">Request</abbr> $request, array $backtrace = null)</code>
+    </h3>
+    <div class="details">
+        <p>Format the backtrace in HTML.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Debug\Asgard\Http\Request">Request</abbr></td>
+                <td>$request</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$backtrace</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCLIBacktrace">
+        <div class="location">at line 222</div>
+        <code>        static    public            string
+    <strong>getCLIBacktrace</strong>(array $backtrace = null)</code>
+    </h3>
+    <div class="details">
+        <p>Return the backtrace formatted for CLI.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$backtrace</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHTMLRequest">
+        <div class="location">at line 243</div>
+        <code>        static    public            string
+    <strong>getHTMLRequest</strong>(<abbr title="Asgard\Debug\Asgard\Http\Request">Request</abbr> $r)</code>
+    </h3>
+    <div class="details">
+        <p>Return the request formatted for HTML.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Debug\Asgard\Http\Request">Request</abbr></td>
+                <td>$r</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

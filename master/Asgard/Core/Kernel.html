@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Core\Kernel | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Asgard/Core.html">Asgard\Core</a>\Kernel</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Kernel</strong>        implements
+        <a href="http://php.net/ArrayAccess"><abbr title="ArrayAccess">ArrayAccess</abbr></a></p>
+
+            <div class="description">
+            <p>Asgard kernel class.</p>
+            <p>
+</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>VERSION</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $root = null, string $env = null)
+                    <p>Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getContainer">getContainer</a>()
+                    <p>Get the services container.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setConfig">setConfig</a>(<abbr title="Asgard\Core\Asgard\Config\ConfigInterface">ConfigInterface</abbr> $config)
+                    <p>Set the config dependency.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Config/ConfigInterface.html"><abbr title="Asgard\Config\ConfigInterface">ConfigInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConfig">getConfig</a>()
+                    <p>Get the config dependency.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRoot">setRoot</a>(string $root)
+                    <p>Set the application root.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setEnv">setEnv</a>(string $env)
+                    <p>Set the environment.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEnv">getEnv</a>()
+                    <p>Get the environment.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_load">load</a>()
+                    <p>Load the kernel.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Cache/CacheInterface.html"><abbr title="Asgard\Cache\CacheInterface">CacheInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getCache">getCache</a>()
+                    <p>Get the cache dependency.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAllBundles">getAllBundles</a>()
+                    <p>Get all the bundles.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Hook/AnnotationReader.html"><abbr title="Asgard\Hook\AnnotationReader">AnnotationReader</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getHooksAnnotationReader">getHooksAnnotationReader</a>()
+                    <p>Get the hooks annotations reader dependency.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/AnnotationReader.html"><abbr title="Asgard\Http\AnnotationReader">AnnotationReader</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getControllersAnnotationReader">getControllersAnnotationReader</a>()
+                    <p>Get the controllers annotations reader dependency.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addBundles">addBundles</a>(array $bundles)
+                    <p>Add bundles.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;float
+                </td>
+                <td class="last">
+                    <a href="#method_getVersion">getVersion</a>()
+                    <p>Get the kernel version.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $name)
+                    <p>Get a parameter.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Core/Kernel.html"><abbr title="Asgard\Core\Kernel">Kernel</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_set">set</a>(string $name, mixed $value)
+                    <p>Set a parameter.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetSet">offsetSet</a>(integer $offset, mixed $value)
+                    <p>Array set implementation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_offsetExists">offsetExists</a>(integer $offset)
+                    <p>Array exists implementation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetUnset">offsetUnset</a>(integer $offset)
+                    <p>Array unset implementation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_offsetGet">offsetGet</a>(integer $offset)
+                    <p>Array get implementation.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 48</div>
+        <code>            public            
+    <strong>__construct</strong>(string $root = null, string $env = null)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$root</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$env</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getContainer">
+        <div class="location">at line 57</div>
+        <code>            public            <a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a>
+    <strong>getContainer</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the services container.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setConfig">
+        <div class="location">at line 69</div>
+        <code>            public            
+    <strong>setConfig</strong>(<abbr title="Asgard\Core\Asgard\Config\ConfigInterface">ConfigInterface</abbr> $config)</code>
+    </h3>
+    <div class="details">
+        <p>Set the config dependency.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Core\Asgard\Config\ConfigInterface">ConfigInterface</abbr></td>
+                <td>$config</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfig">
+        <div class="location">at line 78</div>
+        <code>            public            <a href="../../Asgard/Config/ConfigInterface.html"><abbr title="Asgard\Config\ConfigInterface">ConfigInterface</abbr></a>
+    <strong>getConfig</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the config dependency.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Config/ConfigInterface.html"><abbr title="Asgard\Config\ConfigInterface">ConfigInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRoot">
+        <div class="location">at line 91</div>
+        <code>            public            
+    <strong>setRoot</strong>(string $root)</code>
+    </h3>
+    <div class="details">
+        <p>Set the application root.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$root</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setEnv">
+        <div class="location">at line 100</div>
+        <code>            public            
+    <strong>setEnv</strong>(string $env)</code>
+    </h3>
+    <div class="details">
+        <p>Set the environment.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$env</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getEnv">
+        <div class="location">at line 109</div>
+        <code>            public            string
+    <strong>getEnv</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the environment.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_load">
+        <div class="location">at line 118</div>
+        <code>            public            
+    <strong>load</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Load the kernel.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCache">
+        <div class="location">at line 176</div>
+        <code>            public            <a href="../../Asgard/Cache/CacheInterface.html"><abbr title="Asgard\Cache\CacheInterface">CacheInterface</abbr></a>
+    <strong>getCache</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the cache dependency.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Cache/CacheInterface.html"><abbr title="Asgard\Cache\CacheInterface">CacheInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAllBundles">
+        <div class="location">at line 232</div>
+        <code>            public            array
+    <strong>getAllBundles</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get all the bundles.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHooksAnnotationReader">
+        <div class="location">at line 242</div>
+        <code>            public            <a href="../../Asgard/Hook/AnnotationReader.html"><abbr title="Asgard\Hook\AnnotationReader">AnnotationReader</abbr></a>
+    <strong>getHooksAnnotationReader</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the hooks annotations reader dependency.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Hook/AnnotationReader.html"><abbr title="Asgard\Hook\AnnotationReader">AnnotationReader</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getControllersAnnotationReader">
+        <div class="location">at line 254</div>
+        <code>            public            <a href="../../Asgard/Http/AnnotationReader.html"><abbr title="Asgard\Http\AnnotationReader">AnnotationReader</abbr></a>
+    <strong>getControllersAnnotationReader</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the controllers annotations reader dependency.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/AnnotationReader.html"><abbr title="Asgard\Http\AnnotationReader">AnnotationReader</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addBundles">
+        <div class="location">at line 340</div>
+        <code>            public            
+    <strong>addBundles</strong>(array $bundles)</code>
+    </h3>
+    <div class="details">
+        <p>Add bundles.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$bundles</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVersion">
+        <div class="location">at line 348</div>
+        <code>        static    public            float
+    <strong>getVersion</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the kernel version.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>float</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">at line 357</div>
+        <code>            public            mixed
+    <strong>get</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Get a parameter.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_set">
+        <div class="location">at line 369</div>
+        <code>            public            <a href="../../Asgard/Core/Kernel.html"><abbr title="Asgard\Core\Kernel">Kernel</abbr></a>
+    <strong>set</strong>(string $name, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Set a parameter.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Core/Kernel.html"><abbr title="Asgard\Core\Kernel">Kernel</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetSet">
+        <div class="location">at line 380</div>
+        <code>            public            
+    <strong>offsetSet</strong>(integer $offset, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Array set implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
+                <td>If $offset is null</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetExists">
+        <div class="location">at line 392</div>
+        <code>            public            boolean
+    <strong>offsetExists</strong>(integer $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Array exists implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if exists</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetUnset">
+        <div class="location">at line 400</div>
+        <code>            public            
+    <strong>offsetUnset</strong>(integer $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Array unset implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetGet">
+        <div class="location">at line 409</div>
+        <code>            public            mixed
+    <strong>offsetGet</strong>(integer $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Array get implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Form\Fields\BooleanField | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Asgard/Form/Fields.html">Asgard\Form\Fields</a>\BooleanField</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>BooleanField</strong>        extends <a href="../../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a></p>
+
+            <div class="description">
+            <p>Boolean field.</p>
+            <p>
+</p>
+        </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_options">
+                                                            array
+                </td>
+                <td>$options</td>
+                <td class="last">Field options</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(array $options = array())
+                    <p>Constructor.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method___construct"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_required">required</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_required"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>()
+                    <p>Return the name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_getName"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setOptions">setOptions</a>(array $options)
+                    <p>Set field options.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_setOptions"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getOption">getOption</a>($name)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_getOption"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Asgard/Form/FormInterface.html"><abbr title="Asgard\Form\FormInterface">FormInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTopForm">getTopForm</a>()
+                    <p>Get the top parent form.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_getTopForm"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getValidationRules">getValidationRules</a>()
+                    <p>Get field validation rules.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_getValidationRules"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getValidationMessages">getValidationMessages</a>()
+                    <p>Get field validation messages.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_getValidationMessages"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method___call">__call</a>(string $name, array $args)
+                    <p>__call magic method.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method___call"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDefaultWidget">setDefaultWidget</a>(string|callable $widget)
+                    <p>Set default widget renderer.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_setDefaultWidget"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_label">label</a>()
+                    <p>Get field's label.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_label"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_labelTag">labelTag</a>(string $label = null, string $for = null)
+                    <p>Get field's HTML label tag.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_labelTag"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string|<a href="../../../Asgard/Form/Widget.html"><abbr title="Asgard\Form\Widget">Widget</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_def">def</a>(array $options = array())
+                    <p>Use the default renderer.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_def"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string|<a href="../../../Asgard/Form/Widget.html"><abbr title="Asgard\Form\Widget">Widget</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_render">render</a>(callable $render_callback, array $options = array())
+                    <p>Render with a custom renderer.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_render"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p>__toString magic method.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method___toString"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_value">value</a>()
+                    <p>Get the value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setParent">setParent</a>(<a href="../../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a> $parent)
+                    <p>Set the parent.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_setParent"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getParent">getParent</a>()
+                    <p>Get the parent.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_getParent"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setName">setName</a>(string $name)
+                    <p>Set the name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_setName"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setValue">setValue</a>(mixed $value)
+                    <p>Set the value.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_setValue"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getParents">getParents</a>()
+                    <p>Get all parents.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_getParents"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getID">getID</a>()
+                    <p>Get field id.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_getID"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_name">name</a>()
+                    <p>Get the full name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_name"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_shortName">shortName</a>()
+                    <p>Get the field short name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_shortName"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setErrors">setErrors</a>(array $errors)
+                    <p>Set the errors.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_setErrors"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_error">error</a>()
+                    <p>Return the first error.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_error"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_errors">errors</a>()
+                    <p>Return all errors.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Form/Field.html#method_errors"><abbr title="Asgard\Form\Field">Field</abbr></a></small></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method___construct"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 49</div>
+        <code>            public            
+    <strong>__construct</strong>(array $options = array())</code>
+    </h3>
+    <div class="details">
+        <p>Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_required">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_required"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 53</div>
+        <code>            public            
+    <strong>required</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_getName"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 61</div>
+        <code>            public            string
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the name.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOptions">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_setOptions"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 69</div>
+        <code>            public            
+    <strong>setOptions</strong>(array $options)</code>
+    </h3>
+    <div class="details">
+        <p>Set field options.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOption">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_getOption"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 82</div>
+        <code>            public            
+    <strong>getOption</strong>($name)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTopForm">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_getTopForm"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 92</div>
+        <code>            public            <a href="../../../Asgard/Form/FormInterface.html"><abbr title="Asgard\Form\FormInterface">FormInterface</abbr></a>
+    <strong>getTopForm</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the top parent form.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Asgard/Form/FormInterface.html"><abbr title="Asgard\Form\FormInterface">FormInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getValidationRules">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_getValidationRules"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 100</div>
+        <code>            public            array
+    <strong>getValidationRules</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get field validation rules.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getValidationMessages">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_getValidationMessages"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 110</div>
+        <code>            public            array
+    <strong>getValidationMessages</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get field validation messages.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___call">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method___call"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 121</div>
+        <code>            public            string
+    <strong>__call</strong>(string $name, array $args)</code>
+    </h3>
+    <div class="details">
+        <p>__call magic method.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDefaultWidget">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_setDefaultWidget"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 129</div>
+        <code>            public            
+    <strong>setDefaultWidget</strong>(string|callable $widget)</code>
+    </h3>
+    <div class="details">
+        <p>Set default widget renderer.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|callable</td>
+                <td>$widget</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_label">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_label"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 137</div>
+        <code>            public            string
+    <strong>label</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get field's label.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_labelTag">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_labelTag"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 147</div>
+        <code>            public            string
+    <strong>labelTag</strong>(string $label = null, string $for = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get field's HTML label tag.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$label</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$for</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_def">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_def"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 156</div>
+        <code>            public            string|<a href="../../../Asgard/Form/Widget.html"><abbr title="Asgard\Form\Widget">Widget</abbr></a>
+    <strong>def</strong>(array $options = array())</code>
+    </h3>
+    <div class="details">
+        <p>Use the default renderer.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|<a href="../../../Asgard/Form/Widget.html"><abbr title="Asgard\Form\Widget">Widget</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_render">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_render"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 168</div>
+        <code>            public            string|<a href="../../../Asgard/Form/Widget.html"><abbr title="Asgard\Form\Widget">Widget</abbr></a>
+    <strong>render</strong>(callable $render_callback, array $options = array())</code>
+    </h3>
+    <div class="details">
+        <p>Render with a custom renderer.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>callable</td>
+                <td>$render_callback</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|<a href="../../../Asgard/Form/Widget.html"><abbr title="Asgard\Form\Widget">Widget</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___toString">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method___toString"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 176</div>
+        <code>            public            string
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>__toString magic method.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_value">
+        <div class="location">at line 17</div>
+        <code>            public            mixed
+    <strong>value</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the value.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setParent">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_setParent"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 192</div>
+        <code>            public            
+    <strong>setParent</strong>(<a href="../../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a> $parent)</code>
+    </h3>
+    <div class="details">
+        <p>Set the parent.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a></td>
+                <td>$parent</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParent">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_getParent"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 200</div>
+        <code>            public            <a href="../../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a>
+    <strong>getParent</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the parent.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setName">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_setName"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 208</div>
+        <code>            public            
+    <strong>setName</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Set the name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setValue">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_setValue"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 216</div>
+        <code>            public            
+    <strong>setValue</strong>(mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Set the value.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParents">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_getParents"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 224</div>
+        <code>            public            array
+    <strong>getParents</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get all parents.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getID">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_getID"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 232</div>
+        <code>            public            string
+    <strong>getID</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get field id.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_name">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_name"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 251</div>
+        <code>            public            string
+    <strong>name</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the full name.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_shortName">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_shortName"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 270</div>
+        <code>            public            string
+    <strong>shortName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the field short name.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setErrors">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_setErrors"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 278</div>
+        <code>            public            
+    <strong>setErrors</strong>(array $errors)</code>
+    </h3>
+    <div class="details">
+        <p>Set the errors.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$errors</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_error">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_error"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 286</div>
+        <code>            public            string
+    <strong>error</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the first error.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_errors">
+        <div class="location">in <a href="../../../Asgard/Form/Field.html#method_errors"><abbr title="Asgard\Form\Field">Field</abbr></a> at line 295</div>
+        <code>            public            array
+    <strong>errors</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return all errors.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

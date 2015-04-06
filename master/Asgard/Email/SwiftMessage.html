@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Email\SwiftMessage | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Asgard/Email.html">Asgard\Email</a>\SwiftMessage</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>SwiftMessage</strong>        extends <abbr title="Swift_Message">Swift_Message</abbr></p>
+
+            <div class="description">
+            <p>Extended SwiftMessage class.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_subject">subject</a>(string $subject)
+                    <p>Set the subject.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_to">to</a>(array|string $to)
+                    <p>Set the destinator.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_from">from</a>(string $from)
+                    <p>Set the sender.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_cc">cc</a>(array|string $cc)
+                    <p>Set the cc.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_bcc">bcc</a>(array|string $bcc)
+                    <p>Set the bcc.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_html">html</a>(string $html)
+                    <p>Set the hml content.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_text">text</a>(string $text)
+                    <p>Set the text content.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_htmlTemplate">htmlTemplate</a>(string $template, array $data = array())
+                    <p>Use a template for the html content.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_textTemplate">textTemplate</a>(string $template, array $data = array())
+                    <p>Use a template for the html content.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_attachFile">attachFile</a>(string $file, array $options = array())
+                    <p>Attach a file to the email.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_attachData">attachData</a>(string $data, array $options = array())
+                    <p>Attach data as a file to the email.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_embedFile">embedFile</a>(string $file, array $options = array())
+                    <p>Embed a file in the email.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_embedData">embedData</a>(string $data, array $options = array())
+                    <p>Embed data as a file in the email.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_subject">
+        <div class="location">at line 14</div>
+        <code>            public            <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+    <strong>subject</strong>(string $subject)</code>
+    </h3>
+    <div class="details">
+        <p>Set the subject.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_to">
+        <div class="location">at line 23</div>
+        <code>            public            <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+    <strong>to</strong>(array|string $to)</code>
+    </h3>
+    <div class="details">
+        <p>Set the destinator.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array|string</td>
+                <td>$to</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_from">
+        <div class="location">at line 32</div>
+        <code>            public            <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+    <strong>from</strong>(string $from)</code>
+    </h3>
+    <div class="details">
+        <p>Set the sender.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_cc">
+        <div class="location">at line 41</div>
+        <code>            public            <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+    <strong>cc</strong>(array|string $cc)</code>
+    </h3>
+    <div class="details">
+        <p>Set the cc.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array|string</td>
+                <td>$cc</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_bcc">
+        <div class="location">at line 50</div>
+        <code>            public            <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+    <strong>bcc</strong>(array|string $bcc)</code>
+    </h3>
+    <div class="details">
+        <p>Set the bcc.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array|string</td>
+                <td>$bcc</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_html">
+        <div class="location">at line 59</div>
+        <code>            public            <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+    <strong>html</strong>(string $html)</code>
+    </h3>
+    <div class="details">
+        <p>Set the hml content.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$html</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_text">
+        <div class="location">at line 68</div>
+        <code>            public            <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+    <strong>text</strong>(string $text)</code>
+    </h3>
+    <div class="details">
+        <p>Set the text content.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_htmlTemplate">
+        <div class="location">at line 78</div>
+        <code>            public            string
+    <strong>htmlTemplate</strong>(string $template, array $data = array())</code>
+    </h3>
+    <div class="details">
+        <p>Use a template for the html content.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_textTemplate">
+        <div class="location">at line 90</div>
+        <code>            public            string
+    <strong>textTemplate</strong>(string $template, array $data = array())</code>
+    </h3>
+    <div class="details">
+        <p>Use a template for the html content.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_attachFile">
+        <div class="location">at line 115</div>
+        <code>            public            <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+    <strong>attachFile</strong>(string $file, array $options = array())</code>
+    </h3>
+    <div class="details">
+        <p>Attach a file to the email.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_attachData">
+        <div class="location">at line 130</div>
+        <code>            public            <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+    <strong>attachData</strong>(string $data, array $options = array())</code>
+    </h3>
+    <div class="details">
+        <p>Attach data as a file to the email.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_embedFile">
+        <div class="location">at line 145</div>
+        <code>            public            <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+    <strong>embedFile</strong>(string $file, array $options = array())</code>
+    </h3>
+    <div class="details">
+        <p>Embed a file in the email.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_embedData">
+        <div class="location">at line 160</div>
+        <code>            public            <a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a>
+    <strong>embedData</strong>(string $data, array $options = array())</code>
+    </h3>
+    <div class="details">
+        <p>Embed data as a file in the email.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Email/SwiftMessage.html"><abbr title="Asgard\Email\SwiftMessage">SwiftMessage</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

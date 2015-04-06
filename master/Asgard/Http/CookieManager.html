@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Http\CookieManager | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Asgard/Http.html">Asgard\Http</a>\CookieManager</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>CookieManager</strong>        implements
+        <a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a></p>
+
+            <div class="description">
+            <p>To manage cookies.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_all">all</a>()
+                    <p>Return all cookies.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/CookieManager.html"><abbr title="Asgard\Http\CookieManager">CookieManager</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_clear">clear</a>()
+                    <p>Clear all cookies.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_count">count</a>()
+                    <p>Return the number of cookies.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setAll">setAll</a>(array $data)
+                    <p>Set all cookies.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_has">has</a>(string $path)
+                    <p>Check if it contains a cookie.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $path, mixed $default = null)
+                    <p>Get a cookie.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_set">set</a>(array|string $what, mixed $value = null, integer $time = null, string $path = &#039;/&#039;)
+                    <p>Set a cookie.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(string $path, string $_path = &#039;/&#039;)
+                    <p>Delete a cookie.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetSet">offsetSet</a>(string $offset, mixed $value)
+                    <p>Array set implementation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_offsetExists">offsetExists</a>(string $offset)
+                    <p>Array exists implementation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetUnset">offsetUnset</a>(string $offset)
+                    <p>Array unset implementation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_offsetGet">offsetGet</a>(string $offset)
+                    <p>Array get implementation.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_all">
+        <div class="location">at line 13</div>
+        <code>            public            array
+    <strong>all</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return all cookies.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clear">
+        <div class="location">at line 21</div>
+        <code>            public            <a href="../../Asgard/Http/CookieManager.html"><abbr title="Asgard\Http\CookieManager">CookieManager</abbr></a>
+    <strong>clear</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clear all cookies.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/CookieManager.html"><abbr title="Asgard\Http\CookieManager">CookieManager</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_count">
+        <div class="location">at line 30</div>
+        <code>            public            integer
+    <strong>count</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the number of cookies.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAll">
+        <div class="location">at line 38</div>
+        <code>            public            <a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a>
+    <strong>setAll</strong>(array $data)</code>
+    </h3>
+    <div class="details">
+        <p>Set all cookies.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_has">
+        <div class="location">at line 47</div>
+        <code>            public            boolean
+    <strong>has</strong>(string $path)</code>
+    </h3>
+    <div class="details">
+        <p>Check if it contains a cookie.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>nested keys separated by ".".</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if cookie exists.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">at line 57</div>
+        <code>            public            mixed
+    <strong>get</strong>(string $path, mixed $default = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get a cookie.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>nested keys separated by ".".</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_set">
+        <div class="location">at line 70</div>
+        <code>            public            <a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a>
+    <strong>set</strong>(array|string $what, mixed $value = null, integer $time = null, string $path = &#039;/&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Set a cookie.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array|string</td>
+                <td>$what</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$time</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>nested keys separated by ".".</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 90</div>
+        <code>            public            <a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a>
+    <strong>delete</strong>(string $path, string $_path = &#039;/&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Delete a cookie.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>nested keys separated by ".".</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$_path</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetSet">
+        <div class="location">at line 102</div>
+        <code>            public            
+    <strong>offsetSet</strong>(string $offset, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Array set implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
+                <td>If $offset is null</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetExists">
+        <div class="location">at line 114</div>
+        <code>            public            boolean
+    <strong>offsetExists</strong>(string $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Array exists implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if cookie exists.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetUnset">
+        <div class="location">at line 122</div>
+        <code>            public            
+    <strong>offsetUnset</strong>(string $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Array unset implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetGet">
+        <div class="location">at line 131</div>
+        <code>            public            mixed
+    <strong>offsetGet</strong>(string $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Array get implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

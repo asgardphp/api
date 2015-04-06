@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Templating\ViewableTrait | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Trait</div>
+    <h1><a href="../../Asgard/Templating.html">Asgard\Templating</a>\ViewableTrait</h1>
+    </div>
+        <div class="content">
+                <p>    trait
+    <strong>ViewableTrait</strong></p>
+
+            <div class="description">
+            <p>Trait for classes using templates.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_fragment">fragment</a>(string $method, array $params = array())
+                    <p>Render the method of a class.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_sFragment">sFragment</a>(string $method, array $params = array())
+                    <p>Render the method of a class statically.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTemplateEngine">setTemplateEngine</a>(<a href="../../Asgard/Templating/TemplateEngineInterface.html"><abbr title="Asgard\Templating\TemplateEngineInterface">TemplateEngineInterface</abbr></a> $templateEngine)
+                    <p>Set the template engine.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Templating/TemplateEngineInterface.html"><abbr title="Asgard\Templating\TemplateEngineInterface">TemplateEngineInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTemplateEngine">getTemplateEngine</a>()
+                    <p>Return the template engine.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addTemplatePathSolver">addTemplatePathSolver</a>(callable $cb)
+                    <p>Add a callable path solver.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_fragment">
+        <div class="location">at line 36</div>
+        <code>            public            string
+    <strong>fragment</strong>(string $method, array $params = array())</code>
+    </h3>
+    <div class="details">
+        <p>Render the method of a class.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>method name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>arguments</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sFragment">
+        <div class="location">at line 47</div>
+        <code>        static    public            string
+    <strong>sFragment</strong>(string $method, array $params = array())</code>
+    </h3>
+    <div class="details">
+        <p>Render the method of a class statically.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>method name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>arguments</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTemplateEngine">
+        <div class="location">at line 57</div>
+        <code>            public            
+    <strong>setTemplateEngine</strong>(<a href="../../Asgard/Templating/TemplateEngineInterface.html"><abbr title="Asgard\Templating\TemplateEngineInterface">TemplateEngineInterface</abbr></a> $templateEngine)</code>
+    </h3>
+    <div class="details">
+        <p>Set the template engine.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Templating/TemplateEngineInterface.html"><abbr title="Asgard\Templating\TemplateEngineInterface">TemplateEngineInterface</abbr></a></td>
+                <td>$templateEngine</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTemplateEngine">
+        <div class="location">at line 66</div>
+        <code>            public            <a href="../../Asgard/Templating/TemplateEngineInterface.html"><abbr title="Asgard\Templating\TemplateEngineInterface">TemplateEngineInterface</abbr></a>
+    <strong>getTemplateEngine</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the template engine.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Templating/TemplateEngineInterface.html"><abbr title="Asgard\Templating\TemplateEngineInterface">TemplateEngineInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addTemplatePathSolver">
+        <div class="location">at line 74</div>
+        <code>            public            
+    <strong>addTemplatePathSolver</strong>(callable $cb)</code>
+    </h3>
+    <div class="details">
+        <p>Add a callable path solver.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>callable</td>
+                <td>$cb</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

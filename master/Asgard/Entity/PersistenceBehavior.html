@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Entity\PersistenceBehavior | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../Asgard/Entity.html">Asgard\Entity</a>\PersistenceBehavior</h1>
+    </div>
+        <div class="content">
+                <p>    interface
+    <strong>PersistenceBehavior</strong></p>
+
+            <div class="description">
+            <p>Persistence behavior.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_static_orm">static_orm</a>()
+                    <p>Article::orm()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_static_loadBy">static_loadBy</a>(<a href="../../Asgard/Entity/Property.html"><abbr title="Asgard\Entity\Property">Property</abbr></a> $property, mixed $value)
+                    <p>Article::loadBy('title', 'hello world')</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_static_load">static_load</a>(integer $id)
+                    <p>Article::load(2)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_static_destroyAll">static_destroyAll</a>()
+                    <p>Article::destroyAll()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_static_destroyOne">static_destroyOne</a>(integer $id)
+                    <p>Article::destroyOne()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_static_create">static_create</a>(array $attrs = array(), boolean $validate = true)
+                    <p>Article::create()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_call_save">call_save</a>(<a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a> $entity, array $attrs = null, boolean $validate = true)
+                    <p>$article->save()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_call_destroy">call_destroy</a>(<a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a> $entity)
+                    <p>$article->destroy()</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_static_orm">
+        <div class="location">at line 13</div>
+        <code>            public            mixed
+    <strong>static_orm</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Article::orm()</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_static_loadBy">
+        <div class="location">at line 21</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>static_loadBy</strong>(<a href="../../Asgard/Entity/Property.html"><abbr title="Asgard\Entity\Property">Property</abbr></a> $property, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Article::loadBy('title', 'hello world')</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Entity/Property.html"><abbr title="Asgard\Entity\Property">Property</abbr></a></td>
+                <td>$property</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_static_load">
+        <div class="location">at line 28</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>static_load</strong>(integer $id)</code>
+    </h3>
+    <div class="details">
+        <p>Article::load(2)</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_static_destroyAll">
+        <div class="location">at line 34</div>
+        <code>            public            integer
+    <strong>static_destroyAll</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Article::destroyAll()</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_static_destroyOne">
+        <div class="location">at line 41</div>
+        <code>            public            boolean
+    <strong>static_destroyOne</strong>(integer $id)</code>
+    </h3>
+    <div class="details">
+        <p>Article::destroyOne()</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_static_create">
+        <div class="location">at line 49</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>static_create</strong>(array $attrs = array(), boolean $validate = true)</code>
+    </h3>
+    <div class="details">
+        <p>Article::create()</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$attrs</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$validate</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_call_save">
+        <div class="location">at line 58</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>call_save</strong>(<a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a> $entity, array $attrs = null, boolean $validate = true)</code>
+    </h3>
+    <div class="details">
+        <p>$article->save()</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+                <td>$entity</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$attrs</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$validate</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_call_destroy">
+        <div class="location">at line 64</div>
+        <code>            public            
+    <strong>call_destroy</strong>(<a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a> $entity)</code>
+    </h3>
+    <div class="details">
+        <p>$article->destroy()</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+                <td>$entity</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

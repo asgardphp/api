@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Form\DynamicGroup | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Asgard/Form.html">Asgard\Form</a>\DynamicGroup</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>DynamicGroup</strong>        extends <a href="../../Asgard/Form/Group.html"><abbr title="Asgard\Form\Group">Group</abbr></a></p>
+
+            <div class="description">
+            <p>Group with undefined number of fields.</p>
+            <p>
+</p>
+        </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_fields">
+                                                            array
+                </td>
+                <td>$fields</td>
+                <td class="last">Fields.</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(callable $cb = null, callable $default_render = null)
+                    <p>Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Validation/ValidatorInterface.html"><abbr title="Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createValidator">createValidator</a>()
+                    <p>Create a validator.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_createValidator"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Symfony\Component\Translation\TranslatorInterface">TranslatorInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getTranslator">getTranslator</a>()
+                    <p>Get the translator.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_getTranslator"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getRequest">getRequest</a>()
+                    <p>Get the request from group or a parent.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_getRequest"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_name">name</a>()
+                    <p>Return the name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_name"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setName">setName</a>(string $name)
+                    <p>Set the name.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_setName"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_size">size</a>()
+                    <p>Return the number of fields.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_size"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasFile">hasFile</a>()
+                    <p>Check if group has a file.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_hasFile"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Form/WidgetManagerInterface.html"><abbr title="Asgard\Form\WidgetManagerInterface">WidgetManagerInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getWidgetManager">getWidgetManager</a>()
+                    <p>Return the widgets manager.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_getWidgetManager"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setWidgetManager">setWidgetManager</a>(<a href="../../Asgard/Form/WidgetManager.html"><abbr title="Asgard\Form\WidgetManager">WidgetManager</abbr></a> $WidgetManager)
+                    <p>Set the widgets manager.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_setWidgetManager"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Form/Widget.html"><abbr title="Asgard\Form\Widget">Widget</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_render">render</a>(string|callable $render_callback, <a href="../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a> $field, array $options = array())
+                    <p>Render a field.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_render"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isValid">isValid</a>()
+                    <p>Check if group is valid.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_isValid"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_sent">sent</a>()
+                    <p>Check if group's form was sent.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_sent"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_errors">errors</a>($validationGroups = array())
+                    <p>Return errors.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_errors"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_remove">remove</a>(string $name)
+                    <p>Remove a field.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_remove"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a>|<a href="../../Asgard/Form/Group.html"><abbr title="Asgard\Form\Group">Group</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $name)
+                    <p>Return a field.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_get"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_add">add</a>(<a href="../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a>|<a href="../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a> $field, string $name = null)
+                    <p>Add a field.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_add"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_has">has</a>(string $field_name)
+                    <p>Check if has a field.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_has"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_resetFields">resetFields</a>()
+                    <p>Reset fields.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_resetFields"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_fields">fields</a>()
+                    <p>Return all fields.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_fields"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addFields">addFields</a>(array $fields)
+                    <p>Add fields.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_addFields"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_reset">reset</a>()
+                    <p>Reset data.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_reset"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Asgard\Form\DynamicGroupInterface">DynamicGroupInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setData">setData</a>(array $data)
+                    <p>Set group data.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_data">data</a>()
+                    <p>Return data.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_data"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetSet">offsetSet</a>(string $offset, mixed $value)
+                    <p>Array set implementation.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_offsetSet"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_offsetExists">offsetExists</a>(string $offset)
+                    <p>Array exists implementation.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_offsetExists"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetUnset">offsetUnset</a>(string $offset)
+                    <p>Array unset implementation.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_offsetUnset"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_offsetGet">offsetGet</a>(string $offset)
+                    <p>Array get implementation.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_offsetGet"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_valid">valid</a>()
+                    <p>Iterator valid implementation.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_valid"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_rewind">rewind</a>()
+                    <p>Iterator rewind implementation.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_rewind"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_current">current</a>()
+                    <p>Iterator current implementation.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_current"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_key">key</a>()
+                    <p>Iterator key implementation.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_key"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_next">next</a>()
+                    <p>Iterator next implementation.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_next"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setParent">setParent</a>(<a href="../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a> $parent)
+                    <p>Set parent.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_setParent"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Form/FormInterface.html"><abbr title="Asgard\Form\FormInterface">FormInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTopForm">getTopForm</a>()
+                    <p>Get top parent form.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_getTopForm"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setFields">setFields</a>(array $fields)
+                    <p>Set fields.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_setFields"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getParents">getParents</a>()
+                    <p>Get all parents.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_getParents"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_doSave">doSave</a>()
+                    <p>Actually perform the group saving.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_doSave"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Form/Widget.html"><abbr title="Asgard\Form\Widget">Widget</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_doRender">doRender</a>(string|callable $render_callback, <a href="../../Asgard/Form/Group.html"><abbr title="Asgard\Form\Group">Group</abbr></a>|<a href="../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a> $field, array $options)
+                    <p>Pass the doRender call to the parent group/form.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Form/Group.html#method_doRender"><abbr title="Asgard\Form\Group">Group</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setCallback">setCallback</a>(callable $cb)
+                    <p>Set callback.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDefaultRender">setDefaultRender</a>(callable $default_render)
+                    <p>Set default renderer.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string|<a href="../../Asgard/Form/Widget.html"><abbr title="Asgard\Form\Widget">Widget</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_field">field</a>(<a href="../../Asgard/Form/Group.html"><abbr title="Asgard\Form\Group">Group</abbr></a>|<a href="../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a> $field = null)
+                    <p>Render a field or a sub-group.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_renderTemplate">renderTemplate</a>(string $offset = &#039;&#039;)
+                    <p>Render the javascript template.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 25</div>
+        <code>            public            
+    <strong>__construct</strong>(callable $cb = null, callable $default_render = null)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>callable</td>
+                <td>$cb</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$default_render</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createValidator">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_createValidator"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 72</div>
+        <code>            public            <a href="../../Asgard/Validation/ValidatorInterface.html"><abbr title="Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></a>
+    <strong>createValidator</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Create a validator.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Validation/ValidatorInterface.html"><abbr title="Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTranslator">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_getTranslator"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 79</div>
+        <code>            public            <abbr title="Symfony\Component\Translation\TranslatorInterface">TranslatorInterface</abbr>
+    <strong>getTranslator</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the translator.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Symfony\Component\Translation\TranslatorInterface">TranslatorInterface</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRequest">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_getRequest"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 86</div>
+        <code>            public            <a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a>
+    <strong>getRequest</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the request from group or a parent.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_name">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_name"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 96</div>
+        <code>            public            string
+    <strong>name</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the name.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setName">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_setName"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 103</div>
+        <code>            public            
+    <strong>setName</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Set the name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_size">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_size"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 110</div>
+        <code>            public            integer
+    <strong>size</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the number of fields.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasFile">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_hasFile"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 117</div>
+        <code>            public            boolean
+    <strong>hasFile</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if group has a file.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if has file</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getWidgetManager">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_getWidgetManager"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 135</div>
+        <code>            public            <a href="../../Asgard/Form/WidgetManagerInterface.html"><abbr title="Asgard\Form\WidgetManagerInterface">WidgetManagerInterface</abbr></a>
+    <strong>getWidgetManager</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the widgets manager.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Form/WidgetManagerInterface.html"><abbr title="Asgard\Form\WidgetManagerInterface">WidgetManagerInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setWidgetManager">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_setWidgetManager"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 147</div>
+        <code>            public            
+    <strong>setWidgetManager</strong>(<a href="../../Asgard/Form/WidgetManager.html"><abbr title="Asgard\Form\WidgetManager">WidgetManager</abbr></a> $WidgetManager)</code>
+    </h3>
+    <div class="details">
+        <p>Set the widgets manager.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Form/WidgetManager.html"><abbr title="Asgard\Form\WidgetManager">WidgetManager</abbr></a></td>
+                <td>$WidgetManager</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_render">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_render"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 155</div>
+        <code>            public            <a href="../../Asgard/Form/Widget.html"><abbr title="Asgard\Form\Widget">Widget</abbr></a>
+    <strong>render</strong>(string|callable $render_callback, <a href="../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a> $field, array $options = array())</code>
+    </h3>
+    <div class="details">
+        <p>Render a field.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|callable</td>
+                <td>$render_callback</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a></td>
+                <td>$field</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Form/Widget.html"><abbr title="Asgard\Form\Widget">Widget</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isValid">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_isValid"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 165</div>
+        <code>            public            boolean
+    <strong>isValid</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if group is valid.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if valid</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sent">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_sent"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 172</div>
+        <code>            public            boolean
+    <strong>sent</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if group's form was sent.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if sent</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_errors">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_errors"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 179</div>
+        <code>            public            array
+    <strong>errors</strong>($validationGroups = array())</code>
+    </h3>
+    <div class="details">
+        <p>Return errors.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$validationGroups</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_remove">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_remove"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 203</div>
+        <code>            public            
+    <strong>remove</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Remove a field.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_get"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 210</div>
+        <code>            public            <a href="../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a>|<a href="../../Asgard/Form/Group.html"><abbr title="Asgard\Form\Group">Group</abbr></a>
+    <strong>get</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Return a field.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a>|<a href="../../Asgard/Form/Group.html"><abbr title="Asgard\Form\Group">Group</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_add">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_add"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 217</div>
+        <code>            public            
+    <strong>add</strong>(<a href="../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a>|<a href="../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a> $field, string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Add a field.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a>|<a href="../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a></td>
+                <td>$field</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_has">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_has"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 229</div>
+        <code>            public            boolean
+    <strong>has</strong>(string $field_name)</code>
+    </h3>
+    <div class="details">
+        <p>Check if has a field.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$field_name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetFields">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_resetFields"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 236</div>
+        <code>            public            <a href="../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a>
+    <strong>resetFields</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Reset fields.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fields">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_fields"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 244</div>
+        <code>            public            array
+    <strong>fields</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return all fields.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addFields">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_addFields"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 251</div>
+        <code>            public            
+    <strong>addFields</strong>(array $fields)</code>
+    </h3>
+    <div class="details">
+        <p>Add fields.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$fields</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_reset">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_reset"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 260</div>
+        <code>            public            <a href="../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a>
+    <strong>reset</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Reset data.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setData">
+        <div class="location">at line 43</div>
+        <code>            public            <abbr title="Asgard\Form\DynamicGroupInterface">DynamicGroupInterface</abbr>
+    <strong>setData</strong>(array $data)</code>
+    </h3>
+    <div class="details">
+        <p>Set group data.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Asgard\Form\DynamicGroupInterface">DynamicGroupInterface</abbr></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_data">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_data"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 277</div>
+        <code>            public            array
+    <strong>data</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return data.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetSet">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_offsetSet"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 298</div>
+        <code>            public            
+    <strong>offsetSet</strong>(string $offset, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Array set implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetExists">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_offsetExists"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 310</div>
+        <code>            public            boolean
+    <strong>offsetExists</strong>(string $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Array exists implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetUnset">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_offsetUnset"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 318</div>
+        <code>            public            
+    <strong>offsetUnset</strong>(string $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Array unset implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetGet">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_offsetGet"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 327</div>
+        <code>            public            mixed
+    <strong>offsetGet</strong>(string $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Array get implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_valid">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_valid"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 335</div>
+        <code>            public            boolean
+    <strong>valid</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Iterator valid implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rewind">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_rewind"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 343</div>
+        <code>            public            
+    <strong>rewind</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Iterator rewind implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_current">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_current"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 351</div>
+        <code>            public            integer
+    <strong>current</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Iterator current implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_key">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_key"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 359</div>
+        <code>            public            string
+    <strong>key</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Iterator key implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_next">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_next"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 367</div>
+        <code>            public            mixed
+    <strong>next</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Iterator next implementation.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setParent">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_setParent"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 374</div>
+        <code>            public            <a href="../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a>
+    <strong>setParent</strong>(<a href="../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a> $parent)</code>
+    </h3>
+    <div class="details">
+        <p>Set parent.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a></td>
+                <td>$parent</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Form/GroupInterface.html"><abbr title="Asgard\Form\GroupInterface">GroupInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTopForm">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_getTopForm"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 382</div>
+        <code>            public            <a href="../../Asgard/Form/FormInterface.html"><abbr title="Asgard\Form\FormInterface">FormInterface</abbr></a>
+    <strong>getTopForm</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get top parent form.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Form/FormInterface.html"><abbr title="Asgard\Form\FormInterface">FormInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setFields">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_setFields"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 392</div>
+        <code>            public            
+    <strong>setFields</strong>(array $fields)</code>
+    </h3>
+    <div class="details">
+        <p>Set fields.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$fields</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParents">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_getParents"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 400</div>
+        <code>            public            array
+    <strong>getParents</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get all parents.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doSave">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_doSave"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 487</div>
+        <code>            public            
+    <strong>doSave</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Actually perform the group saving.</p>
+        <p>Empty by default but can be overriden.</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_doRender">
+        <div class="location">in <a href="../../Asgard/Form/Group.html#method_doRender"><abbr title="Asgard\Form\Group">Group</abbr></a> at line 588</div>
+        <code>            public            <a href="../../Asgard/Form/Widget.html"><abbr title="Asgard\Form\Widget">Widget</abbr></a>
+    <strong>doRender</strong>(string|callable $render_callback, <a href="../../Asgard/Form/Group.html"><abbr title="Asgard\Form\Group">Group</abbr></a>|<a href="../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a> $field, array $options)</code>
+    </h3>
+    <div class="details">
+        <p>Pass the doRender call to the parent group/form.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|callable</td>
+                <td>$render_callback</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Asgard/Form/Group.html"><abbr title="Asgard\Form\Group">Group</abbr></a>|<a href="../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a></td>
+                <td>$field</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Form/Widget.html"><abbr title="Asgard\Form\Widget">Widget</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setCallback">
+        <div class="location">at line 34</div>
+        <code>            public            
+    <strong>setCallback</strong>(callable $cb)</code>
+    </h3>
+    <div class="details">
+        <p>Set callback.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>callable</td>
+                <td>$cb</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDefaultRender">
+        <div class="location">at line 60</div>
+        <code>            public            
+    <strong>setDefaultRender</strong>(callable $default_render)</code>
+    </h3>
+    <div class="details">
+        <p>Set default renderer.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>callable</td>
+                <td>$default_render</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_field">
+        <div class="location">at line 69</div>
+        <code>            public            string|<a href="../../Asgard/Form/Widget.html"><abbr title="Asgard\Form\Widget">Widget</abbr></a>
+    <strong>field</strong>(<a href="../../Asgard/Form/Group.html"><abbr title="Asgard\Form\Group">Group</abbr></a>|<a href="../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a> $field = null)</code>
+    </h3>
+    <div class="details">
+        <p>Render a field or a sub-group.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Form/Group.html"><abbr title="Asgard\Form\Group">Group</abbr></a>|<a href="../../Asgard/Form/Field.html"><abbr title="Asgard\Form\Field">Field</abbr></a></td>
+                <td>$field</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|<a href="../../Asgard/Form/Widget.html"><abbr title="Asgard\Form\Widget">Widget</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_renderTemplate">
+        <div class="location">at line 82</div>
+        <code>            public            string
+    <strong>renderTemplate</strong>(string $offset = &#039;&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Render the javascript template.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

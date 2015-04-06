@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Http\HttpKernel | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Asgard/Http.html">Asgard\Http</a>\HttpKernel</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>HttpKernel</strong>        implements
+        <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a></p>
+
+            <div class="description">
+            <p>HTTP Kernel.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<abbr title="Asgard\Http\Asgard\Container\ContainerInterface">ContainerInterface</abbr> $container = null)
+                    <p>Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setDebug">setDebug</a>(boolean $debug)
+                    <p>Set debug flag.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setTranslator">setTranslator</a>(<abbr title="Asgard\Http\Symfony\Component\Translation\TranslatorInterface">TranslatorInterface</abbr> $translator)
+                    <p>Set translator dependency.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setResolver">setResolver</a>(<a href="../../Asgard/Http/ResolverInterface.html"><abbr title="Asgard\Http\ResolverInterface">ResolverInterface</abbr></a> $resolver)
+                    <p>Set Resolver dependency.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setErrorHandler">setErrorHandler</a>(<abbr title="Asgard\Http\Asgard\Debug\ErrorHandler">ErrorHandler</abbr> $errorHandler)
+                    <p>Set Error handler dependency.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setHookManager">setHookManager</a>(<abbr title="Asgard\Http\Asgard\Hook\hookManagerInterface">hookManagerInterface</abbr> $hookManager)
+                    <p>Set Hooks manager dependency.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setTemplateEngineFactory">setTemplateEngineFactory</a>(<abbr title="Asgard\Http\Asgard\Templating\TemplateEngineFactoryInterface">TemplateEngineFactoryInterface</abbr> $templateEngineFactory)
+                    <p>Set template engine factory.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Hook/HookManagerInterface.html"><abbr title="Asgard\Hook\HookManagerInterface">HookManagerInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getHookManager">getHookManager</a>()
+                    <p>Return the HookManager.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/ResolverInterface.html"><abbr title="Asgard\Http\ResolverInterface">ResolverInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getResolver">getResolver</a>()
+                    <p>Return the resolver.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_getDebug">getDebug</a>()
+                    <p>Return the debug flag.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Symfony\Component\Translation\TranslatorInterface">TranslatorInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getTranslator">getTranslator</a>()
+                    <p>Return the translator</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Debug/ErrorHandler.html"><abbr title="Asgard\Debug\ErrorHandler">ErrorHandler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getErrorHandler">getErrorHandler</a>()
+                    <p>Return the error handler.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Templating/TemplateEngineFactoryInterface.html"><abbr title="Asgard\Templating\TemplateEngineFactoryInterface">TemplateEngineFactoryInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTemplateEngineFactory">getTemplateEngineFactory</a>()
+                    <p>Return the HookManager</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_start">start</a>(string $start)
+                    <p>Set the start file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_end">end</a>(string $end)
+                    <p>Set the end file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_run">run</a>()
+                    <p>Run the kernel and return a response.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addRequest">addRequest</a>(<a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request)
+                    <p>Set the HTTP request.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_process">process</a>(<a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request, boolean $catch = true)
+                    <p>Process the request.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getRequest">getRequest</a>()
+                    <p>Get the last given request.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_runController">runController</a>(string $controllerClass, string|callable $action, <a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request, <a href="../../Asgard/Http/Route.html"><abbr title="Asgard\Http\Route">Route</abbr></a> $route = null)
+                    <p>Run the controller and action.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_prepareController">prepareController</a>($controller, $action, <a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request, <a href="../../Asgard/Http/Route.html"><abbr title="Asgard\Http\Route">Route</abbr></a> $route = null)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addTemplatePathSolver">addTemplatePathSolver</a>(callable $cb)
+                    <p>Add a template path solver.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterAll">filterAll</a>(string $filter, array $args = array())
+                    <p>Filter all controllers and actions.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filter">filter</a>(array $criteria, string $filter, array $args = array())
+                    <p>Fillter controllers and actions with criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterBeforeAll">filterBeforeAll</a>(callable $filter)
+                    <p>Filter before all controllers and actions.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterBefore">filterBefore</a>(array $criteria, callable $filter)
+                    <p>Filter before controllers and actions with criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterAfterAll">filterAfterAll</a>(callable $filter)
+                    <p>Filter after all controllers and actions.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_filterAfter">filterAfter</a>(array $criteria, callable $filter)
+                    <p>Filter after controllers and actions with criteria.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 86</div>
+        <code>            public            
+    <strong>__construct</strong>(<abbr title="Asgard\Http\Asgard\Container\ContainerInterface">ContainerInterface</abbr> $container = null)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Http\Asgard\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDebug">
+        <div class="location">at line 93</div>
+        <code>            public            <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+    <strong>setDebug</strong>(boolean $debug)</code>
+    </h3>
+    <div class="details">
+        <p>Set debug flag.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$debug</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTranslator">
+        <div class="location">at line 101</div>
+        <code>            public            <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+    <strong>setTranslator</strong>(<abbr title="Asgard\Http\Symfony\Component\Translation\TranslatorInterface">TranslatorInterface</abbr> $translator)</code>
+    </h3>
+    <div class="details">
+        <p>Set translator dependency.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Http\Symfony\Component\Translation\TranslatorInterface">TranslatorInterface</abbr></td>
+                <td>$translator</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setResolver">
+        <div class="location">at line 109</div>
+        <code>            public            <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+    <strong>setResolver</strong>(<a href="../../Asgard/Http/ResolverInterface.html"><abbr title="Asgard\Http\ResolverInterface">ResolverInterface</abbr></a> $resolver)</code>
+    </h3>
+    <div class="details">
+        <p>Set Resolver dependency.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Http/ResolverInterface.html"><abbr title="Asgard\Http\ResolverInterface">ResolverInterface</abbr></a></td>
+                <td>$resolver</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setErrorHandler">
+        <div class="location">at line 117</div>
+        <code>            public            <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+    <strong>setErrorHandler</strong>(<abbr title="Asgard\Http\Asgard\Debug\ErrorHandler">ErrorHandler</abbr> $errorHandler)</code>
+    </h3>
+    <div class="details">
+        <p>Set Error handler dependency.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Http\Asgard\Debug\ErrorHandler">ErrorHandler</abbr></td>
+                <td>$errorHandler</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setHookManager">
+        <div class="location">at line 125</div>
+        <code>            public            <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+    <strong>setHookManager</strong>(<abbr title="Asgard\Http\Asgard\Hook\hookManagerInterface">hookManagerInterface</abbr> $hookManager)</code>
+    </h3>
+    <div class="details">
+        <p>Set Hooks manager dependency.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Http\Asgard\Hook\hookManagerInterface">hookManagerInterface</abbr></td>
+                <td>$hookManager</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTemplateEngineFactory">
+        <div class="location">at line 133</div>
+        <code>            public            <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+    <strong>setTemplateEngineFactory</strong>(<abbr title="Asgard\Http\Asgard\Templating\TemplateEngineFactoryInterface">TemplateEngineFactoryInterface</abbr> $templateEngineFactory)</code>
+    </h3>
+    <div class="details">
+        <p>Set template engine factory.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Http\Asgard\Templating\TemplateEngineFactoryInterface">TemplateEngineFactoryInterface</abbr></td>
+                <td>$templateEngineFactory</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHookManager">
+        <div class="location">at line 141</div>
+        <code>            public            <a href="../../Asgard/Hook/HookManagerInterface.html"><abbr title="Asgard\Hook\HookManagerInterface">HookManagerInterface</abbr></a>
+    <strong>getHookManager</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the HookManager.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Hook/HookManagerInterface.html"><abbr title="Asgard\Hook\HookManagerInterface">HookManagerInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getResolver">
+        <div class="location">at line 148</div>
+        <code>            public            <a href="../../Asgard/Http/ResolverInterface.html"><abbr title="Asgard\Http\ResolverInterface">ResolverInterface</abbr></a>
+    <strong>getResolver</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the resolver.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/ResolverInterface.html"><abbr title="Asgard\Http\ResolverInterface">ResolverInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDebug">
+        <div class="location">at line 157</div>
+        <code>            public            boolean
+    <strong>getDebug</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the debug flag.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTranslator">
+        <div class="location">at line 164</div>
+        <code>            public            <abbr title="Symfony\Component\Translation\TranslatorInterface">TranslatorInterface</abbr>
+    <strong>getTranslator</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the translator</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Symfony\Component\Translation\TranslatorInterface">TranslatorInterface</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getErrorHandler">
+        <div class="location">at line 171</div>
+        <code>            public            <a href="../../Asgard/Debug/ErrorHandler.html"><abbr title="Asgard\Debug\ErrorHandler">ErrorHandler</abbr></a>
+    <strong>getErrorHandler</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the error handler.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Debug/ErrorHandler.html"><abbr title="Asgard\Debug\ErrorHandler">ErrorHandler</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTemplateEngineFactory">
+        <div class="location">at line 178</div>
+        <code>            public            <a href="../../Asgard/Templating/TemplateEngineFactoryInterface.html"><abbr title="Asgard\Templating\TemplateEngineFactoryInterface">TemplateEngineFactoryInterface</abbr></a>
+    <strong>getTemplateEngineFactory</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the HookManager</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Templating/TemplateEngineFactoryInterface.html"><abbr title="Asgard\Templating\TemplateEngineFactoryInterface">TemplateEngineFactoryInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_start">
+        <div class="location">at line 185</div>
+        <code>            public            
+    <strong>start</strong>(string $start)</code>
+    </h3>
+    <div class="details">
+        <p>Set the start file.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$start</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_end">
+        <div class="location">at line 192</div>
+        <code>            public            
+    <strong>end</strong>(string $end)</code>
+    </h3>
+    <div class="details">
+        <p>Set the end file.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$end</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_run">
+        <div class="location">at line 199</div>
+        <code>            public            <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+    <strong>run</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Run the kernel and return a response.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRequest">
+        <div class="location">at line 213</div>
+        <code>            public            <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+    <strong>addRequest</strong>(<a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request)</code>
+    </h3>
+    <div class="details">
+        <p>Set the HTTP request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_process">
+        <div class="location">at line 221</div>
+        <code>            public            <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+    <strong>process</strong>(<a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request, boolean $catch = true)</code>
+    </h3>
+    <div class="details">
+        <p>Process the request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$catch</td>
+                <td>true to catch exceptions.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRequest">
+        <div class="location">at line 268</div>
+        <code>            public            <a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a>
+    <strong>getRequest</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the last given request.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_runController">
+        <div class="location">at line 306</div>
+        <code>            public            mixed
+    <strong>runController</strong>(string $controllerClass, string|callable $action, <a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request, <a href="../../Asgard/Http/Route.html"><abbr title="Asgard\Http\Route">Route</abbr></a> $route = null)</code>
+    </h3>
+    <div class="details">
+        <p>Run the controller and action.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$controllerClass</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string|callable</td>
+                <td>$action</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Asgard/Http/Route.html"><abbr title="Asgard\Http\Route">Route</abbr></a></td>
+                <td>$route</td>
+                <td>Route prefix to match.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_prepareController">
+        <div class="location">at line 315</div>
+        <code>            public            
+    <strong>prepareController</strong>($controller, $action, <a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request, <a href="../../Asgard/Http/Route.html"><abbr title="Asgard\Http\Route">Route</abbr></a> $route = null)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$controller</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$action</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Asgard/Http/Route.html"><abbr title="Asgard\Http\Route">Route</abbr></a></td>
+                <td>$route</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addTemplatePathSolver">
+        <div class="location">at line 329</div>
+        <code>            public            
+    <strong>addTemplatePathSolver</strong>(callable $cb)</code>
+    </h3>
+    <div class="details">
+        <p>Add a template path solver.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>callable</td>
+                <td>$cb</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterAll">
+        <div class="location">at line 369</div>
+        <code>            public            <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+    <strong>filterAll</strong>(string $filter, array $args = array())</code>
+    </h3>
+    <div class="details">
+        <p>Filter all controllers and actions.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$filter</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filter">
+        <div class="location">at line 377</div>
+        <code>            public            <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+    <strong>filter</strong>(array $criteria, string $filter, array $args = array())</code>
+    </h3>
+    <div class="details">
+        <p>Fillter controllers and actions with criteria.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$criteria</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$filter</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterBeforeAll">
+        <div class="location">at line 385</div>
+        <code>            public            <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+    <strong>filterBeforeAll</strong>(callable $filter)</code>
+    </h3>
+    <div class="details">
+        <p>Filter before all controllers and actions.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>callable</td>
+                <td>$filter</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterBefore">
+        <div class="location">at line 393</div>
+        <code>            public            <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+    <strong>filterBefore</strong>(array $criteria, callable $filter)</code>
+    </h3>
+    <div class="details">
+        <p>Filter before controllers and actions with criteria.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$criteria</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$filter</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterAfterAll">
+        <div class="location">at line 401</div>
+        <code>            public            <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+    <strong>filterAfterAll</strong>(callable $filter)</code>
+    </h3>
+    <div class="details">
+        <p>Filter after all controllers and actions.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>callable</td>
+                <td>$filter</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_filterAfter">
+        <div class="location">at line 409</div>
+        <code>            public            <a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a>
+    <strong>filterAfter</strong>(array $criteria, callable $filter)</code>
+    </h3>
+    <div class="details">
+        <p>Filter after controllers and actions with criteria.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$criteria</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$filter</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

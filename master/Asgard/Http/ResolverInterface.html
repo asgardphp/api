@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Http\ResolverInterface | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../Asgard/Http.html">Asgard\Http</a>\ResolverInterface</h1>
+    </div>
+        <div class="content">
+                <p>    interface
+    <strong>ResolverInterface</strong></p>
+
+            <div class="description">
+            <p>Resolve routes to actions.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRoutes">setRoutes</a>(array $routes)
+                    <p>Set the routes.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addRoutes">addRoutes</a>(array $routes)
+                    <p>Add routes.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addRoute">addRoute</a>(<a href="../../Asgard/Http/Route.html"><abbr title="Asgard\Http\Route">Route</abbr></a> $route)
+                    <p>Add one route.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean|array
+                </td>
+                <td class="last">
+                    <a href="#method_match">match</a>(<a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request, string $route, array $requirements = null, string $method = null)
+                    <p>Check if a request matches a route.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean|array
+                </td>
+                <td class="last">
+                    <a href="#method_matchWith">matchWith</a>(string $route, string $with, array $requirements = null, <a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request = null, string $method = null)
+                    <p>Actually check if url and route match.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_getRegexFromRoute">getRegexFromRoute</a>(string $route, array $requirements)
+                    <p>Get a regex from a route.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/Route.html"><abbr title="Asgard\Http\Route">Route</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getRoute">getRoute</a>(<a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request)
+                    <p>Get the route matching a request.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_sortRoutes">sortRoutes</a>()
+                    <p>Sort the routes by order of coverage.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_buildRoute">buildRoute</a>(string $route, array $params = array())
+                    <p>Build an URL from a route.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRoutes">getRoutes</a>()
+                    <p>Return the routes.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_url">url</a>(array|string $what, array $params = array())
+                    <p>Return the url for a route or a controller/action couple.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setHttpKernel">setHttpKernel</a>(<a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a> $httpKernel)
+                    <p>Set the HttpKernel dependency.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/URLInterface.html"><abbr title="Asgard\Http\URLInterface">URLInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getUrl">getUrl</a>()
+                    <p>Get the url instance.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setRoutes">
+        <div class="location">at line 13</div>
+        <code>            public            
+    <strong>setRoutes</strong>(array $routes)</code>
+    </h3>
+    <div class="details">
+        <p>Set the routes.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$routes</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRoutes">
+        <div class="location">at line 19</div>
+        <code>            public            
+    <strong>addRoutes</strong>(array $routes)</code>
+    </h3>
+    <div class="details">
+        <p>Add routes.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$routes</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRoute">
+        <div class="location">at line 25</div>
+        <code>            public            
+    <strong>addRoute</strong>(<a href="../../Asgard/Http/Route.html"><abbr title="Asgard\Http\Route">Route</abbr></a> $route)</code>
+    </h3>
+    <div class="details">
+        <p>Add one route.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Http/Route.html"><abbr title="Asgard\Http\Route">Route</abbr></a></td>
+                <td>$route</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_match">
+        <div class="location">at line 35</div>
+        <code>        static    public            boolean|array
+    <strong>match</strong>(<a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request, string $route, array $requirements = null, string $method = null)</code>
+    </h3>
+    <div class="details">
+        <p>Check if a request matches a route.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$route</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$requirements</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean|array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_matchWith">
+        <div class="location">at line 46</div>
+        <code>        static    public            boolean|array
+    <strong>matchWith</strong>(string $route, string $with, array $requirements = null, <a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request = null, string $method = null)</code>
+    </h3>
+    <div class="details">
+        <p>Actually check if url and route match.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$route</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$with</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$requirements</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean|array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRegexFromRoute">
+        <div class="location">at line 54</div>
+        <code>        static    public            string
+    <strong>getRegexFromRoute</strong>(string $route, array $requirements)</code>
+    </h3>
+    <div class="details">
+        <p>Get a regex from a route.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$route</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$requirements</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRoute">
+        <div class="location">at line 61</div>
+        <code>            public            <a href="../../Asgard/Http/Route.html"><abbr title="Asgard\Http\Route">Route</abbr></a>
+    <strong>getRoute</strong>(<a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request)</code>
+    </h3>
+    <div class="details">
+        <p>Get the route matching a request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/Route.html"><abbr title="Asgard\Http\Route">Route</abbr></a></td>
+            <td>null if not found.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sortRoutes">
+        <div class="location">at line 66</div>
+        <code>            public            
+    <strong>sortRoutes</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Sort the routes by order of coverage.</p>
+        <p>Routes covering less first.</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildRoute">
+        <div class="location">at line 75</div>
+        <code>        static    public            string
+    <strong>buildRoute</strong>(string $route, array $params = array())</code>
+    </h3>
+    <div class="details">
+        <p>Build an URL from a route.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$route</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>If a parameter is missing for the route.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRoutes">
+        <div class="location">at line 81</div>
+        <code>            public            array
+    <strong>getRoutes</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the routes.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_url">
+        <div class="location">at line 90</div>
+        <code>            public            string
+    <strong>url</strong>(array|string $what, array $params = array())</code>
+    </h3>
+    <div class="details">
+        <p>Return the url for a route or a controller/action couple.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array|string</td>
+                <td>$what</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>If route not found.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setHttpKernel">
+        <div class="location">at line 96</div>
+        <code>            public            
+    <strong>setHttpKernel</strong>(<a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a> $httpKernel)</code>
+    </h3>
+    <div class="details">
+        <p>Set the HttpKernel dependency.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Http/HttpKernelInterface.html"><abbr title="Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></a></td>
+                <td>$httpKernel</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUrl">
+        <div class="location">at line 102</div>
+        <code>            public            <a href="../../Asgard/Http/URLInterface.html"><abbr title="Asgard\Http\URLInterface">URLInterface</abbr></a>
+    <strong>getUrl</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the url instance.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/URLInterface.html"><abbr title="Asgard\Http\URLInterface">URLInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

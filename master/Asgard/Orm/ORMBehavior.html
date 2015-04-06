@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Orm\ORMBehavior | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Asgard/Orm.html">Asgard\Orm</a>\ORMBehavior</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>ORMBehavior</strong>        extends <a href="../../Asgard/Entity/Behavior.html"><abbr title="Asgard\Entity\Behavior">Behavior</abbr></a>        implements
+        <a href="../../Asgard/Entity/PersistenceBehavior.html"><abbr title="Asgard\Entity\PersistenceBehavior">PersistenceBehavior</abbr></a>, <a href="../../Asgard/Entity/RelationsBehavior.html"><abbr title="Asgard\Entity\RelationsBehavior">RelationsBehavior</abbr></a></p>
+
+            <div class="description">
+            <p>ORM Behavior.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(mixed $params = null)
+                    <p>Constructor.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Entity/Behavior.html#method___construct"><abbr title="Asgard\Entity\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method___sleep">__sleep</a>()
+                    <p>__sleep magic method.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Entity/Behavior.html#method___sleep"><abbr title="Asgard\Entity\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getContainer">getContainer</a>()
+                    <p>Get entity definition container.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Entity/Behavior.html#method_getContainer"><abbr title="Asgard\Entity\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDefinition">setDefinition</a>(<a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a> $definition)
+                    <p>Set entity definition.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Entity/Behavior.html#method_setDefinition"><abbr title="Asgard\Entity\Behavior">Behavior</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_load">load</a>(<abbr title="Asgard\Orm\Asgard\Entity\Definition">Definition</abbr> $definition)
+                    <p>Behavior loading.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_hookGet">hookGet</a>(<abbr title="Asgard\Orm\Asgard\Hook\Chain">Chain</abbr> $chain, <abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, string $name)
+                    <p>Hook for the entity get method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_hookgetTranslations">hookgetTranslations</a>(<abbr title="Asgard\Orm\Asgard\Hook\Chain">Chain</abbr> $chain, <abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, string $name, string $locale)
+                    <p>Hook for the entity translations get method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_hookValidation">hookValidation</a>(<abbr title="Asgard\Orm\Asgard\Hook\Chain">Chain</abbr> $chain, <abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, <abbr title="Asgard\Orm\Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr> $validator, array|null $groups, array $data)
+                    <p>Hook for the entity validation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/ORM.html"><abbr title="Asgard\Orm\ORM">ORM</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_staticCatchAll">staticCatchAll</a>(string $name, array $args, boolean $processed)
+                    <p>Catch all static calls.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>|<a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_callCatchAll">callCatchAll</a>(<a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a> $entity, string $name, array $args, boolean $processed)
+                    <p>Catch all calls.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_static_loadBy">static_loadBy</a>(string $property, mixed $value)
+                    <p>Article::loadBy('title', 'hello world')</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_static_relations">static_relations</a>()
+                    <p>Article::relations()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_static_relation">static_relation</a>(string $name)
+                    <p>Article::relation('parent')</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_static_hasRelation">static_hasRelation</a>(string $name)
+                    <p>Article::hasRelation('parent')</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_static_load">static_load</a>(integer $id)
+                    <p>Article::load(2)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_static_getTable">static_getTable</a>()
+                    <p>Article::getTable()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_static_orm">static_orm</a>()
+                    <p>Article::orm()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_static_destroyAll">static_destroyAll</a>()
+                    <p>Article::destroyAll()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_static_destroyOne">static_destroyOne</a>(integer $id)
+                    <p>Article::destroyOne()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_static_create">static_create</a>(array $values = array(), array|null $groups = array())
+                    <p>Article::create()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_call_save">call_save</a>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, array $values = array(), array|null $groups = array())
+                    <p>$article->save()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_call_destroy">call_destroy</a>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity)
+                    <p>$article->destroy()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Asgrd\Entity\Entity">Entity</abbr>|<a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_call_related">call_related</a>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, string $relation)
+                    <p>$article->related('category')</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../Asgard/Entity/Behavior.html#method___construct"><abbr title="Asgard\Entity\Behavior">Behavior</abbr></a> at line 24</div>
+        <code>            public            
+    <strong>__construct</strong>(mixed $params = null)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___sleep">
+        <div class="location">in <a href="../../Asgard/Entity/Behavior.html#method___sleep"><abbr title="Asgard\Entity\Behavior">Behavior</abbr></a> at line 32</div>
+        <code>            public            array
+    <strong>__sleep</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>__sleep magic method.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getContainer">
+        <div class="location">in <a href="../../Asgard/Entity/Behavior.html#method_getContainer"><abbr title="Asgard\Entity\Behavior">Behavior</abbr></a> at line 45</div>
+        <code>            public            <a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a>
+    <strong>getContainer</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get entity definition container.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDefinition">
+        <div class="location">in <a href="../../Asgard/Entity/Behavior.html#method_setDefinition"><abbr title="Asgard\Entity\Behavior">Behavior</abbr></a> at line 53</div>
+        <code>            public            
+    <strong>setDefinition</strong>(<a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a> $definition)</code>
+    </h3>
+    <div class="details">
+        <p>Set entity definition.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a></td>
+                <td>$definition</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_load">
+        <div class="location">at line 24</div>
+        <code>            public            
+    <strong>load</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Definition">Definition</abbr> $definition)</code>
+    </h3>
+    <div class="details">
+        <p>Behavior loading.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Entity\Definition">Definition</abbr></td>
+                <td>$definition</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hookGet">
+        <div class="location">at line 51</div>
+        <code>            public            
+    <strong>hookGet</strong>(<abbr title="Asgard\Orm\Asgard\Hook\Chain">Chain</abbr> $chain, <abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Hook for the entity get method.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Hook\Chain">Chain</abbr></td>
+                <td>$chain</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr></td>
+                <td>$entity</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hookgetTranslations">
+        <div class="location">at line 68</div>
+        <code>            public            
+    <strong>hookgetTranslations</strong>(<abbr title="Asgard\Orm\Asgard\Hook\Chain">Chain</abbr> $chain, <abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, string $name, string $locale)</code>
+    </h3>
+    <div class="details">
+        <p>Hook for the entity translations get method.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Hook\Chain">Chain</abbr></td>
+                <td>$chain</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr></td>
+                <td>$entity</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hookValidation">
+        <div class="location">at line 80</div>
+        <code>            public            
+    <strong>hookValidation</strong>(<abbr title="Asgard\Orm\Asgard\Hook\Chain">Chain</abbr> $chain, <abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, <abbr title="Asgard\Orm\Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr> $validator, array|null $groups, array $data)</code>
+    </h3>
+    <div class="details">
+        <p>Hook for the entity validation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Hook\Chain">Chain</abbr></td>
+                <td>$chain</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr></td>
+                <td>$entity</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></td>
+                <td>$validator</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array|null</td>
+                <td>$groups</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_staticCatchAll">
+        <div class="location">at line 91</div>
+        <code>            public            <a href="../../Asgard/Orm/ORM.html"><abbr title="Asgard\Orm\ORM">ORM</abbr></a>
+    <strong>staticCatchAll</strong>(string $name, array $args, boolean $processed)</code>
+    </h3>
+    <div class="details">
+        <p>Catch all static calls.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>static call name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$processed</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/ORM.html"><abbr title="Asgard\Orm\ORM">ORM</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_callCatchAll">
+        <div class="location">at line 107</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>|<a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a>
+    <strong>callCatchAll</strong>(<a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a> $entity, string $name, array $args, boolean $processed)</code>
+    </h3>
+    <div class="details">
+        <p>Catch all calls.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+                <td>$entity</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>static call name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$processed</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>|<a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_static_loadBy">
+        <div class="location">at line 123</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>static_loadBy</strong>(string $property, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Article::loadBy('title', 'hello world')</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td>property name</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_static_relations">
+        <div class="location">at line 131</div>
+        <code>            public            array
+    <strong>static_relations</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Article::relations()</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_static_relation">
+        <div class="location">at line 140</div>
+        <code>            public            <a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>
+    <strong>static_relation</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Article::relation('parent')</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>relation name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_static_hasRelation">
+        <div class="location">at line 149</div>
+        <code>            public            boolean
+    <strong>static_hasRelation</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Article::hasRelation('parent')</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>relation name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if the entity class has the relation, false otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_static_load">
+        <div class="location">at line 158</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>static_load</strong>(integer $id)</code>
+    </h3>
+    <div class="details">
+        <p>Article::load(2)</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$id</td>
+                <td>entity id</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_static_getTable">
+        <div class="location">at line 166</div>
+        <code>            public            string
+    <strong>static_getTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Article::getTable()</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_static_orm">
+        <div class="location">at line 174</div>
+        <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+    <strong>static_orm</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Article::orm()</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_static_destroyAll">
+        <div class="location">at line 182</div>
+        <code>            public            integer
+    <strong>static_destroyAll</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Article::destroyAll()</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>number of destroyed entities</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_static_destroyOne">
+        <div class="location">at line 191</div>
+        <code>            public            boolean
+    <strong>static_destroyOne</strong>(integer $id)</code>
+    </h3>
+    <div class="details">
+        <p>Article::destroyOne()</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$id</td>
+                <td>entity id</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if entity was destroyed, false otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_static_create">
+        <div class="location">at line 201</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>static_create</strong>(array $values = array(), array|null $groups = array())</code>
+    </h3>
+    <div class="details">
+        <p>Article::create()</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td>default attributes</td>
+            </tr>
+                    <tr>
+                <td>array|null</td>
+                <td>$groups</td>
+                <td>validation groups</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_call_save">
+        <div class="location">at line 214</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>call_save</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, array $values = array(), array|null $groups = array())</code>
+    </h3>
+    <div class="details">
+        <p>$article->save()</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr></td>
+                <td>$entity</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td>default attributes</td>
+            </tr>
+                    <tr>
+                <td>array|null</td>
+                <td>$groups</td>
+                <td>validation groups</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_call_destroy">
+        <div class="location">at line 223</div>
+        <code>            public            boolean
+    <strong>call_destroy</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity)</code>
+    </h3>
+    <div class="details">
+        <p>$article->destroy()</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr></td>
+                <td>$entity</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if entity was destroyed, false otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_call_related">
+        <div class="location">at line 233</div>
+        <code>            public            <abbr title="Asgrd\Entity\Entity">Entity</abbr>|<a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a>
+    <strong>call_related</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, string $relation)</code>
+    </h3>
+    <div class="details">
+        <p>$article->related('category')</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr></td>
+                <td>$entity</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td>relation name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Asgrd\Entity\Entity">Entity</abbr>|<a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

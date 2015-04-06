@@ -1,0 +1,2452 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Db\DAL | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Asgard/Db.html">Asgard\Db</a>\DAL</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>DAL</strong>        implements
+        <a href="http://php.net/Iterator"><abbr title="Iterator">Iterator</abbr></a></p>
+
+            <div class="description">
+            <p>Database Abstraction Layer.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../Asgard/Db/DBInterface.html"><abbr title="Asgard\Db\DBInterface">DBInterface</abbr></a> $db, string $tables = null)
+                    <p>Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_reverse">reverse</a>()
+                    <p>Reverse the query order.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_last">last</a>()
+                    <p>Return the last row.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="../../Asgard/Db/Raw.html"><abbr title="Asgard\Db\Raw">Raw</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_raw">raw</a>(string $sql)
+                    <p>Return a raw SQL object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getParameters">getParameters</a>()
+                    <p>Return the DAL parameters.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_from">from</a>(string $tables)
+                    <p>Set FROM tables.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_into">into</a>(string $table)
+                    <p>INTO table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addFrom">addFrom</a>(string $tables)
+                    <p>Add FROM tables.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_removeFrom">removeFrom</a>(string $what)
+                    <p>Remove a FROM table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_join">join</a>(string $type, string|array $table, string|array $conditions = null)
+                    <p>Create a jointure.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_leftjoin">leftjoin</a>(string|array $table, string|array $conditions = null)
+                    <p>Add a LEFT jointure.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_rightjoin">rightjoin</a>(string|array $table, string|array $conditions = null)
+                    <p>Add a RIGHT jointure.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_innerjoin">innerjoin</a>(string|array $table, string|array $conditions = null)
+                    <p>Add an INNER jointure.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_next">next</a>()
+                    <p>Return the next row.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_current">current</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_rewind">rewind</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_key">key</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_valid">valid</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_reset">reset</a>()
+                    <p>Reset all parameters.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/Query.html"><abbr title="Asgard\Db\Query">Query</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_query">query</a>(string $sql = null, array $params = array())
+                    <p>Execute a query.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_first">first</a>()
+                    <p>Return the first row only.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>()
+                    <p>Return selected rows.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_paginate">paginate</a>(integer $page, integer $per_page = 10)
+                    <p>Paginate the results.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setPaginatorFactory">setPaginatorFactory</a>(<abbr title="Asgard\Db\Asgard\Common\PaginatorFactoryInterface">PaginatorFactoryInterface</abbr> $paginatorFactory)
+                    <p>Set the paginator factory.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Common/PaginatorInterface.html"><abbr title="Asgard\Common\PaginatorInterface">PaginatorInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getPaginator">getPaginator</a>()
+                    <p>Get a paginator instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_select">select</a>(string|array $columns)
+                    <p>Set SELECT columns.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addSelect">addSelect</a>(string|array $columns)
+                    <p>Add SELECT columns.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_removeSelect">removeSelect</a>(string $what)
+                    <p>Remove a SELECT column.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_offset">offset</a>(integer $offset)
+                    <p>Set offset.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_limit">limit</a>(integer $limit)
+                    <p>Set limit.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_orderBy">orderBy</a>(string $orderBy)
+                    <p>Set order by.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_groupBy">groupBy</a>(string $groupBy)
+                    <p>Set group by.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_where">where</a>(array|string $conditions, mixed $values = null)
+                    <p>Add WHERE conditions.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_removeJointure">removeJointure</a>(string $alias)
+                    <p>Remove a jointure.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isIdentifier">isIdentifier</a>(string $str)
+                    <p>Check if string is an identifier.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_buildSQL">buildSQL</a>()
+                    <p>Build a SELECT SQL query.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_buildUpdateSQL">buildUpdateSQL</a>(array $values)
+                    <p>Build an UPDATE SQL query.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_buildDeleteSQL">buildDeleteSQL</a>(array $del_tables = array())
+                    <p>Build a DELETE SQL query.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_replaceTableInConditions">replaceTableInConditions</a>(array $conditions, string $oldTable, string $newTable)
+                    <p>Replace an alias in conditions.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_replaceTable">replaceTable</a>(string $oldTable, string $newTable)
+                    <p>Replace an alias with a new one in the conditions, jointures and group by.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_buildInsertSQL">buildInsertSQL</a>(array $values)
+                    <p>Build an INSERT SQL query.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_values">values</a>(string $column)
+                    <p>Return all values of a column.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_update">update</a>(array $values)
+                    <p>Update rows.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_insert">insert</a>(array $values)
+                    <p>Insert rows.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(array $tables = array())
+                    <p>Delete rows.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_count">count</a>(string $what = null, string $group_by = null)
+                    <p>Count number of rows.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_min">min</a>(string $what, string $group_by = null)
+                    <p>Return the minimum value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_max">max</a>(string $what, string $group_by = null)
+                    <p>Return the maximum value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_avg">avg</a>(string $what, string $group_by = null)
+                    <p>Return the average value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_sum">sum</a>(string $what, string $group_by = null)
+                    <p>Return the sum.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_dbgSelect">dbgSelect</a>()
+                    <p>Compute the sql query for debugging.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_dbgUpdate">dbgUpdate</a>(array $values)
+                    <p>Compute the update sql query for debugging.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_dbgInsert">dbgInsert</a>(array $values)
+                    <p>Conpute the insert sql query for debugging.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_dbgDelete">dbgDelete</a>()
+                    <p>Compute the delete sql query for debugging.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 97</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../Asgard/Db/DBInterface.html"><abbr title="Asgard\Db\DBInterface">DBInterface</abbr></a> $db, string $tables = null)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Db/DBInterface.html"><abbr title="Asgard\Db\DBInterface">DBInterface</abbr></a></td>
+                <td>$db</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tables</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_reverse">
+        <div class="location">at line 106</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>reverse</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Reverse the query order.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_last">
+        <div class="location">at line 134</div>
+        <code>            public            array
+    <strong>last</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the last row.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_raw">
+        <div class="location">at line 144</div>
+        <code>        static    public            <a href="../../Asgard/Db/Raw.html"><abbr title="Asgard\Db\Raw">Raw</abbr></a>
+    <strong>raw</strong>(string $sql)</code>
+    </h3>
+    <div class="details">
+        <p>Return a raw SQL object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/Raw.html"><abbr title="Asgard\Db\Raw">Raw</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParameters">
+        <div class="location">at line 153</div>
+        <code>            public            array
+    <strong>getParameters</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the DAL parameters.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_from">
+        <div class="location">at line 163</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>from</strong>(string $tables)</code>
+    </h3>
+    <div class="details">
+        <p>Set FROM tables.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tables</td>
+                <td>Separated by ,</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_into">
+        <div class="location">at line 174</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>into</strong>(string $table)</code>
+    </h3>
+    <div class="details">
+        <p>INTO table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addFrom">
+        <div class="location">at line 185</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>addFrom</strong>(string $tables)</code>
+    </h3>
+    <div class="details">
+        <p>Add FROM tables.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tables</td>
+                <td>Separated by ,</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeFrom">
+        <div class="location">at line 215</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>removeFrom</strong>(string $what)</code>
+    </h3>
+    <div class="details">
+        <p>Remove a FROM table.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$what</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_join">
+        <div class="location">at line 233</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>join</strong>(string $type, string|array $table, string|array $conditions = null)</code>
+    </h3>
+    <div class="details">
+        <p>Create a jointure.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$conditions</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_leftjoin">
+        <div class="location">at line 256</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>leftjoin</strong>(string|array $table, string|array $conditions = null)</code>
+    </h3>
+    <div class="details">
+        <p>Add a LEFT jointure.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|array</td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$conditions</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rightjoin">
+        <div class="location">at line 267</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>rightjoin</strong>(string|array $table, string|array $conditions = null)</code>
+    </h3>
+    <div class="details">
+        <p>Add a RIGHT jointure.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|array</td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$conditions</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_innerjoin">
+        <div class="location">at line 278</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>innerjoin</strong>(string|array $table, string|array $conditions = null)</code>
+    </h3>
+    <div class="details">
+        <p>Add an INNER jointure.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|array</td>
+                <td>$table</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$conditions</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_next">
+        <div class="location">at line 287</div>
+        <code>            public            array
+    <strong>next</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the next row.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_current">
+        <div class="location">at line 293</div>
+        <code>            public            
+    <strong>current</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rewind">
+        <div class="location">at line 299</div>
+        <code>            public            
+    <strong>rewind</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_key">
+        <div class="location">at line 303</div>
+        <code>            public            
+    <strong>key</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_valid">
+        <div class="location">at line 307</div>
+        <code>            public            
+    <strong>valid</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_reset">
+        <div class="location">at line 316</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>reset</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Reset all parameters.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_query">
+        <div class="location">at line 337</div>
+        <code>            public            <a href="../../Asgard/Db/Query.html"><abbr title="Asgard\Db\Query">Query</abbr></a>
+    <strong>query</strong>(string $sql = null, array $params = array())</code>
+    </h3>
+    <div class="details">
+        <p>Execute a query.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/Query.html"><abbr title="Asgard\Db\Query">Query</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_first">
+        <div class="location">at line 352</div>
+        <code>            public            array
+    <strong>first</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the first row only.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">at line 361</div>
+        <code>            public            array
+    <strong>get</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return selected rows.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_paginate">
+        <div class="location">at line 372</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>paginate</strong>(integer $page, integer $per_page = 10)</code>
+    </h3>
+    <div class="details">
+        <p>Paginate the results.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$page</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$per_page</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPaginatorFactory">
+        <div class="location">at line 387</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>setPaginatorFactory</strong>(<abbr title="Asgard\Db\Asgard\Common\PaginatorFactoryInterface">PaginatorFactoryInterface</abbr> $paginatorFactory)</code>
+    </h3>
+    <div class="details">
+        <p>Set the paginator factory.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Db\Asgard\Common\PaginatorFactoryInterface">PaginatorFactoryInterface</abbr></td>
+                <td>$paginatorFactory</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPaginator">
+        <div class="location">at line 397</div>
+        <code>            public            <a href="../../Asgard/Common/PaginatorInterface.html"><abbr title="Asgard\Common\PaginatorInterface">PaginatorInterface</abbr></a>
+    <strong>getPaginator</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a paginator instance.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Common/PaginatorInterface.html"><abbr title="Asgard\Common\PaginatorInterface">PaginatorInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_select">
+        <div class="location">at line 411</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>select</strong>(string|array $columns)</code>
+    </h3>
+    <div class="details">
+        <p>Set SELECT columns.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|array</td>
+                <td>$columns</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addSelect">
+        <div class="location">at line 422</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>addSelect</strong>(string|array $columns)</code>
+    </h3>
+    <div class="details">
+        <p>Add SELECT columns.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|array</td>
+                <td>$columns</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeSelect">
+        <div class="location">at line 467</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>removeSelect</strong>(string $what)</code>
+    </h3>
+    <div class="details">
+        <p>Remove a SELECT column.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$what</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offset">
+        <div class="location">at line 483</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>offset</strong>(integer $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Set offset.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_limit">
+        <div class="location">at line 494</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>limit</strong>(integer $limit)</code>
+    </h3>
+    <div class="details">
+        <p>Set limit.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$limit</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orderBy">
+        <div class="location">at line 505</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>orderBy</strong>(string $orderBy)</code>
+    </h3>
+    <div class="details">
+        <p>Set order by.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$orderBy</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupBy">
+        <div class="location">at line 516</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>groupBy</strong>(string $groupBy)</code>
+    </h3>
+    <div class="details">
+        <p>Set group by.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$groupBy</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_where">
+        <div class="location">at line 528</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>where</strong>(array|string $conditions, mixed $values = null)</code>
+    </h3>
+    <div class="details">
+        <p>Add WHERE conditions.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array|string</td>
+                <td>$conditions</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$values</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeJointure">
+        <div class="location">at line 609</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>removeJointure</strong>(string $alias)</code>
+    </h3>
+    <div class="details">
+        <p>Remove a jointure.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$alias</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isIdentifier">
+        <div class="location">at line 635</div>
+        <code>        static    public            boolean
+    <strong>isIdentifier</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Check if string is an identifier.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildSQL">
+        <div class="location">at line 885</div>
+        <code>            public            string
+    <strong>buildSQL</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Build a SELECT SQL query.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildUpdateSQL">
+        <div class="location">at line 914</div>
+        <code>            public            string
+    <strong>buildUpdateSQL</strong>(array $values)</code>
+    </h3>
+    <div class="details">
+        <p>Build an UPDATE SQL query.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildDeleteSQL">
+        <div class="location">at line 1002</div>
+        <code>            public            string
+    <strong>buildDeleteSQL</strong>(array $del_tables = array())</code>
+    </h3>
+    <div class="details">
+        <p>Build a DELETE SQL query.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$del_tables</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_replaceTableInConditions">
+        <div class="location">at line 1064</div>
+        <code>            public            array
+    <strong>replaceTableInConditions</strong>(array $conditions, string $oldTable, string $newTable)</code>
+    </h3>
+    <div class="details">
+        <p>Replace an alias in conditions.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$conditions</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$oldTable</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$newTable</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>new conditions</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_replaceTable">
+        <div class="location">at line 1088</div>
+        <code>            public            
+    <strong>replaceTable</strong>(string $oldTable, string $newTable)</code>
+    </h3>
+    <div class="details">
+        <p>Replace an alias with a new one in the conditions, jointures and group by.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$oldTable</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$newTable</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildInsertSQL">
+        <div class="location">at line 1101</div>
+        <code>            public            string
+    <strong>buildInsertSQL</strong>(array $values)</code>
+    </h3>
+    <div class="details">
+        <p>Build an INSERT SQL query.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_values">
+        <div class="location">at line 1139</div>
+        <code>            public            array
+    <strong>values</strong>(string $column)</code>
+    </h3>
+    <div class="details">
+        <p>Return all values of a column.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_update">
+        <div class="location">at line 1153</div>
+        <code>            public            integer
+    <strong>update</strong>(array $values)</code>
+    </h3>
+    <div class="details">
+        <p>Update rows.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insert">
+        <div class="location">at line 1165</div>
+        <code>            public            integer
+    <strong>insert</strong>(array $values)</code>
+    </h3>
+    <div class="details">
+        <p>Insert rows.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 1178</div>
+        <code>            public            integer
+    <strong>delete</strong>(array $tables = array())</code>
+    </h3>
+    <div class="details">
+        <p>Delete rows.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$tables</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_count">
+        <div class="location">at line 1224</div>
+        <code>            public            string
+    <strong>count</strong>(string $what = null, string $group_by = null)</code>
+    </h3>
+    <div class="details">
+        <p>Count number of rows.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$what</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$group_by</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_min">
+        <div class="location">at line 1238</div>
+        <code>            public            string
+    <strong>min</strong>(string $what, string $group_by = null)</code>
+    </h3>
+    <div class="details">
+        <p>Return the minimum value.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$what</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$group_by</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_max">
+        <div class="location">at line 1249</div>
+        <code>            public            string
+    <strong>max</strong>(string $what, string $group_by = null)</code>
+    </h3>
+    <div class="details">
+        <p>Return the maximum value.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$what</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$group_by</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_avg">
+        <div class="location">at line 1260</div>
+        <code>            public            string
+    <strong>avg</strong>(string $what, string $group_by = null)</code>
+    </h3>
+    <div class="details">
+        <p>Return the average value.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$what</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$group_by</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sum">
+        <div class="location">at line 1271</div>
+        <code>            public            string
+    <strong>sum</strong>(string $what, string $group_by = null)</code>
+    </h3>
+    <div class="details">
+        <p>Return the sum.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$what</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$group_by</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_dbgSelect">
+        <div class="location">at line 1295</div>
+        <code>            public            string
+    <strong>dbgSelect</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Compute the sql query for debugging.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_dbgUpdate">
+        <div class="location">at line 1307</div>
+        <code>            public            string
+    <strong>dbgUpdate</strong>(array $values)</code>
+    </h3>
+    <div class="details">
+        <p>Compute the update sql query for debugging.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_dbgInsert">
+        <div class="location">at line 1319</div>
+        <code>            public            string
+    <strong>dbgInsert</strong>(array $values)</code>
+    </h3>
+    <div class="details">
+        <p>Conpute the insert sql query for debugging.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_dbgDelete">
+        <div class="location">at line 1330</div>
+        <code>            public            string
+    <strong>dbgDelete</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Compute the delete sql query for debugging.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

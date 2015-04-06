@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Http\LambdaController | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Asgard/Http.html">Asgard\Http</a>\LambdaController</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>LambdaController</strong>        extends <a href="../../Asgard/Http/Controller.html"><abbr title="Asgard\Http\Controller">Controller</abbr></a></p>
+
+            <div class="description">
+            <p>Controller for actions without a controller.</p>
+            <p>
+</p>
+        </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_request">
+                                                            <a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a>
+                </td>
+                <td>$request</td>
+                <td class="last">Request instance.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_response">
+                                                            <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+                </td>
+                <td>$response</td>
+                <td class="last">Response instance.</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addFilter">addFilter</a>(<a href="../../Asgard/Http/Filter.html"><abbr title="Asgard\Http\Filter">Filter</abbr></a> $filter)
+                    <p>Add a filter.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Controller.html#method_addFilter"><abbr title="Asgard\Http\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addBeforeFilter">addBeforeFilter</a>(callable $filter)
+                    <p>Add a filter before the action.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Controller.html#method_addBeforeFilter"><abbr title="Asgard\Http\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addAfterFilter">addAfterFilter</a>(callable $filter)
+                    <p>Add a filter after the action.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Controller.html#method_addAfterFilter"><abbr title="Asgard\Http\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_run">run</a>(string $action, <a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request = null)
+                    <p>Run the action.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Controller.html#method_run"><abbr title="Asgard\Http\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_before">before</a>(<a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request)
+                    <p>To be executed before the action.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Controller.html#method_before"><abbr title="Asgard\Http\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_after">after</a>(<a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request, mixed $result)
+                    <p>To be executed after the action.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Controller.html#method_after"><abbr title="Asgard\Http\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAction">getAction</a>()
+                    <p>Get the ongoing action.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Controller.html#method_getAction"><abbr title="Asgard\Http\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/Utils/Flash.html"><abbr title="Asgard\Http\Utils\Flash">Flash</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getFlash">getFlash</a>()
+                    <p>Return a Flash instance.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Controller.html#method_getFlash"><abbr title="Asgard\Http\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_back">back</a>()
+                    <p>Return to the previous page.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Controller.html#method_back"><abbr title="Asgard\Http\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_notFound">notFound</a>(string $msg = null)
+                    <p>Throw a "not found" exception.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Controller.html#method_notFound"><abbr title="Asgard\Http\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_url">url</a>(mixed $action, array $params = array())
+                    <p>Return the url for a given action.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Controller.html#method_url"><abbr title="Asgard\Http\Controller">Controller</abbr></a></small></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_addFilter">
+        <div class="location">in <a href="../../Asgard/Http/Controller.html#method_addFilter"><abbr title="Asgard\Http\Controller">Controller</abbr></a> at line 42</div>
+        <code>            public            
+    <strong>addFilter</strong>(<a href="../../Asgard/Http/Filter.html"><abbr title="Asgard\Http\Filter">Filter</abbr></a> $filter)</code>
+    </h3>
+    <div class="details">
+        <p>Add a filter.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Http/Filter.html"><abbr title="Asgard\Http\Filter">Filter</abbr></a></td>
+                <td>$filter</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addBeforeFilter">
+        <div class="location">in <a href="../../Asgard/Http/Controller.html#method_addBeforeFilter"><abbr title="Asgard\Http\Controller">Controller</abbr></a> at line 51</div>
+        <code>            public            
+    <strong>addBeforeFilter</strong>(callable $filter)</code>
+    </h3>
+    <div class="details">
+        <p>Add a filter before the action.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>callable</td>
+                <td>$filter</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAfterFilter">
+        <div class="location">in <a href="../../Asgard/Http/Controller.html#method_addAfterFilter"><abbr title="Asgard\Http\Controller">Controller</abbr></a> at line 59</div>
+        <code>            public            
+    <strong>addAfterFilter</strong>(callable $filter)</code>
+    </h3>
+    <div class="details">
+        <p>Add a filter after the action.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>callable</td>
+                <td>$filter</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_run">
+        <div class="location">in <a href="../../Asgard/Http/Controller.html#method_run"><abbr title="Asgard\Http\Controller">Controller</abbr></a> at line 69</div>
+        <code>            public            <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+    <strong>run</strong>(string $action, <a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request = null)</code>
+    </h3>
+    <div class="details">
+        <p>Run the action.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_before">
+        <div class="location">in <a href="../../Asgard/Http/Controller.html#method_before"><abbr title="Asgard\Http\Controller">Controller</abbr></a> at line 121</div>
+        <code>            public            mixed
+    <strong>before</strong>(<a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request)</code>
+    </h3>
+    <div class="details">
+        <p>To be executed before the action.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_after">
+        <div class="location">in <a href="../../Asgard/Http/Controller.html#method_after"><abbr title="Asgard\Http\Controller">Controller</abbr></a> at line 129</div>
+        <code>            public            
+    <strong>after</strong>(<a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a> $request, mixed $result)</code>
+    </h3>
+    <div class="details">
+        <p>To be executed after the action.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$result</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAction">
+        <div class="location">in <a href="../../Asgard/Http/Controller.html#method_getAction"><abbr title="Asgard\Http\Controller">Controller</abbr></a> at line 136</div>
+        <code>            public            string
+    <strong>getAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the ongoing action.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFlash">
+        <div class="location">in <a href="../../Asgard/Http/Controller.html#method_getFlash"><abbr title="Asgard\Http\Controller">Controller</abbr></a> at line 144</div>
+        <code>            public            <a href="../../Asgard/Http/Utils/Flash.html"><abbr title="Asgard\Http\Utils\Flash">Flash</abbr></a>
+    <strong>getFlash</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return a Flash instance.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/Utils/Flash.html"><abbr title="Asgard\Http\Utils\Flash">Flash</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_back">
+        <div class="location">in <a href="../../Asgard/Http/Controller.html#method_back"><abbr title="Asgard\Http\Controller">Controller</abbr></a> at line 152</div>
+        <code>            public            <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+    <strong>back</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return to the previous page.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_notFound">
+        <div class="location">in <a href="../../Asgard/Http/Controller.html#method_notFound"><abbr title="Asgard\Http\Controller">Controller</abbr></a> at line 161</div>
+        <code>            public            
+    <strong>notFound</strong>(string $msg = null)</code>
+    </h3>
+    <div class="details">
+        <p>Throw a "not found" exception.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Exceptions\NotFoundException">NotFoundException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_url">
+        <div class="location">in <a href="../../Asgard/Http/Controller.html#method_url"><abbr title="Asgard\Http\Controller">Controller</abbr></a> at line 171</div>
+        <code>            public            string
+    <strong>url</strong>(mixed $action, array $params = array())</code>
+    </h3>
+    <div class="details">
+        <p>Return the url for a given action.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$action</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

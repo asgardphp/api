@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Http\Utils\HTMLInterface | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../Asgard/Http/Utils.html">Asgard\Http\Utils</a>\HTMLInterface</h1>
+    </div>
+        <div class="content">
+                <p>    interface
+    <strong>HTMLInterface</strong></p>
+
+            <div class="description">
+            <p>HTML helper.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_codeStart">codeStart</a>()
+                    <p>Start buffer to write code.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_codeEnd">codeEnd</a>()
+                    <p>End buffer to write code.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getTitle">getTitle</a>()
+                    <p>Get page title.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDescription">getDescription</a>()
+                    <p>Get page description.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getKeywords">getKeywords</a>()
+                    <p>Get page keywords</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTitle">setTitle</a>(string $title)
+                    <p>Set page title.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDescription">setDescription</a>(string $description)
+                    <p>Set page description.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setKeywords">setKeywords</a>(string $keywords)
+                    <p>Set page keywords.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_printTitle">printTitle</a>()
+                    <p>Print the title.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_printDescription">printDescription</a>()
+                    <p>Print the description.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_printKeywords">printKeywords</a>()
+                    <p>Print the keywords.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_includeJS">includeJS</a>(string $js)
+                    <p>Include a JS file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_includeCSS">includeCSS</a>(string $css)
+                    <p>Include a CSS file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_codeJS">codeJS</a>(string $js)
+                    <p>Include JS code.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_codeCSS">codeCSS</a>(string $css)
+                    <p>Include CSS code.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_code">code</a>(string $code)
+                    <p>Include code.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_printJSInclude">printJSInclude</a>()
+                    <p>Print JS files.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_printCSSInclude">printCSSInclude</a>()
+                    <p>Print CSS files.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_printJSCode">printJSCode</a>()
+                    <p>Print JS code.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_printCSSCode">printCSSCode</a>()
+                    <p>Print CSS code.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_printCode">printCode</a>()
+                    <p>Print code.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_printAll">printAll</a>()
+                    <p>Print all.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_codeStart">
+        <div class="location">at line 12</div>
+        <code>            public            
+    <strong>codeStart</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Start buffer to write code.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_codeEnd">
+        <div class="location">at line 17</div>
+        <code>            public            
+    <strong>codeEnd</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>End buffer to write code.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTitle">
+        <div class="location">at line 23</div>
+        <code>            public            string
+    <strong>getTitle</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get page title.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDescription">
+        <div class="location">at line 29</div>
+        <code>            public            string
+    <strong>getDescription</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get page description.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getKeywords">
+        <div class="location">at line 35</div>
+        <code>            public            string
+    <strong>getKeywords</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get page keywords</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTitle">
+        <div class="location">at line 41</div>
+        <code>            public            
+    <strong>setTitle</strong>(string $title)</code>
+    </h3>
+    <div class="details">
+        <p>Set page title.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$title</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDescription">
+        <div class="location">at line 47</div>
+        <code>            public            
+    <strong>setDescription</strong>(string $description)</code>
+    </h3>
+    <div class="details">
+        <p>Set page description.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$description</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setKeywords">
+        <div class="location">at line 53</div>
+        <code>            public            
+    <strong>setKeywords</strong>(string $keywords)</code>
+    </h3>
+    <div class="details">
+        <p>Set page keywords.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$keywords</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_printTitle">
+        <div class="location">at line 58</div>
+        <code>            public            
+    <strong>printTitle</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Print the title.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_printDescription">
+        <div class="location">at line 63</div>
+        <code>            public            
+    <strong>printDescription</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Print the description.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_printKeywords">
+        <div class="location">at line 68</div>
+        <code>            public            
+    <strong>printKeywords</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Print the keywords.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_includeJS">
+        <div class="location">at line 74</div>
+        <code>            public            
+    <strong>includeJS</strong>(string $js)</code>
+    </h3>
+    <div class="details">
+        <p>Include a JS file.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$js</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_includeCSS">
+        <div class="location">at line 80</div>
+        <code>            public            
+    <strong>includeCSS</strong>(string $css)</code>
+    </h3>
+    <div class="details">
+        <p>Include a CSS file.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$css</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_codeJS">
+        <div class="location">at line 86</div>
+        <code>            public            
+    <strong>codeJS</strong>(string $js)</code>
+    </h3>
+    <div class="details">
+        <p>Include JS code.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$js</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_codeCSS">
+        <div class="location">at line 92</div>
+        <code>            public            
+    <strong>codeCSS</strong>(string $css)</code>
+    </h3>
+    <div class="details">
+        <p>Include CSS code.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$css</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_code">
+        <div class="location">at line 98</div>
+        <code>            public            
+    <strong>code</strong>(string $code)</code>
+    </h3>
+    <div class="details">
+        <p>Include code.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_printJSInclude">
+        <div class="location">at line 103</div>
+        <code>            public            
+    <strong>printJSInclude</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Print JS files.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_printCSSInclude">
+        <div class="location">at line 108</div>
+        <code>            public            
+    <strong>printCSSInclude</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Print CSS files.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_printJSCode">
+        <div class="location">at line 113</div>
+        <code>            public            
+    <strong>printJSCode</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Print JS code.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_printCSSCode">
+        <div class="location">at line 118</div>
+        <code>            public            
+    <strong>printCSSCode</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Print CSS code.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_printCode">
+        <div class="location">at line 123</div>
+        <code>            public            
+    <strong>printCode</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Print code.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_printAll">
+        <div class="location">at line 128</div>
+        <code>            public            
+    <strong>printAll</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Print all.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

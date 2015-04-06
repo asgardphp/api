@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Orm\Rules\Ormhasmorethan | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Asgard/Orm/Rules.html">Asgard\Orm\Rules</a>\Ormhasmorethan</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Ormhasmorethan</strong>        extends <a href="../../../Asgard/Validation/Rule.html"><abbr title="Asgard\Validation\Rule">Rule</abbr></a></p>
+
+            <div class="description">
+            <p>Verify that there more less than x entities.</p>
+            <p>
+</p>
+        </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_more">
+                                                            integer
+                </td>
+                <td>$more</td>
+                <td class="last">Minimum number of entities</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(integer $more)
+                    <p>Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_validate">validate</a>(mixed $input, <abbr title="Asgard\Orm\Rules\Asgard\Validation\InputBag">InputBag</abbr> $parentInput, <abbr title="Asgard\Orm\Rules\Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr> $validator)
+                    <p>Perform the validation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_formatParameters">formatParameters</a>(array $params)
+                    <p>Format parameters before being passed to the error message.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Validation/Rule.html#method_formatParameters"><abbr title="Asgard\Validation\Rule">Rule</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getMessage">getMessage</a>()
+                    <p>Return the error message.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isHandlingEach">isHandlingEach</a>()
+                    <p>Check if the rule must handle each input.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Validation/Rule.html#method_isHandlingEach"><abbr title="Asgard\Validation\Rule">Rule</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_handleEach">handleEach</a>(boolean $handleEach)
+                    <p>Set handleEach, to handle each input of an array.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Validation/Rule.html#method_handleEach"><abbr title="Asgard\Validation\Rule">Rule</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setGroups">setGroups</a>(array|string|null $groups = null)
+                    <p>Set the groups.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Validation/Rule.html#method_setGroups"><abbr title="Asgard\Validation\Rule">Rule</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getGroups">getGroups</a>()
+                    <p>Return the groups.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Validation/Rule.html#method_getGroups"><abbr title="Asgard\Validation\Rule">Rule</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_belongsToGroups">belongsToGroups</a>(array $groups, <a href="../../../Asgard/Validation/Validator.html"><abbr title="Asgard\Validation\Validator">Validator</abbr></a> $validator)
+                    <p>Check if the validator belongs to some groups.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Validation/Rule.html#method_belongsToGroups"><abbr title="Asgard\Validation\Rule">Rule</abbr></a></small></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 19</div>
+        <code>            public            
+    <strong>__construct</strong>(integer $more)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>integer</td>
+                <td>$more</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_validate">
+        <div class="location">at line 26</div>
+        <code>            public            boolean
+    <strong>validate</strong>(mixed $input, <abbr title="Asgard\Orm\Rules\Asgard\Validation\InputBag">InputBag</abbr> $parentInput, <abbr title="Asgard\Orm\Rules\Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr> $validator)</code>
+    </h3>
+    <div class="details">
+        <p>Perform the validation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$input</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Rules\Asgard\Validation\InputBag">InputBag</abbr></td>
+                <td>$parentInput</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Rules\Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></td>
+                <td>$validator</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_formatParameters">
+        <div class="location">in <a href="../../../Asgard/Validation/Rule.html#method_formatParameters"><abbr title="Asgard\Validation\Rule">Rule</abbr></a> at line 40</div>
+        <code>            public            null
+    <strong>formatParameters</strong>(array $params)</code>
+    </h3>
+    <div class="details">
+        <p>Format parameters before being passed to the error message.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>rule parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMessage">
+        <div class="location">at line 33</div>
+        <code>            public            string
+    <strong>getMessage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the error message.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isHandlingEach">
+        <div class="location">in <a href="../../../Asgard/Validation/Rule.html#method_isHandlingEach"><abbr title="Asgard\Validation\Rule">Rule</abbr></a> at line 52</div>
+        <code>            public            boolean
+    <strong>isHandlingEach</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the rule must handle each input.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_handleEach">
+        <div class="location">in <a href="../../../Asgard/Validation/Rule.html#method_handleEach"><abbr title="Asgard\Validation\Rule">Rule</abbr></a> at line 59</div>
+        <code>            public            null
+    <strong>handleEach</strong>(boolean $handleEach)</code>
+    </h3>
+    <div class="details">
+        <p>Set handleEach, to handle each input of an array.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$handleEach</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setGroups">
+        <div class="location">in <a href="../../../Asgard/Validation/Rule.html#method_setGroups"><abbr title="Asgard\Validation\Rule">Rule</abbr></a> at line 65</div>
+        <code>            public            
+    <strong>setGroups</strong>(array|string|null $groups = null)</code>
+    </h3>
+    <div class="details">
+        <p>Set the groups.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array|string|null</td>
+                <td>$groups</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getGroups">
+        <div class="location">in <a href="../../../Asgard/Validation/Rule.html#method_getGroups"><abbr title="Asgard\Validation\Rule">Rule</abbr></a> at line 76</div>
+        <code>            public            array
+    <strong>getGroups</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the groups.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_belongsToGroups">
+        <div class="location">in <a href="../../../Asgard/Validation/Rule.html#method_belongsToGroups"><abbr title="Asgard\Validation\Rule">Rule</abbr></a> at line 86</div>
+        <code>            public            boolean
+    <strong>belongsToGroups</strong>(array $groups, <a href="../../../Asgard/Validation/Validator.html"><abbr title="Asgard\Validation\Validator">Validator</abbr></a> $validator)</code>
+    </h3>
+    <div class="details">
+        <p>Check if the validator belongs to some groups.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$groups</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Asgard/Validation/Validator.html"><abbr title="Asgard\Validation\Validator">Validator</abbr></a></td>
+                <td>$validator</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

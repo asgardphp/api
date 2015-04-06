@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Container\Container | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Asgard/Container.html">Asgard\Container</a>\Container</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Container</strong>        implements
+        <a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a></p>
+
+            <div class="description">
+            <p>Services container.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(array $instances = array())
+                    <p>Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setParentClass">setParentClass</a>(string $name, string $parent, boolean $force = false)
+                    <p>Set a service parent class.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getParentClass">getParentClass</a>(string $name)
+                    <p>Return the parent class.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRegistry">getRegistry</a>()
+                    <p>Get the registry.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getInstances">getInstances</a>()
+                    <p>Get the instances.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_singleton">singleton</a>()
+                    <p>Get the default instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_setInstance">setInstance</a>(<a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a> $instance)
+                    <p>Set the default instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setAutofacade">setAutofacade</a>(boolean $facade)
+                    <p>Set autofacade to true or false.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $name)
+                    <p>Get a service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_set">set</a>(string $name, mixed $value)
+                    <p>Set a service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_has">has</a>(string $name)
+                    <p>Check if has a service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_remove">remove</a>(string $name)
+                    <p>Remove a service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_register">register</a>(string $name, callable $callback, boolean $persist = true)
+                    <p>Register a service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_make">make</a>(string $name, array $params = array(), mixed $default = null)
+                    <p>Make a service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_registered">registered</a>(string $name)
+                    <p>Check if a service was registered.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Container/Factory.html"><abbr title="Asgard\Container\Factory">Factory</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createFactory">createFactory</a>(string|callable $what)
+                    <p>Create a factory.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetSet">offsetSet</a>($offset, $value)
+                    <p>{@inheritDoc}</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetExists">offsetExists</a>($offset)
+                    <p>{@inheritDoc}</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetUnset">offsetUnset</a>($offset)
+                    <p>{@inheritDoc}</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetGet">offsetGet</a>($offset)
+                    <p>{@inheritDoc}</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___wakeup">__wakeup</a>()
+                    <p>__wakeup magic method</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 46</div>
+        <code>            public            
+    <strong>__construct</strong>(array $instances = array())</code>
+    </h3>
+    <div class="details">
+        <p>Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$instances</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setParentClass">
+        <div class="location">at line 54</div>
+        <code>            public            <a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a>
+    <strong>setParentClass</strong>(string $name, string $parent, boolean $force = false)</code>
+    </h3>
+    <div class="details">
+        <p>Set a service parent class.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$parent</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$force</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParentClass">
+        <div class="location">at line 65</div>
+        <code>            public            string
+    <strong>getParentClass</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Return the parent class.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRegistry">
+        <div class="location">at line 75</div>
+        <code>            public            array
+    <strong>getRegistry</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the registry.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getInstances">
+        <div class="location">at line 82</div>
+        <code>            public            array
+    <strong>getInstances</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the instances.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_singleton">
+        <div class="location">at line 90</div>
+        <code>        static    public            <a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a>
+    <strong>singleton</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the default instance.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setInstance">
+        <div class="location">at line 100</div>
+        <code>        static    public            
+    <strong>setInstance</strong>(<a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a> $instance)</code>
+    </h3>
+    <div class="details">
+        <p>Set the default instance.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a></td>
+                <td>$instance</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAutofacade">
+        <div class="location">at line 107</div>
+        <code>            public            <a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a>
+    <strong>setAutofacade</strong>(boolean $facade)</code>
+    </h3>
+    <div class="details">
+        <p>Set autofacade to true or false.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$facade</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">at line 115</div>
+        <code>            public            mixed
+    <strong>get</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Get a service.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_set">
+        <div class="location">at line 136</div>
+        <code>            public            <a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a>
+    <strong>set</strong>(string $name, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Set a service.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_has">
+        <div class="location">at line 157</div>
+        <code>            public            boolean
+    <strong>has</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Check if has a service.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if service exists.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_remove">
+        <div class="location">at line 165</div>
+        <code>            public            
+    <strong>remove</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Remove a service.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_register">
+        <div class="location">at line 173</div>
+        <code>            public            
+    <strong>register</strong>(string $name, callable $callback, boolean $persist = true)</code>
+    </h3>
+    <div class="details">
+        <p>Register a service.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$persist</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_make">
+        <div class="location">at line 188</div>
+        <code>            public            mixed
+    <strong>make</strong>(string $name, array $params = array(), mixed $default = null)</code>
+    </h3>
+    <div class="details">
+        <p>Make a service.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_registered">
+        <div class="location">at line 209</div>
+        <code>            public            boolean
+    <strong>registered</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Check if a service was registered.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if registered</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createFactory">
+        <div class="location">at line 217</div>
+        <code>            public            <a href="../../Asgard/Container/Factory.html"><abbr title="Asgard\Container\Factory">Factory</abbr></a>
+    <strong>createFactory</strong>(string|callable $what)</code>
+    </h3>
+    <div class="details">
+        <p>Create a factory.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|callable</td>
+                <td>$what</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Container/Factory.html"><abbr title="Asgard\Container\Factory">Factory</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetSet">
+        <div class="location">at line 233</div>
+        <code>            public            
+    <strong>offsetSet</strong>($offset, $value)</code>
+    </h3>
+    <div class="details">
+        <p>{@inheritDoc}</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetExists">
+        <div class="location">at line 243</div>
+        <code>            public            
+    <strong>offsetExists</strong>($offset)</code>
+    </h3>
+    <div class="details">
+        <p>{@inheritDoc}</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetUnset">
+        <div class="location">at line 250</div>
+        <code>            public            
+    <strong>offsetUnset</strong>($offset)</code>
+    </h3>
+    <div class="details">
+        <p>{@inheritDoc}</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetGet">
+        <div class="location">at line 257</div>
+        <code>            public            
+    <strong>offsetGet</strong>($offset)</code>
+    </h3>
+    <div class="details">
+        <p>{@inheritDoc}</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___wakeup">
+        <div class="location">at line 264</div>
+        <code>            public            
+    <strong>__wakeup</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>__wakeup magic method</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>
