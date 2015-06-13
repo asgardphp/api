@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Migration\MigrationManagerInterface | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../Asgard/Migration.html">Asgard\Migration</a>\MigrationManagerInterface</h1>
+    </div>
+        <div class="content">
+                <p>    interface
+    <strong>MigrationManagerInterface</strong></p>
+
+            <div class="description">
+            <p>Manage the migrations.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Migration/Tracker.html"><abbr title="Asgard\Migration\Tracker">Tracker</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTracker">getTracker</a>()
+                    <p>Return the tracker instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_add">add</a>(string $file)
+                    <p>Add a migration file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(string $up, string $down, string $name, string $class = &#039;\\Asgard\\Migration\\Migration&#039;)
+                    <p>Create a new migration from given code.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_has">has</a>(string $migrationName)
+                    <p>Check if it contains a migration.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_remove">remove</a>(string $migrationName)
+                    <p>Remove a migration.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_migrate">migrate</a>(string $migrationName)
+                    <p>Execute a migration.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_migrateFile">migrateFile</a>(string $file)
+                    <p>Execute a migration file directly.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_migrateAll">migrateAll</a>()
+                    <p>Execute all migrations.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_reset">reset</a>()
+                    <p>Rollback and re-execute all migrations.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_unmigrate">unmigrate</a>(string $migrationName)
+                    <p>Rollback a migration.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_rollback">rollback</a>()
+                    <p>Rollback the last migration.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_rollbackUntil">rollbackUntil</a>(string $migrationName)
+                    <p>Rollback until a given migration name.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getTracker">
+        <div class="location">at line 13</div>
+        <code>            public            <a href="../../Asgard/Migration/Tracker.html"><abbr title="Asgard\Migration\Tracker">Tracker</abbr></a>
+    <strong>getTracker</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the tracker instance.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Migration/Tracker.html"><abbr title="Asgard\Migration\Tracker">Tracker</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_add">
+        <div class="location">at line 19</div>
+        <code>            public            
+    <strong>add</strong>(string $file)</code>
+    </h3>
+    <div class="details">
+        <p>Add a migration file.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>file path</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 29</div>
+        <code>            public            string
+    <strong>create</strong>(string $up, string $down, string $name, string $class = &#039;\\Asgard\\Migration\\Migration&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Create a new migration from given code.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$up</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$down</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>migration name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td>entity class</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>final migration name</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_has">
+        <div class="location">at line 36</div>
+        <code>            public            boolean
+    <strong>has</strong>(string $migrationName)</code>
+    </h3>
+    <div class="details">
+        <p>Check if it contains a migration.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$migrationName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true if migration exists, false otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_remove">
+        <div class="location">at line 42</div>
+        <code>            public            
+    <strong>remove</strong>(string $migrationName)</code>
+    </h3>
+    <div class="details">
+        <p>Remove a migration.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$migrationName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_migrate">
+        <div class="location">at line 49</div>
+        <code>            public            boolean
+    <strong>migrate</strong>(string $migrationName)</code>
+    </h3>
+    <div class="details">
+        <p>Execute a migration.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$migrationName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true for success, otherwise false</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_migrateFile">
+        <div class="location">at line 55</div>
+        <code>            public            
+    <strong>migrateFile</strong>(string $file)</code>
+    </h3>
+    <div class="details">
+        <p>Execute a migration file directly.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>file path</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_migrateAll">
+        <div class="location">at line 61</div>
+        <code>            public            boolean
+    <strong>migrateAll</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Execute all migrations.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true for success, otherwise false</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_reset">
+        <div class="location">at line 67</div>
+        <code>            public            boolean
+    <strong>reset</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Rollback and re-execute all migrations.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true for success, otherwise false</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_unmigrate">
+        <div class="location">at line 74</div>
+        <code>            public            boolean
+    <strong>unmigrate</strong>(string $migrationName)</code>
+    </h3>
+    <div class="details">
+        <p>Rollback a migration.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$migrationName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>true for success, otherwise false</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rollback">
+        <div class="location">at line 79</div>
+        <code>            public            
+    <strong>rollback</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Rollback the last migration.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rollbackUntil">
+        <div class="location">at line 85</div>
+        <code>            public            
+    <strong>rollbackUntil</strong>(string $migrationName)</code>
+    </h3>
+    <div class="details">
+        <p>Rollback until a given migration name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$migrationName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

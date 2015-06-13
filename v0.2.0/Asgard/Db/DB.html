@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Db\DB | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Asgard/Db.html">Asgard\Db</a>\DB</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>DB</strong>        implements
+        <a href="../../Asgard/Db/DBInterface.html"><abbr title="Asgard\Db\DBInterface">DBInterface</abbr></a></p>
+
+            <div class="description">
+            <p>Database.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(array $config, <abbr title="Asgard\Db\PDO">PDO</abbr> $pdo = null)
+                    <p>Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_dal">dal</a>()
+                    <p>Return a DAL instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_buildPDO">buildPDO</a>(array $config = null)
+                    <p>Build the PDO instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getPDO">getPDO</a>()
+                    <p>Get the PDO instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getConfig">getConfig</a>()
+                    <p>Return the configuration.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/Query.html"><abbr title="Asgard\Db\Query">Query</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_query">query</a>(string $sql, array $args = array())
+                    <p>Execute an SQL query.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_id">id</a>()
+                    <p>Return the last inserted id.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_beginTransaction">beginTransaction</a>()
+                    <p>Start a new SQL transaction.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_commit">commit</a>()
+                    <p>Commit the SQL transaction.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_rollback">rollback</a>()
+                    <p>Roll back the SQL transaction.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_close">close</a>()
+                    <p>{@inheritDoc}</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getSchema">getSchema</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getConn">getConn</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 28</div>
+        <code>            public            
+    <strong>__construct</strong>(array $config, <abbr title="Asgard\Db\PDO">PDO</abbr> $pdo = null)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td>database configuration</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Asgard\Db\PDO">PDO</abbr></td>
+                <td>$pdo</td>
+                <td>database connection</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_dal">
+        <div class="location">at line 41</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>dal</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return a DAL instance.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildPDO">
+        <div class="location">at line 49</div>
+        <code>            public            
+    <strong>buildPDO</strong>(array $config = null)</code>
+    </h3>
+    <div class="details">
+        <p>Build the PDO instance.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPDO">
+        <div class="location">at line 83</div>
+        <code>            public            <a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a>
+    <strong>getPDO</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the PDO instance.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="http://php.net/PDO"><abbr title="PDO">PDO</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfig">
+        <div class="location">at line 93</div>
+        <code>            public            array
+    <strong>getConfig</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the configuration.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_query">
+        <div class="location">at line 100</div>
+        <code>            public            <a href="../../Asgard/Db/Query.html"><abbr title="Asgard\Db\Query">Query</abbr></a>
+    <strong>query</strong>(string $sql, array $args = array())</code>
+    </h3>
+    <div class="details">
+        <p>Execute an SQL query.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td>SQL query</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>SQL parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/Query.html"><abbr title="Asgard\Db\Query">Query</abbr></a></td>
+            <td>Query object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_id">
+        <div class="location">at line 107</div>
+        <code>            public            integer
+    <strong>id</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the last inserted id.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>Last inserted id</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_beginTransaction">
+        <div class="location">at line 114</div>
+        <code>            public            
+    <strong>beginTransaction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Start a new SQL transaction.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_commit">
+        <div class="location">at line 121</div>
+        <code>            public            
+    <strong>commit</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Commit the SQL transaction.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rollback">
+        <div class="location">at line 128</div>
+        <code>            public            
+    <strong>rollback</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Roll back the SQL transaction.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_close">
+        <div class="location">at line 136</div>
+        <code>            public            
+    <strong>close</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>{@inheritDoc}</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSchema">
+        <div class="location">at line 140</div>
+        <code>            public            
+    <strong>getSchema</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConn">
+        <div class="location">at line 144</div>
+        <code>            public            
+    <strong>getConn</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

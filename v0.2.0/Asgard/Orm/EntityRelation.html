@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Orm\EntityRelation | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Asgard/Orm.html">Asgard\Orm</a>\EntityRelation</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>EntityRelation</strong></p>
+
+            <div class="description">
+            <p>Define relation between entities.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<abbr title="Asgard\Orm\Asgard\Entity\Definition">Definition</abbr> $definition, <a href="../../Asgard/Orm/DataMapperInterface.html"><abbr title="Asgard\Orm\DataMapperInterface">DataMapperInterface</abbr></a> $dataMapper, string $name, array $params)
+                    <p>Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isPolymorphic">isPolymorphic</a>()
+                    <p>Check if the relation is polymorphic.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>()
+                    <p>Return the name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getLink">getLink</a>()
+                    <p>Get the relation link attribute.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getLinkType">getLinkType</a>()
+                    <p>Get the relation link attribute.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getLinkA">getLinkA</a>()
+                    <p>Get the link A for a HMABT relation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getLinkB">getLinkB</a>()
+                    <p>Get the link B for a HMABT relation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPositionField">getPositionField</a>()
+                    <p>Return the position field name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getAssociationTable">getAssociationTable</a>()
+                    <p>Get the table of a HMABT table.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTargetDefinition">getTargetDefinition</a>()
+                    <p>Return the target entity definition.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setTargetDefinition">setTargetDefinition</a>(<abbr title="Asgard\Orm\Asgard\Entity\Definition">Definition</abbr> $targetDefinition)
+                    <p>Set the target definition.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_type">type</a>()
+                    <p>Get the relation type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_reverse">reverse</a>()
+                    <p>Get the reverse relation instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_prepareValidator">prepareValidator</a>(<abbr title="Asgard\Orm\Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr> $validator)
+                    <p>Get the relation validation rules.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $name)
+                    <p>Return a parameter.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_set">set</a>(string $name, mixed $value)
+                    <p>Set a parameter.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 52</div>
+        <code>            public            
+    <strong>__construct</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Definition">Definition</abbr> $definition, <a href="../../Asgard/Orm/DataMapperInterface.html"><abbr title="Asgard\Orm\DataMapperInterface">DataMapperInterface</abbr></a> $dataMapper, string $name, array $params)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Entity\Definition">Definition</abbr></td>
+                <td>$definition</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Asgard/Orm/DataMapperInterface.html"><abbr title="Asgard\Orm\DataMapperInterface">DataMapperInterface</abbr></a></td>
+                <td>$dataMapper</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isPolymorphic">
+        <div class="location">at line 67</div>
+        <code>            public            boolean
+    <strong>isPolymorphic</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the relation is polymorphic.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">at line 75</div>
+        <code>            public            string
+    <strong>getName</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the name.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLink">
+        <div class="location">at line 83</div>
+        <code>            public            string
+    <strong>getLink</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the relation link attribute.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLinkType">
+        <div class="location">at line 94</div>
+        <code>            public            string
+    <strong>getLinkType</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the relation link attribute.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLinkA">
+        <div class="location">at line 107</div>
+        <code>            public            string
+    <strong>getLinkA</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the link A for a HMABT relation.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLinkB">
+        <div class="location">at line 118</div>
+        <code>            public            string
+    <strong>getLinkB</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the link B for a HMABT relation.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPositionField">
+        <div class="location">at line 129</div>
+        <code>            public            string
+    <strong>getPositionField</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the position field name.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAssociationTable">
+        <div class="location">at line 137</div>
+        <code>            public            string
+    <strong>getAssociationTable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the table of a HMABT table.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTargetDefinition">
+        <div class="location">at line 161</div>
+        <code>            public            <a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a>
+    <strong>getTargetDefinition</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the target entity definition.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTargetDefinition">
+        <div class="location">at line 178</div>
+        <code>            public            <a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>
+    <strong>setTargetDefinition</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Definition">Definition</abbr> $targetDefinition)</code>
+    </h3>
+    <div class="details">
+        <p>Set the target definition.</p>
+        <p>Necessary when dealing with polymorphic relations.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Entity\Definition">Definition</abbr></td>
+                <td>$targetDefinition</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_type">
+        <div class="location">at line 187</div>
+        <code>            public            string
+    <strong>type</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the relation type.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>hasOne, belongsTo, hasMany or HMABT</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_reverse">
+        <div class="location">at line 213</div>
+        <code>            public            <a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>
+    <strong>reverse</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the reverse relation instance.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_prepareValidator">
+        <div class="location">at line 262</div>
+        <code>            public            array
+    <strong>prepareValidator</strong>(<abbr title="Asgard\Orm\Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr> $validator)</code>
+    </h3>
+    <div class="details">
+        <p>Get the relation validation rules.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></td>
+                <td>$validator</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">at line 282</div>
+        <code>            public            mixed
+    <strong>get</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Return a parameter.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_set">
+        <div class="location">at line 294</div>
+        <code>            public            <a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>
+    <strong>set</strong>(string $name, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Set a parameter.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

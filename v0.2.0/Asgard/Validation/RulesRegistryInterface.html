@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Validation\RulesRegistryInterface | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../Asgard/Validation.html">Asgard\Validation</a>\RulesRegistryInterface</h1>
+    </div>
+        <div class="content">
+                <p>    interface
+    <strong>RulesRegistryInterface</strong></p>
+
+            <div class="description">
+            <p>Contains the rules for validation.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Validation/RulesRegistryInterface.html"><abbr title="Asgard\Validation\RulesRegistryInterface">RulesRegistryInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_message">message</a>(string $rule, string $message)
+                    <p>Set the default message of a rule.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Validation/RulesRegistryInterface.html"><abbr title="Asgard\Validation\RulesRegistryInterface">RulesRegistryInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_messages">messages</a>(array $rules)
+                    <p>Set an array of rules messages.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getMessage">getMessage</a>(string $rule)
+                    <p>Get the default message of a rule.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Validation/RulesRegistryInterface.html"><abbr title="Asgard\Validation\RulesRegistryInterface">RulesRegistryInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_register">register</a>(string $rule, callable|string $object)
+                    <p>Register a rule.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Validation/RulesRegistryInterface.html"><abbr title="Asgard\Validation\RulesRegistryInterface">RulesRegistryInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_registerNamespace">registerNamespace</a>(string $namespace)
+                    <p>Register a namespace.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Validation/Rule.html"><abbr title="Asgard\Validation\Rule">Rule</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getRule">getRule</a>(string $rule, array $params = array())
+                    <p>Get a rule instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRuleName">getRuleName</a>(<a href="../../Asgard/Validation/Rule.html"><abbr title="Asgard\Validation\Rule">Rule</abbr></a> $rule)
+                    <p>Get the name of a rule.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_message">
+        <div class="location">at line 15</div>
+        <code>            public            <a href="../../Asgard/Validation/RulesRegistryInterface.html"><abbr title="Asgard\Validation\RulesRegistryInterface">RulesRegistryInterface</abbr></a>
+    <strong>message</strong>(string $rule, string $message)</code>
+    </h3>
+    <div class="details">
+        <p>Set the default message of a rule.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$rule</td>
+                <td>rule name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Validation/RulesRegistryInterface.html"><abbr title="Asgard\Validation\RulesRegistryInterface">RulesRegistryInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_messages">
+        <div class="location">at line 22</div>
+        <code>            public            <a href="../../Asgard/Validation/RulesRegistryInterface.html"><abbr title="Asgard\Validation\RulesRegistryInterface">RulesRegistryInterface</abbr></a>
+    <strong>messages</strong>(array $rules)</code>
+    </h3>
+    <div class="details">
+        <p>Set an array of rules messages.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$rules</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Validation/RulesRegistryInterface.html"><abbr title="Asgard\Validation\RulesRegistryInterface">RulesRegistryInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMessage">
+        <div class="location">at line 29</div>
+        <code>            public            string
+    <strong>getMessage</strong>(string $rule)</code>
+    </h3>
+    <div class="details">
+        <p>Get the default message of a rule.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$rule</td>
+                <td>rule name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_register">
+        <div class="location">at line 37</div>
+        <code>            public            <a href="../../Asgard/Validation/RulesRegistryInterface.html"><abbr title="Asgard\Validation\RulesRegistryInterface">RulesRegistryInterface</abbr></a>
+    <strong>register</strong>(string $rule, callable|string $object)</code>
+    </h3>
+    <div class="details">
+        <p>Register a rule.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$rule</td>
+                <td>rule name</td>
+            </tr>
+                    <tr>
+                <td>callable|string</td>
+                <td>$object</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Validation/RulesRegistryInterface.html"><abbr title="Asgard\Validation\RulesRegistryInterface">RulesRegistryInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_registerNamespace">
+        <div class="location">at line 44</div>
+        <code>            public            <a href="../../Asgard/Validation/RulesRegistryInterface.html"><abbr title="Asgard\Validation\RulesRegistryInterface">RulesRegistryInterface</abbr></a>
+    <strong>registerNamespace</strong>(string $namespace)</code>
+    </h3>
+    <div class="details">
+        <p>Register a namespace.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Validation/RulesRegistryInterface.html"><abbr title="Asgard\Validation\RulesRegistryInterface">RulesRegistryInterface</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRule">
+        <div class="location">at line 52</div>
+        <code>            public            <a href="../../Asgard/Validation/Rule.html"><abbr title="Asgard\Validation\Rule">Rule</abbr></a>
+    <strong>getRule</strong>(string $rule, array $params = array())</code>
+    </h3>
+    <div class="details">
+        <p>Get a rule instance.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$rule</td>
+                <td>rule name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>rule parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Validation/Rule.html"><abbr title="Asgard\Validation\Rule">Rule</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRuleName">
+        <div class="location">at line 59</div>
+        <code>            public            string
+    <strong>getRuleName</strong>(<a href="../../Asgard/Validation/Rule.html"><abbr title="Asgard\Validation\Rule">Rule</abbr></a> $rule)</code>
+    </h3>
+    <div class="details">
+        <p>Get the name of a rule.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Validation/Rule.html"><abbr title="Asgard\Validation\Rule">Rule</abbr></a></td>
+                <td>$rule</td>
+                <td>rule object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>rule name</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

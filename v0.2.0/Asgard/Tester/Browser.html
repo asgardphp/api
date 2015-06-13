@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Tester\Browser | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Asgard/Tester.html">Asgard\Tester</a>\Browser</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Browser</strong>        extends <a href="../../Asgard/Http/Browser/Browser.html"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<abbr title="Asgard\Http\Browser\Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr> $httpKernel, <abbr title="Asgard\Http\Browser\Asgard\Container\ContainerInterface">ContainerInterface</abbr> $container = null)
+                    <p>Constructor.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Browser/Browser.html#method___construct"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getSession">getSession</a>()
+                    <p>Return session.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Browser/Browser.html#method_getSession"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getCookies">getCookies</a>()
+                    <p>Return cookies.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Browser/Browser.html#method_getCookies"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getLast">getLast</a>()
+                    <p>Get last response.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Browser/Browser.html#method_getLast"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $url = &#039;&#039;, string $body = &#039;&#039;, array $headers = array())
+                    <p>Execute a GET request.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Browser/Browser.html#method_get"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_post">post</a>(string $url = &#039;&#039;, array $post = array(), array $files = array(), string $body = &#039;&#039;, array $headers = array())
+                    <p>Execute a POST request.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Browser/Browser.html#method_post"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_put">put</a>(string $url = &#039;&#039;, array $post = array(), array $files = array(), string $body = &#039;&#039;, array $headers = array())
+                    <p>Execute a PUT request.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Browser/Browser.html#method_put"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(string $url = &#039;&#039;, string $body = &#039;&#039;, array $headers = array())
+                    <p>Execute a DELETE request.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Browser/Browser.html#method_delete"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_req">req</a>(string $url = &#039;&#039;, string $method = &#039;GET&#039;, array $post = array(), array $file = array(), string $body = &#039;&#039;, array $headers = array(), array $server = array())
+                    <p>Execute a request.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Browser/Browser.html#method_req"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_request">request</a>(<abbr title="Asgard\Tester\Asgard\Http\Request">Request</abbr> $request)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_catchException">catchException</a>(boolean $catchException)
+                    <p>Set the catchException parameter.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Browser/Browser.html#method_catchException"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_submit">submit</a>(string $xpath = &#039;//form&#039;, string $to = null, array $override = array())
+                    <p>Submit a form.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Asgard/Http/Browser/Browser.html#method_submit"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a></small></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../Asgard/Http/Browser/Browser.html#method___construct"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a> at line 45</div>
+        <code>            public            
+    <strong>__construct</strong>(<abbr title="Asgard\Http\Browser\Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr> $httpKernel, <abbr title="Asgard\Http\Browser\Asgard\Container\ContainerInterface">ContainerInterface</abbr> $container = null)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Http\Browser\Asgard\Http\HttpKernelInterface">HttpKernelInterface</abbr></td>
+                <td>$httpKernel</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Asgard\Http\Browser\Asgard\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSession">
+        <div class="location">in <a href="../../Asgard/Http/Browser/Browser.html#method_getSession"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a> at line 52</div>
+        <code>            public            <a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a>
+    <strong>getSession</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return session.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCookies">
+        <div class="location">in <a href="../../Asgard/Http/Browser/Browser.html#method_getCookies"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a> at line 59</div>
+        <code>            public            <a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a>
+    <strong>getCookies</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return cookies.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Common/BagInterface.html"><abbr title="Asgard\Common\BagInterface">BagInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLast">
+        <div class="location">in <a href="../../Asgard/Http/Browser/Browser.html#method_getLast"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a> at line 66</div>
+        <code>            public            <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+    <strong>getLast</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get last response.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">in <a href="../../Asgard/Http/Browser/Browser.html#method_get"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a> at line 73</div>
+        <code>            public            <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+    <strong>get</strong>(string $url = &#039;&#039;, string $body = &#039;&#039;, array $headers = array())</code>
+    </h3>
+    <div class="details">
+        <p>Execute a GET request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$body</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_post">
+        <div class="location">in <a href="../../Asgard/Http/Browser/Browser.html#method_post"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a> at line 80</div>
+        <code>            public            <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+    <strong>post</strong>(string $url = &#039;&#039;, array $post = array(), array $files = array(), string $body = &#039;&#039;, array $headers = array())</code>
+    </h3>
+    <div class="details">
+        <p>Execute a POST request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$post</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$files</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$body</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_put">
+        <div class="location">in <a href="../../Asgard/Http/Browser/Browser.html#method_put"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a> at line 87</div>
+        <code>            public            <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+    <strong>put</strong>(string $url = &#039;&#039;, array $post = array(), array $files = array(), string $body = &#039;&#039;, array $headers = array())</code>
+    </h3>
+    <div class="details">
+        <p>Execute a PUT request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$post</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$files</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$body</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">in <a href="../../Asgard/Http/Browser/Browser.html#method_delete"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a> at line 94</div>
+        <code>            public            <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+    <strong>delete</strong>(string $url = &#039;&#039;, string $body = &#039;&#039;, array $headers = array())</code>
+    </h3>
+    <div class="details">
+        <p>Execute a DELETE request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$body</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_req">
+        <div class="location">in <a href="../../Asgard/Http/Browser/Browser.html#method_req"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a> at line 101</div>
+        <code>            public            <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+    <strong>req</strong>(string $url = &#039;&#039;, string $method = &#039;GET&#039;, array $post = array(), array $file = array(), string $body = &#039;&#039;, array $headers = array(), array $server = array())</code>
+    </h3>
+    <div class="details">
+        <p>Execute a request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$post</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$file</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$body</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$server</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_request">
+        <div class="location">at line 5</div>
+        <code>            public            
+    <strong>request</strong>(<abbr title="Asgard\Tester\Asgard\Http\Request">Request</abbr> $request)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Tester\Asgard\Http\Request">Request</abbr></td>
+                <td>$request</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_catchException">
+        <div class="location">in <a href="../../Asgard/Http/Browser/Browser.html#method_catchException"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a> at line 162</div>
+        <code>            public            
+    <strong>catchException</strong>(boolean $catchException)</code>
+    </h3>
+    <div class="details">
+        <p>Set the catchException parameter.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$catchException</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_submit">
+        <div class="location">in <a href="../../Asgard/Http/Browser/Browser.html#method_submit"><abbr title="Asgard\Http\Browser\Browser">Browser</abbr></a> at line 169</div>
+        <code>            public            <a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a>
+    <strong>submit</strong>(string $xpath = &#039;//form&#039;, string $to = null, array $override = array())</code>
+    </h3>
+    <div class="details">
+        <p>Submit a form.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$xpath</td>
+                <td>path to submit button.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td>destination url.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$override</td>
+                <td>override post attributes.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Http/Response.html"><abbr title="Asgard\Http\Response">Response</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>
