@@ -61,7 +61,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(array $attrs = null, string $locale = null)
+                    <a href="#method___construct">__construct</a>(array $attrs = null, $locale = null, <a href="../../Asgard/Entity/EntityManager.html"><abbr title="Asgard\Entity\EntityManager">EntityManager</abbr></a> $entityManager = null)
                     <p>Constructor.</p>
                 </td>
                 <td></td>
@@ -282,7 +282,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_set">set</a>(array|string $name, mixed $value = null, string $locale = null, boolean $hook = true, boolean $change = true)
+                    <a href="#method_set">set</a>(array|string $name, mixed $value = null, string $locale = null, boolean $hook = true, boolean $change = true, boolean $silentException = false)
                     <p>Soft set data.</p>
                 </td>
                 <td></td>
@@ -430,10 +430,50 @@
             </tr>
                     <tr>
                 <td class="type">
-                    
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_resetchanged">resetchanged</a>()
+                    <p>Reset changed properties.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setChanged">setChanged</a>(string $name, boolean $changed = true)
+                    <p>Set a property as changed.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getParameter">getParameter</a>(string $key)
+                    <p>Return a parameter.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setParameter">setParameter</a>(string $key, mixed $value)
+                    <p>Set a parameter.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getClass">getClass</a>()
                     <p>
 </p>
                 </td>
@@ -445,9 +485,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 44</div>
+        <div class="location">at line 49</div>
         <code>            public            
-    <strong>__construct</strong>(array $attrs = null, string $locale = null)</code>
+    <strong>__construct</strong>(array $attrs = null, $locale = null, <a href="../../Asgard/Entity/EntityManager.html"><abbr title="Asgard\Entity\EntityManager">EntityManager</abbr></a> $entityManager = null)</code>
     </h3>
     <div class="details">
         <p>Constructor.</p>
@@ -464,8 +504,14 @@
 </td>
             </tr>
                     <tr>
-                <td>string</td>
+                <td></td>
                 <td>$locale</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Asgard/Entity/EntityManager.html"><abbr title="Asgard\Entity\EntityManager">EntityManager</abbr></a></td>
+                <td>$entityManager</td>
                 <td>
 </td>
             </tr>
@@ -478,7 +524,7 @@
     </div>
 
                 <h3 id="method_getLocale">
-        <div class="location">at line 55</div>
+        <div class="location">at line 61</div>
         <code>            public            string
     <strong>getLocale</strong>()</code>
     </h3>
@@ -504,7 +550,7 @@
     </div>
 
                 <h3 id="method_setEntityManager">
-        <div class="location">at line 65</div>
+        <div class="location">at line 71</div>
         <code>            public            
     <strong>setEntityManager</strong>(<a href="../../Asgard/Entity/EntityManager.html"><abbr title="Asgard\Entity\EntityManager">EntityManager</abbr></a> $em)</code>
     </h3>
@@ -531,7 +577,7 @@
     </div>
 
                 <h3 id="method_setLocale">
-        <div class="location">at line 74</div>
+        <div class="location">at line 80</div>
         <code>            public            
     <strong>setLocale</strong>(string $locale)</code>
     </h3>
@@ -558,7 +604,7 @@
     </div>
 
                 <h3 id="method___sleep">
-        <div class="location">at line 78</div>
+        <div class="location">at line 84</div>
         <code>            public            
     <strong>__sleep</strong>()</code>
     </h3>
@@ -575,7 +621,7 @@
     </div>
 
                 <h3 id="method___set">
-        <div class="location">at line 87</div>
+        <div class="location">at line 93</div>
         <code>            public            
     <strong>__set</strong>(string $name, mixed $value)</code>
     </h3>
@@ -608,7 +654,7 @@
     </div>
 
                 <h3 id="method___get">
-        <div class="location">at line 96</div>
+        <div class="location">at line 102</div>
         <code>            public            mixed
     <strong>__get</strong>(string $name)</code>
     </h3>
@@ -645,7 +691,7 @@
     </div>
 
                 <h3 id="method___isset">
-        <div class="location">at line 105</div>
+        <div class="location">at line 111</div>
         <code>            public            boolean
     <strong>__isset</strong>(string $name)</code>
     </h3>
@@ -682,7 +728,7 @@
     </div>
 
                 <h3 id="method___unset">
-        <div class="location">at line 114</div>
+        <div class="location">at line 120</div>
         <code>            public            
     <strong>__unset</strong>(string $name)</code>
     </h3>
@@ -709,7 +755,7 @@
     </div>
 
                 <h3 id="method___callStatic">
-        <div class="location">at line 125</div>
+        <div class="location">at line 131</div>
         <code>        static    public            mixed
     <strong>__callStatic</strong>(string $name, array $arguments)</code>
     </h3>
@@ -751,7 +797,7 @@
     </div>
 
                 <h3 id="method___call">
-        <div class="location">at line 135</div>
+        <div class="location">at line 141</div>
         <code>            public            mixed
     <strong>__call</strong>(string $name, array $arguments)</code>
     </h3>
@@ -793,7 +839,7 @@
     </div>
 
                 <h3 id="method_definition">
-        <div class="location">at line 143</div>
+        <div class="location">at line 149</div>
         <code>        static    public            
     <strong>definition</strong>(<a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a> $Definition)</code>
     </h3>
@@ -819,7 +865,7 @@
     </div>
 
                 <h3 id="method_getDefinition">
-        <div class="location">at line 149</div>
+        <div class="location">at line 155</div>
         <code>            public            <a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a>
     <strong>getDefinition</strong>()</code>
     </h3>
@@ -845,7 +891,7 @@
     </div>
 
                 <h3 id="method_getStaticDefinition">
-        <div class="location">at line 159</div>
+        <div class="location">at line 165</div>
         <code>        static    public            <a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a>
     <strong>getStaticDefinition</strong>()</code>
     </h3>
@@ -871,7 +917,7 @@
     </div>
 
                 <h3 id="method_loadDefault">
-        <div class="location">at line 168</div>
+        <div class="location">at line 174</div>
         <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
     <strong>loadDefault</strong>()</code>
     </h3>
@@ -897,7 +943,7 @@
     </div>
 
                 <h3 id="method_isNew">
-        <div class="location">at line 178</div>
+        <div class="location">at line 184</div>
         <code>            public            boolean
     <strong>isNew</strong>()</code>
     </h3>
@@ -922,7 +968,7 @@
     </div>
 
                 <h3 id="method_isOld">
-        <div class="location">at line 186</div>
+        <div class="location">at line 192</div>
         <code>            public            boolean
     <strong>isOld</strong>()</code>
     </h3>
@@ -947,7 +993,7 @@
     </div>
 
                 <h3 id="method_getValidator">
-        <div class="location">at line 195</div>
+        <div class="location">at line 201</div>
         <code>            public            <a href="../../Asgard/Validation/ValidatorInterface.html"><abbr title="Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></a>
     <strong>getValidator</strong>(array $locales = array())</code>
     </h3>
@@ -984,7 +1030,7 @@
     </div>
 
                 <h3 id="method_prepareValidator">
-        <div class="location">at line 206</div>
+        <div class="location">at line 212</div>
         <code>            public            <a href="../../Asgard/Validation/ValidatorInterface.html"><abbr title="Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></a>
     <strong>prepareValidator</strong>(<abbr title="Asgard\Entity\Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr> $validator, array $locales = array())</code>
     </h3>
@@ -1027,7 +1073,7 @@
     </div>
 
                 <h3 id="method_valid">
-        <div class="location">at line 270</div>
+        <div class="location">at line 276</div>
         <code>            public            boolean
     <strong>valid</strong>(array $groups = array())</code>
     </h3>
@@ -1063,7 +1109,7 @@
     </div>
 
                 <h3 id="method_errors">
-        <div class="location">at line 283</div>
+        <div class="location">at line 289</div>
         <code>            public            <a href="../../Asgard/Validation/Report.html"><abbr title="Asgard\Validation\Report">Report</abbr></a>
     <strong>errors</strong>(array|string|null $groups = array())</code>
     </h3>
@@ -1099,7 +1145,7 @@
     </div>
 
                 <h3 id="method__set">
-        <div class="location">at line 300</div>
+        <div class="location">at line 308</div>
         <code>            public            
     <strong>_set</strong>(array|string $name, mixed $value = null, string $locale = null, boolean $change = true)</code>
     </h3>
@@ -1143,9 +1189,9 @@
     </div>
 
                 <h3 id="method_set">
-        <div class="location">at line 366</div>
+        <div class="location">at line 375</div>
         <code>            public            
-    <strong>set</strong>(array|string $name, mixed $value = null, string $locale = null, boolean $hook = true, boolean $change = true)</code>
+    <strong>set</strong>(array|string $name, mixed $value = null, string $locale = null, boolean $hook = true, boolean $change = true, boolean $silentException = false)</code>
     </h3>
     <div class="details">
         <p>Soft set data.</p>
@@ -1184,6 +1230,12 @@
                 <td>
 </td>
             </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$silentException</td>
+                <td>
+</td>
+            </tr>
             </table>
 
             
@@ -1193,7 +1245,7 @@
     </div>
 
                 <h3 id="method__get">
-        <div class="location">at line 445</div>
+        <div class="location">at line 454</div>
         <code>            public            mixed
     <strong>_get</strong>(string $name, string|array $locale = null)</code>
     </h3>
@@ -1235,7 +1287,7 @@
     </div>
 
                 <h3 id="method_get">
-        <div class="location">at line 483</div>
+        <div class="location">at line 492</div>
         <code>            public            mixed
     <strong>get</strong>(string $name, string|array $locale = null, boolean $hook = true)</code>
     </h3>
@@ -1283,7 +1335,7 @@
     </div>
 
                 <h3 id="method_toArrayRaw">
-        <div class="location">at line 506</div>
+        <div class="location">at line 515</div>
         <code>            public            array
     <strong>toArrayRaw</strong>(integer $depth)</code>
     </h3>
@@ -1320,7 +1372,7 @@
     </div>
 
                 <h3 id="method_toArray">
-        <div class="location">at line 515</div>
+        <div class="location">at line 524</div>
         <code>            public            array
     <strong>toArray</strong>(integer $depth)</code>
     </h3>
@@ -1357,7 +1409,7 @@
     </div>
 
                 <h3 id="method_toJSON">
-        <div class="location">at line 524</div>
+        <div class="location">at line 533</div>
         <code>            public            string
     <strong>toJSON</strong>(integer $depth)</code>
     </h3>
@@ -1394,7 +1446,7 @@
     </div>
 
                 <h3 id="method_translate">
-        <div class="location">at line 533</div>
+        <div class="location">at line 542</div>
         <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
     <strong>translate</strong>(string $locale)</code>
     </h3>
@@ -1431,7 +1483,7 @@
     </div>
 
                 <h3 id="method_getLocales">
-        <div class="location">at line 548</div>
+        <div class="location">at line 557</div>
         <code>            public            array
     <strong>getLocales</strong>()</code>
     </h3>
@@ -1457,7 +1509,7 @@
     </div>
 
                 <h3 id="method_toArrayRawI18N">
-        <div class="location">at line 558</div>
+        <div class="location">at line 567</div>
         <code>            public            array
     <strong>toArrayRawI18N</strong>(array $locales = array(), integer $depth)</code>
     </h3>
@@ -1500,7 +1552,7 @@
     </div>
 
                 <h3 id="method_toArrayI18N">
-        <div class="location">at line 568</div>
+        <div class="location">at line 577</div>
         <code>            public            array
     <strong>toArrayI18N</strong>(array $locales = array(), integer $depth)</code>
     </h3>
@@ -1543,7 +1595,7 @@
     </div>
 
                 <h3 id="method_toJSONI18N">
-        <div class="location">at line 578</div>
+        <div class="location">at line 587</div>
         <code>            public            string
     <strong>toJSONI18N</strong>(array $locales = array(), integer $depth)</code>
     </h3>
@@ -1586,7 +1638,7 @@
     </div>
 
                 <h3 id="method_validI18N">
-        <div class="location">at line 588</div>
+        <div class="location">at line 597</div>
         <code>            public            boolean
     <strong>validI18N</strong>(array $locales = array(), array $groups = array())</code>
     </h3>
@@ -1628,7 +1680,7 @@
     </div>
 
                 <h3 id="method_errorsI18N">
-        <div class="location">at line 602</div>
+        <div class="location">at line 611</div>
         <code>            public            <a href="../../Asgard/Validation/Report.html"><abbr title="Asgard\Validation\Report">Report</abbr></a>
     <strong>errorsI18N</strong>(array $locales = array(), array $groups = array())</code>
     </h3>
@@ -1670,7 +1722,7 @@
     </div>
 
                 <h3 id="method_getchanged">
-        <div class="location">at line 611</div>
+        <div class="location">at line 620</div>
         <code>            public            
     <strong>getchanged</strong>()</code>
     </h3>
@@ -1687,7 +1739,7 @@
     </div>
 
                 <h3 id="method_getchangedI18N">
-        <div class="location">at line 620</div>
+        <div class="location">at line 629</div>
         <code>            public            array
     <strong>getchangedI18N</strong>(string $locale = null)</code>
     </h3>
@@ -1724,9 +1776,158 @@
     </div>
 
                 <h3 id="method_resetchanged">
-        <div class="location">at line 629</div>
-        <code>            public            
+        <div class="location">at line 642</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
     <strong>resetchanged</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Reset changed properties.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setChanged">
+        <div class="location">at line 654</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>setChanged</strong>(string $name, boolean $changed = true)</code>
+    </h3>
+    <div class="details">
+        <p>Set a property as changed.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$changed</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParameter">
+        <div class="location">at line 664</div>
+        <code>            public            mixed
+    <strong>getParameter</strong>(string $key)</code>
+    </h3>
+    <div class="details">
+        <p>Return a parameter.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setParameter">
+        <div class="location">at line 676</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>setParameter</strong>(string $key, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Set a parameter.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getClass">
+        <div class="location">at line 681</div>
+        <code>            public            
+    <strong>getClass</strong>()</code>
     </h3>
     <div class="details">
         <p>

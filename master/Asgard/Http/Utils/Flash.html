@@ -24,7 +24,8 @@
     </div>
         <div class="content">
                 <p>    class
-    <strong>Flash</strong></p>
+    <strong>Flash</strong>        implements
+        <a href="../../../Asgard/Http/Utils/FlashInterface.html"><abbr title="Asgard\Http\Utils\FlashInterface">FlashInterface</abbr></a></p>
 
             <div class="description">
             <p>Store messages in the container and display them on the next page.</p>
@@ -129,12 +130,11 @@
             </tr>
                     <tr>
                 <td class="type">
-                    
+                    boolean
                 </td>
                 <td class="last">
-                    <a href="#method_has">has</a>($type = null)
-                    <p>
-</p>
+                    <a href="#method_has">has</a>(string $type = null)
+                    <p>Check if it contains a type.</p>
                 </td>
                 <td></td>
             </tr>
@@ -144,8 +144,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_setGlobalCallback">setGlobalCallback</a>(callable $globalCb)
-                    <p>
-</p>
+                    <p>Set a callback to handle display.</p>
                 </td>
                 <td></td>
             </tr>
@@ -182,7 +181,7 @@
     </div>
 
                 <h3 id="method_addSuccess">
-        <div class="location">at line 68</div>
+        <div class="location">at line 67</div>
         <code>            public            
     <strong>addSuccess</strong>(string $message)</code>
     </h3>
@@ -209,7 +208,7 @@
     </div>
 
                 <h3 id="method_addError">
-        <div class="location">at line 76</div>
+        <div class="location">at line 74</div>
         <code>            public            
     <strong>addError</strong>(string $message)</code>
     </h3>
@@ -236,7 +235,7 @@
     </div>
 
                 <h3 id="method_addInfo">
-        <div class="location">at line 84</div>
+        <div class="location">at line 81</div>
         <code>            public            
     <strong>addInfo</strong>(string $message)</code>
     </h3>
@@ -263,7 +262,7 @@
     </div>
 
                 <h3 id="method_addWarning">
-        <div class="location">at line 92</div>
+        <div class="location">at line 88</div>
         <code>            public            
     <strong>addWarning</strong>(string $message)</code>
     </h3>
@@ -290,7 +289,7 @@
     </div>
 
                 <h3 id="method_add">
-        <div class="location">at line 101</div>
+        <div class="location">at line 95</div>
         <code>            public            
     <strong>add</strong>(string $type, string $message)</code>
     </h3>
@@ -323,7 +322,7 @@
     </div>
 
                 <h3 id="method_showAll">
-        <div class="location">at line 118</div>
+        <div class="location">at line 110</div>
         <code>            public            
     <strong>showAll</strong>(string $cat = null, boolean $cb = true)</code>
     </h3>
@@ -355,7 +354,7 @@
     </div>
 
                 <h3 id="method_show">
-        <div class="location">at line 136</div>
+        <div class="location">at line 125</div>
         <code>            public            
     <strong>show</strong>(string $type, string $cat = null, callable $cb = null)</code>
     </h3>
@@ -394,7 +393,7 @@
     </div>
 
                 <h3 id="method_setCallback">
-        <div class="location">at line 180</div>
+        <div class="location">at line 167</div>
         <code>            public            <a href="../../../Asgard/Http/Utils/Flash.html"><abbr title="Asgard\Http\Utils\Flash">Flash</abbr></a>
     <strong>setCallback</strong>(callable $cb)</code>
     </h3>
@@ -430,13 +429,12 @@
     </div>
 
                 <h3 id="method_has">
-        <div class="location">at line 185</div>
-        <code>            public            
-    <strong>has</strong>($type = null)</code>
+        <div class="location">at line 175</div>
+        <code>            public            boolean
+    <strong>has</strong>(string $type = null)</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>Check if it contains a type.</p>
         <p>
 </p>
         <div class="tags">
@@ -444,7 +442,7 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$type</td>
                 <td>
 </td>
@@ -452,19 +450,28 @@
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
             
             
                     </div>
     </div>
 
                 <h3 id="method_setGlobalCallback">
-        <div class="location">at line 191</div>
+        <div class="location">at line 185</div>
         <code>            public            
     <strong>setGlobalCallback</strong>(callable $globalCb)</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>Set a callback to handle display.</p>
         <p>
 </p>
         <div class="tags">

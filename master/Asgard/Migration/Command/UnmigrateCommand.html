@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Migration\Command\UnmigrateCommand | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Asgard/Migration/Command.html">Asgard\Migration\Command</a>\UnmigrateCommand</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>UnmigrateCommand</strong>        extends <a href="../../../Asgard/Console/Command.html"><abbr title="Asgard\Console\Command">Command</abbr></a></p>
+
+            <div class="description">
+            <p>Unmigrate command.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $migrationsDir, <abbr title="Asgard\Migration\Command\Asgard\Db\DBInterface">DBInterface</abbr> $db = null, <abbr title="Asgard\Migration\Command\Asgard\Db\SchemaInterface">SchemaInterface</abbr> $schema = null)
+                    <p>Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_run">run</a>(<abbr title="Symfony\Component\Console\Input\InputInterface">InputInterface</abbr> $input, <abbr title="Symfony\Component\Console\Output\OutputInterface">OutputInterface</abbr> $output)
+                    <p>Run the command.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Console/Command.html#method_run"><abbr title="Asgard\Console\Command">Command</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_call">call</a>(string $command, array $arguments = array())
+                    <p>Call another command.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Console/Command.html#method_call"><abbr title="Asgard\Console\Command">Command</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_callSilent">callSilent</a>(string $command, array $arguments = array())
+                    <p>Call another command silently.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Console/Command.html#method_callSilent"><abbr title="Asgard\Console\Command">Command</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_confirm">confirm</a>(string $questionStr)
+                    <p>Prompt user for confirmation.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Console/Command.html#method_confirm"><abbr title="Asgard\Console\Command">Command</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_info">info</a>(string $msg)
+                    <p>Output information message.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Console/Command.html#method_info"><abbr title="Asgard\Console\Command">Command</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_error">error</a>(string $msg)
+                    <p>Output error message.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Console/Command.html#method_error"><abbr title="Asgard\Console\Command">Command</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_comment">comment</a>(string $msg)
+                    <p>Output comment message.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Console/Command.html#method_comment"><abbr title="Asgard\Console\Command">Command</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_question">question</a>(string $msg)
+                    <p>Output question message.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Console/Command.html#method_question"><abbr title="Asgard\Console\Command">Command</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getOutput">getOutput</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Asgard/Console/Command.html#method_getOutput"><abbr title="Asgard\Console\Command">Command</abbr></a></small></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 43</div>
+        <code>            public            
+    <strong>__construct</strong>(string $migrationsDir, <abbr title="Asgard\Migration\Command\Asgard\Db\DBInterface">DBInterface</abbr> $db = null, <abbr title="Asgard\Migration\Command\Asgard\Db\SchemaInterface">SchemaInterface</abbr> $schema = null)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$migrationsDir</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Asgard\Migration\Command\Asgard\Db\DBInterface">DBInterface</abbr></td>
+                <td>$db</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Asgard\Migration\Command\Asgard\Db\SchemaInterface">SchemaInterface</abbr></td>
+                <td>$schema</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_run">
+        <div class="location">in <a href="../../../Asgard/Console/Command.html#method_run"><abbr title="Asgard\Console\Command">Command</abbr></a> at line 90</div>
+        <code>            public            integer
+    <strong>run</strong>(<abbr title="Symfony\Component\Console\Input\InputInterface">InputInterface</abbr> $input, <abbr title="Symfony\Component\Console\Output\OutputInterface">OutputInterface</abbr> $output)</code>
+    </h3>
+    <div class="details">
+        <p>Run the command.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Symfony\Component\Console\Input\InputInterface">InputInterface</abbr></td>
+                <td>$input</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Symfony\Component\Console\Output\OutputInterface">OutputInterface</abbr></td>
+                <td>$output</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_call">
+        <div class="location">in <a href="../../../Asgard/Console/Command.html#method_call"><abbr title="Asgard\Console\Command">Command</abbr></a> at line 103</div>
+        <code>            public            integer
+    <strong>call</strong>(string $command, array $arguments = array())</code>
+    </h3>
+    <div class="details">
+        <p>Call another command.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$command</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_callSilent">
+        <div class="location">in <a href="../../../Asgard/Console/Command.html#method_callSilent"><abbr title="Asgard\Console\Command">Command</abbr></a> at line 116</div>
+        <code>            public            integer
+    <strong>callSilent</strong>(string $command, array $arguments = array())</code>
+    </h3>
+    <div class="details">
+        <p>Call another command silently.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$command</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_confirm">
+        <div class="location">in <a href="../../../Asgard/Console/Command.html#method_confirm"><abbr title="Asgard\Console\Command">Command</abbr></a> at line 128</div>
+        <code>            public            boolean
+    <strong>confirm</strong>(string $questionStr)</code>
+    </h3>
+    <div class="details">
+        <p>Prompt user for confirmation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$questionStr</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_info">
+        <div class="location">in <a href="../../../Asgard/Console/Command.html#method_info"><abbr title="Asgard\Console\Command">Command</abbr></a> at line 139</div>
+        <code>            public            
+    <strong>info</strong>(string $msg)</code>
+    </h3>
+    <div class="details">
+        <p>Output information message.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_error">
+        <div class="location">in <a href="../../../Asgard/Console/Command.html#method_error"><abbr title="Asgard\Console\Command">Command</abbr></a> at line 147</div>
+        <code>            public            
+    <strong>error</strong>(string $msg)</code>
+    </h3>
+    <div class="details">
+        <p>Output error message.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_comment">
+        <div class="location">in <a href="../../../Asgard/Console/Command.html#method_comment"><abbr title="Asgard\Console\Command">Command</abbr></a> at line 155</div>
+        <code>            public            
+    <strong>comment</strong>(string $msg)</code>
+    </h3>
+    <div class="details">
+        <p>Output comment message.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_question">
+        <div class="location">in <a href="../../../Asgard/Console/Command.html#method_question"><abbr title="Asgard\Console\Command">Command</abbr></a> at line 163</div>
+        <code>            public            
+    <strong>question</strong>(string $msg)</code>
+    </h3>
+    <div class="details">
+        <p>Output question message.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOutput">
+        <div class="location">in <a href="../../../Asgard/Console/Command.html#method_getOutput"><abbr title="Asgard\Console\Command">Command</abbr></a> at line 167</div>
+        <code>            public            
+    <strong>getOutput</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

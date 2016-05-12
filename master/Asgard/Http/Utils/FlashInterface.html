@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Asgard\Http\Utils\FlashInterface | Asgard 0.2 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Asgard 0.2 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../Asgard/Http/Utils.html">Asgard\Http\Utils</a>\FlashInterface</h1>
+    </div>
+        <div class="content">
+                <p>    interface
+    <strong>FlashInterface</strong></p>
+
+            <div class="description">
+            <p>Store messages in the container and display them on the next page.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addSuccess">addSuccess</a>(string $message)
+                    <p>Add a success message.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addError">addError</a>(string $message)
+                    <p>Add an error message.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addInfo">addInfo</a>(string $message)
+                    <p>Add an info message.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addWarning">addWarning</a>(string $message)
+                    <p>Add a warning message.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_add">add</a>(string $type, string $message)
+                    <p>Add a custom type message.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_showAll">showAll</a>(string $cat = null, boolean $cb = true)
+                    <p>Show all messages.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_show">show</a>(string $type, string $cat = null, callable $cb = null)
+                    <p>Show a custom type messages.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../Asgard/Http/Utils/Flash.html"><abbr title="Asgard\Http\Utils\Flash">Flash</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setCallback">setCallback</a>(callable $cb)
+                    <p>Set the display callback.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_has">has</a>(string $type = null)
+                    <p>Check if it contains a type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setGlobalCallback">setGlobalCallback</a>(callable $globalCb)
+                    <p>Set a callback to handle display.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_addSuccess">
+        <div class="location">at line 13</div>
+        <code>            public            
+    <strong>addSuccess</strong>(string $message)</code>
+    </h3>
+    <div class="details">
+        <p>Add a success message.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addError">
+        <div class="location">at line 19</div>
+        <code>            public            
+    <strong>addError</strong>(string $message)</code>
+    </h3>
+    <div class="details">
+        <p>Add an error message.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addInfo">
+        <div class="location">at line 25</div>
+        <code>            public            
+    <strong>addInfo</strong>(string $message)</code>
+    </h3>
+    <div class="details">
+        <p>Add an info message.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addWarning">
+        <div class="location">at line 31</div>
+        <code>            public            
+    <strong>addWarning</strong>(string $message)</code>
+    </h3>
+    <div class="details">
+        <p>Add a warning message.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_add">
+        <div class="location">at line 38</div>
+        <code>            public            
+    <strong>add</strong>(string $type, string $message)</code>
+    </h3>
+    <div class="details">
+        <p>Add a custom type message.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_showAll">
+        <div class="location">at line 45</div>
+        <code>            public            
+    <strong>showAll</strong>(string $cat = null, boolean $cb = true)</code>
+    </h3>
+    <div class="details">
+        <p>Show all messages.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$cat</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$cb</td>
+                <td>Use the global callback.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_show">
+        <div class="location">at line 53</div>
+        <code>            public            
+    <strong>show</strong>(string $type, string $cat = null, callable $cb = null)</code>
+    </h3>
+    <div class="details">
+        <p>Show a custom type messages.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$cat</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$cb</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setCallback">
+        <div class="location">at line 60</div>
+        <code>            public            <a href="../../../Asgard/Http/Utils/Flash.html"><abbr title="Asgard\Http\Utils\Flash">Flash</abbr></a>
+    <strong>setCallback</strong>(callable $cb)</code>
+    </h3>
+    <div class="details">
+        <p>Set the display callback.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>callable</td>
+                <td>$cb</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../Asgard/Http/Utils/Flash.html"><abbr title="Asgard\Http\Utils\Flash">Flash</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_has">
+        <div class="location">at line 67</div>
+        <code>            public            boolean
+    <strong>has</strong>(string $type = null)</code>
+    </h3>
+    <div class="details">
+        <p>Check if it contains a type.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setGlobalCallback">
+        <div class="location">at line 73</div>
+        <code>            public            
+    <strong>setGlobalCallback</strong>(callable $globalCb)</code>
+    </h3>
+    <div class="details">
+        <p>Set a callback to handle display.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>callable</td>
+                <td>$globalCb</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

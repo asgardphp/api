@@ -133,7 +133,7 @@
                     <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_join">join</a>(string $type, string|array $table, string|array $conditions = null)
+                    <a href="#method_join">join</a>(string $type, string|array $table, string|array $conditions = null, boolean $recursive = true)
                     <p>Create a jointure.</p>
                 </td>
                 <td></td>
@@ -347,7 +347,7 @@
                     <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_orderBy">orderBy</a>(string $orderBy)
+                    <a href="#method_orderBy">orderBy</a>(string $orderBy, array $parameters = array())
                     <p>Set order by.</p>
                 </td>
                 <td></td>
@@ -357,7 +357,7 @@
                     <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_groupBy">groupBy</a>(string $groupBy)
+                    <a href="#method_groupBy">groupBy</a>(string $groupBy, array $parameters = array())
                     <p>Set group by.</p>
                 </td>
                 <td></td>
@@ -458,7 +458,7 @@
                     string
                 </td>
                 <td class="last">
-                    <a href="#method_buildInsertSQL">buildInsertSQL</a>(array $values)
+                    <a href="#method_buildInsertSQL">buildInsertSQL</a>(array $rows, array $update = array())
                     <p>Build an INSERT SQL query.</p>
                 </td>
                 <td></td>
@@ -488,7 +488,7 @@
                     integer
                 </td>
                 <td class="last">
-                    <a href="#method_insert">insert</a>(array $values)
+                    <a href="#method_insert">insert</a>(array $values, array $update = array())
                     <p>Insert rows.</p>
                 </td>
                 <td></td>
@@ -578,7 +578,7 @@
                     string
                 </td>
                 <td class="last">
-                    <a href="#method_dbgInsert">dbgInsert</a>(array $values)
+                    <a href="#method_dbgInsert">dbgInsert</a>(array $values, array $update = array())
                     <p>Conpute the insert sql query for debugging.</p>
                 </td>
                 <td></td>
@@ -588,7 +588,17 @@
                     string
                 </td>
                 <td class="last">
-                    <a href="#method_dbgDelete">dbgDelete</a>()
+                    <a href="#method_dbgInsertMany">dbgInsertMany</a>(array $rows, array $update = array())
+                    <p>Conpute the insert many sql query for debugging.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_dbgDelete">dbgDelete</a>(array $tables = array())
                     <p>Compute the delete sql query for debugging.</p>
                 </td>
                 <td></td>
@@ -603,13 +613,33 @@
                 </td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_insertMany">insertMany</a>(array $rows, array $update = array())
+                    <p>Insert rows.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setIgnore">setIgnore</a>(boolean $ignore)
+                    <p>Ignore duplicate errors on insertion.</p>
+                </td>
+                <td></td>
+            </tr>
             </table>
 
 
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 107</div>
+        <div class="location">at line 112</div>
         <code>            public            
     <strong>__construct</strong>(<a href="../../Asgard/Db/DBInterface.html"><abbr title="Asgard\Db\DBInterface">DBInterface</abbr></a> $db, string $tables = null)</code>
     </h3>
@@ -642,7 +672,7 @@
     </div>
 
                 <h3 id="method_reverse">
-        <div class="location">at line 116</div>
+        <div class="location">at line 121</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>reverse</strong>()</code>
     </h3>
@@ -668,7 +698,7 @@
     </div>
 
                 <h3 id="method_last">
-        <div class="location">at line 144</div>
+        <div class="location">at line 149</div>
         <code>            public            array
     <strong>last</strong>()</code>
     </h3>
@@ -694,7 +724,7 @@
     </div>
 
                 <h3 id="method_raw">
-        <div class="location">at line 155</div>
+        <div class="location">at line 160</div>
         <code>        static    public            <a href="../../Asgard/Db/Raw.html"><abbr title="Asgard\Db\Raw">Raw</abbr></a>
     <strong>raw</strong>(string $sql)</code>
     </h3>
@@ -731,7 +761,7 @@
     </div>
 
                 <h3 id="method_getParameters">
-        <div class="location">at line 164</div>
+        <div class="location">at line 169</div>
         <code>            public            array
     <strong>getParameters</strong>()</code>
     </h3>
@@ -757,7 +787,7 @@
     </div>
 
                 <h3 id="method_from">
-        <div class="location">at line 175</div>
+        <div class="location">at line 180</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>from</strong>(string|array|<abbr title="Asgard\Db\dal">dal</abbr> $tables, string $alias = null)</code>
     </h3>
@@ -798,7 +828,7 @@
     </div>
 
                 <h3 id="method_into">
-        <div class="location">at line 189</div>
+        <div class="location">at line 194</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>into</strong>(string $table)</code>
     </h3>
@@ -834,7 +864,7 @@
     </div>
 
                 <h3 id="method_addFrom">
-        <div class="location">at line 200</div>
+        <div class="location">at line 205</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>addFrom</strong>(string|array|<abbr title="Asgard\Db\dal">dal</abbr> $tables)</code>
     </h3>
@@ -869,7 +899,7 @@
     </div>
 
                 <h3 id="method_removeFrom">
-        <div class="location">at line 244</div>
+        <div class="location">at line 249</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>removeFrom</strong>(string $what)</code>
     </h3>
@@ -905,9 +935,9 @@
     </div>
 
                 <h3 id="method_join">
-        <div class="location">at line 262</div>
+        <div class="location">at line 268</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
-    <strong>join</strong>(string $type, string|array $table, string|array $conditions = null)</code>
+    <strong>join</strong>(string $type, string|array $table, string|array $conditions = null, boolean $recursive = true)</code>
     </h3>
     <div class="details">
         <p>Create a jointure.</p>
@@ -935,6 +965,11 @@
                 <td>
 </td>
             </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$recursive</td>
+                <td>can $table contain multiple jointures</td>
+            </tr>
             </table>
 
             
@@ -953,7 +988,7 @@
     </div>
 
                 <h3 id="method_leftjoin">
-        <div class="location">at line 285</div>
+        <div class="location">at line 308</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>leftjoin</strong>(string|array $table, string|array $conditions = null)</code>
     </h3>
@@ -995,7 +1030,7 @@
     </div>
 
                 <h3 id="method_rightjoin">
-        <div class="location">at line 296</div>
+        <div class="location">at line 319</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>rightjoin</strong>(string|array $table, string|array $conditions = null)</code>
     </h3>
@@ -1037,7 +1072,7 @@
     </div>
 
                 <h3 id="method_innerjoin">
-        <div class="location">at line 307</div>
+        <div class="location">at line 330</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>innerjoin</strong>(string|array $table, string|array $conditions = null)</code>
     </h3>
@@ -1079,7 +1114,7 @@
     </div>
 
                 <h3 id="method_next">
-        <div class="location">at line 316</div>
+        <div class="location">at line 339</div>
         <code>            public            array
     <strong>next</strong>()</code>
     </h3>
@@ -1105,7 +1140,7 @@
     </div>
 
                 <h3 id="method_current">
-        <div class="location">at line 322</div>
+        <div class="location">at line 345</div>
         <code>            public            
     <strong>current</strong>()</code>
     </h3>
@@ -1122,7 +1157,7 @@
     </div>
 
                 <h3 id="method_rewind">
-        <div class="location">at line 328</div>
+        <div class="location">at line 351</div>
         <code>            public            
     <strong>rewind</strong>()</code>
     </h3>
@@ -1139,7 +1174,7 @@
     </div>
 
                 <h3 id="method_key">
-        <div class="location">at line 332</div>
+        <div class="location">at line 358</div>
         <code>            public            
     <strong>key</strong>()</code>
     </h3>
@@ -1156,7 +1191,7 @@
     </div>
 
                 <h3 id="method_valid">
-        <div class="location">at line 336</div>
+        <div class="location">at line 362</div>
         <code>            public            
     <strong>valid</strong>()</code>
     </h3>
@@ -1173,7 +1208,7 @@
     </div>
 
                 <h3 id="method_reset">
-        <div class="location">at line 345</div>
+        <div class="location">at line 371</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>reset</strong>()</code>
     </h3>
@@ -1198,7 +1233,7 @@
     </div>
 
                 <h3 id="method_query">
-        <div class="location">at line 366</div>
+        <div class="location">at line 392</div>
         <code>            public            <a href="../../Asgard/Db/Query.html"><abbr title="Asgard\Db\Query">Query</abbr></a>
     <strong>query</strong>(string $sql = null, array $params = array())</code>
     </h3>
@@ -1241,7 +1276,7 @@
     </div>
 
                 <h3 id="method_first">
-        <div class="location">at line 381</div>
+        <div class="location">at line 408</div>
         <code>            public            array
     <strong>first</strong>()</code>
     </h3>
@@ -1267,7 +1302,7 @@
     </div>
 
                 <h3 id="method_get">
-        <div class="location">at line 390</div>
+        <div class="location">at line 419</div>
         <code>            public            array
     <strong>get</strong>()</code>
     </h3>
@@ -1293,7 +1328,7 @@
     </div>
 
                 <h3 id="method_paginate">
-        <div class="location">at line 401</div>
+        <div class="location">at line 432</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>paginate</strong>(integer $page, integer $per_page = 10)</code>
     </h3>
@@ -1335,7 +1370,7 @@
     </div>
 
                 <h3 id="method_setPaginatorFactory">
-        <div class="location">at line 416</div>
+        <div class="location">at line 447</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>setPaginatorFactory</strong>(<abbr title="Asgard\Db\Asgard\Common\PaginatorFactoryInterface">PaginatorFactoryInterface</abbr> $paginatorFactory)</code>
     </h3>
@@ -1371,7 +1406,7 @@
     </div>
 
                 <h3 id="method_getPaginator">
-        <div class="location">at line 426</div>
+        <div class="location">at line 457</div>
         <code>            public            <a href="../../Asgard/Common/PaginatorInterface.html"><abbr title="Asgard\Common\PaginatorInterface">PaginatorInterface</abbr></a>
     <strong>getPaginator</strong>()</code>
     </h3>
@@ -1397,7 +1432,7 @@
     </div>
 
                 <h3 id="method_select">
-        <div class="location">at line 440</div>
+        <div class="location">at line 471</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>select</strong>(string|array $columns)</code>
     </h3>
@@ -1433,7 +1468,7 @@
     </div>
 
                 <h3 id="method_addSelect">
-        <div class="location">at line 451</div>
+        <div class="location">at line 482</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>addSelect</strong>(string|array $columns)</code>
     </h3>
@@ -1469,7 +1504,7 @@
     </div>
 
                 <h3 id="method_removeSelect">
-        <div class="location">at line 496</div>
+        <div class="location">at line 527</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>removeSelect</strong>(string $what)</code>
     </h3>
@@ -1505,7 +1540,7 @@
     </div>
 
                 <h3 id="method_offset">
-        <div class="location">at line 512</div>
+        <div class="location">at line 543</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>offset</strong>(integer $offset)</code>
     </h3>
@@ -1541,7 +1576,7 @@
     </div>
 
                 <h3 id="method_limit">
-        <div class="location">at line 523</div>
+        <div class="location">at line 554</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>limit</strong>(integer $limit)</code>
     </h3>
@@ -1577,9 +1612,9 @@
     </div>
 
                 <h3 id="method_orderBy">
-        <div class="location">at line 534</div>
+        <div class="location">at line 566</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
-    <strong>orderBy</strong>(string $orderBy)</code>
+    <strong>orderBy</strong>(string $orderBy, array $parameters = array())</code>
     </h3>
     <div class="details">
         <p>Set order by.</p>
@@ -1592,6 +1627,12 @@
                     <tr>
                 <td>string</td>
                 <td>$orderBy</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
                 <td>
 </td>
             </tr>
@@ -1613,9 +1654,9 @@
     </div>
 
                 <h3 id="method_groupBy">
-        <div class="location">at line 545</div>
+        <div class="location">at line 578</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
-    <strong>groupBy</strong>(string $groupBy)</code>
+    <strong>groupBy</strong>(string $groupBy, array $parameters = array())</code>
     </h3>
     <div class="details">
         <p>Set group by.</p>
@@ -1628,6 +1669,12 @@
                     <tr>
                 <td>string</td>
                 <td>$groupBy</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
                 <td>
 </td>
             </tr>
@@ -1649,7 +1696,7 @@
     </div>
 
                 <h3 id="method_where">
-        <div class="location">at line 557</div>
+        <div class="location">at line 590</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>where</strong>(array|string $conditions, mixed $values = null)</code>
     </h3>
@@ -1691,7 +1738,7 @@
     </div>
 
                 <h3 id="method_having">
-        <div class="location">at line 568</div>
+        <div class="location">at line 601</div>
         <code>            public            
     <strong>having</strong>($conditions, $values = null)</code>
     </h3>
@@ -1725,7 +1772,7 @@
     </div>
 
                 <h3 id="method_removeJointure">
-        <div class="location">at line 662</div>
+        <div class="location">at line 698</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>removeJointure</strong>(string $alias)</code>
     </h3>
@@ -1761,7 +1808,7 @@
     </div>
 
                 <h3 id="method_isIdentifier">
-        <div class="location">at line 688</div>
+        <div class="location">at line 724</div>
         <code>        static    public            boolean
     <strong>isIdentifier</strong>(string $str)</code>
     </h3>
@@ -1798,7 +1845,7 @@
     </div>
 
                 <h3 id="method_buildSQL">
-        <div class="location">at line 960</div>
+        <div class="location">at line 1022</div>
         <code>            public            string
     <strong>buildSQL</strong>($union = false)</code>
     </h3>
@@ -1835,7 +1882,7 @@
     </div>
 
                 <h3 id="method_buildUpdateSQL">
-        <div class="location">at line 1003</div>
+        <div class="location">at line 1074</div>
         <code>            public            string
     <strong>buildUpdateSQL</strong>(array $values)</code>
     </h3>
@@ -1872,7 +1919,7 @@
     </div>
 
                 <h3 id="method_buildDeleteSQL">
-        <div class="location">at line 1115</div>
+        <div class="location">at line 1189</div>
         <code>            public            string
     <strong>buildDeleteSQL</strong>(array $del_tables = array())</code>
     </h3>
@@ -1909,7 +1956,7 @@
     </div>
 
                 <h3 id="method_replaceTableInConditions">
-        <div class="location">at line 1182</div>
+        <div class="location">at line 1271</div>
         <code>            public            array
     <strong>replaceTableInConditions</strong>(array $conditions, string $oldTable, string $newTable)</code>
     </h3>
@@ -1957,7 +2004,7 @@
     </div>
 
                 <h3 id="method_replaceTable">
-        <div class="location">at line 1206</div>
+        <div class="location">at line 1295</div>
         <code>            public            
     <strong>replaceTable</strong>(string $oldTable, string $newTable)</code>
     </h3>
@@ -1990,9 +2037,9 @@
     </div>
 
                 <h3 id="method_buildInsertSQL">
-        <div class="location">at line 1219</div>
+        <div class="location">at line 1310</div>
         <code>            public            string
-    <strong>buildInsertSQL</strong>(array $values)</code>
+    <strong>buildInsertSQL</strong>(array $rows, array $update = array())</code>
     </h3>
     <div class="details">
         <p>Build an INSERT SQL query.</p>
@@ -2004,7 +2051,13 @@
                     <table>
                     <tr>
                 <td>array</td>
-                <td>$values</td>
+                <td>$rows</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$update</td>
                 <td>
 </td>
             </tr>
@@ -2027,7 +2080,7 @@
     </div>
 
                 <h3 id="method_values">
-        <div class="location">at line 1262</div>
+        <div class="location">at line 1382</div>
         <code>            public            array
     <strong>values</strong>(string $column)</code>
     </h3>
@@ -2064,7 +2117,7 @@
     </div>
 
                 <h3 id="method_update">
-        <div class="location">at line 1276</div>
+        <div class="location">at line 1395</div>
         <code>            public            integer
     <strong>update</strong>(array $values)</code>
     </h3>
@@ -2101,9 +2154,9 @@
     </div>
 
                 <h3 id="method_insert">
-        <div class="location">at line 1288</div>
+        <div class="location">at line 1408</div>
         <code>            public            integer
-    <strong>insert</strong>(array $values)</code>
+    <strong>insert</strong>(array $values, array $update = array())</code>
     </h3>
     <div class="details">
         <p>Insert rows.</p>
@@ -2116,6 +2169,12 @@
                     <tr>
                 <td>array</td>
                 <td>$values</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$update</td>
                 <td>
 </td>
             </tr>
@@ -2138,7 +2197,7 @@
     </div>
 
                 <h3 id="method_delete">
-        <div class="location">at line 1301</div>
+        <div class="location">at line 1421</div>
         <code>            public            integer
     <strong>delete</strong>(array $tables = array())</code>
     </h3>
@@ -2175,7 +2234,7 @@
     </div>
 
                 <h3 id="method_count">
-        <div class="location">at line 1347</div>
+        <div class="location">at line 1469</div>
         <code>            public            string
     <strong>count</strong>(string $what = null, string $group_by = null)</code>
     </h3>
@@ -2218,7 +2277,7 @@
     </div>
 
                 <h3 id="method_min">
-        <div class="location">at line 1361</div>
+        <div class="location">at line 1483</div>
         <code>            public            string
     <strong>min</strong>(string $what, string $group_by = null)</code>
     </h3>
@@ -2261,7 +2320,7 @@
     </div>
 
                 <h3 id="method_max">
-        <div class="location">at line 1372</div>
+        <div class="location">at line 1494</div>
         <code>            public            string
     <strong>max</strong>(string $what, string $group_by = null)</code>
     </h3>
@@ -2304,7 +2363,7 @@
     </div>
 
                 <h3 id="method_avg">
-        <div class="location">at line 1383</div>
+        <div class="location">at line 1505</div>
         <code>            public            string
     <strong>avg</strong>(string $what, string $group_by = null)</code>
     </h3>
@@ -2347,7 +2406,7 @@
     </div>
 
                 <h3 id="method_sum">
-        <div class="location">at line 1394</div>
+        <div class="location">at line 1516</div>
         <code>            public            string
     <strong>sum</strong>(string $what, string $group_by = null)</code>
     </h3>
@@ -2390,7 +2449,7 @@
     </div>
 
                 <h3 id="method_dbgSelect">
-        <div class="location">at line 1419</div>
+        <div class="location">at line 1541</div>
         <code>            public            string
     <strong>dbgSelect</strong>()</code>
     </h3>
@@ -2416,7 +2475,7 @@
     </div>
 
                 <h3 id="method_dbgUpdate">
-        <div class="location">at line 1431</div>
+        <div class="location">at line 1553</div>
         <code>            public            string
     <strong>dbgUpdate</strong>(array $values)</code>
     </h3>
@@ -2453,9 +2512,9 @@
     </div>
 
                 <h3 id="method_dbgInsert">
-        <div class="location">at line 1443</div>
+        <div class="location">at line 1566</div>
         <code>            public            string
-    <strong>dbgInsert</strong>(array $values)</code>
+    <strong>dbgInsert</strong>(array $values, array $update = array())</code>
     </h3>
     <div class="details">
         <p>Conpute the insert sql query for debugging.</p>
@@ -2468,6 +2527,55 @@
                     <tr>
                 <td>array</td>
                 <td>$values</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$update</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_dbgInsertMany">
+        <div class="location">at line 1579</div>
+        <code>            public            string
+    <strong>dbgInsertMany</strong>(array $rows, array $update = array())</code>
+    </h3>
+    <div class="details">
+        <p>Conpute the insert many sql query for debugging.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$rows</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$update</td>
                 <td>
 </td>
             </tr>
@@ -2490,15 +2598,26 @@
     </div>
 
                 <h3 id="method_dbgDelete">
-        <div class="location">at line 1454</div>
+        <div class="location">at line 1590</div>
         <code>            public            string
-    <strong>dbgDelete</strong>()</code>
+    <strong>dbgDelete</strong>(array $tables = array())</code>
     </h3>
     <div class="details">
         <p>Compute the delete sql query for debugging.</p>
         <p>
 </p>
         <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$tables</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
             
                             <h4>Return Value</h4>
 
@@ -2516,7 +2635,7 @@
     </div>
 
                 <h3 id="method_union">
-        <div class="location">at line 1466</div>
+        <div class="location">at line 1603</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>union</strong>(array|<a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a> $dals)</code>
     </h3>
@@ -2531,6 +2650,86 @@
                     <tr>
                 <td>array|<a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
                 <td>$dals</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insertMany">
+        <div class="location">at line 1618</div>
+        <code>            public            integer
+    <strong>insertMany</strong>(array $rows, array $update = array())</code>
+    </h3>
+    <div class="details">
+        <p>Insert rows.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$rows</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$update</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setIgnore">
+        <div class="location">at line 1631</div>
+        <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
+    <strong>setIgnore</strong>(boolean $ignore)</code>
+    </h3>
+    <div class="details">
+        <p>Ignore duplicate errors on insertion.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$ignore</td>
                 <td>
 </td>
             </tr>

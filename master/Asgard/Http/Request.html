@@ -192,7 +192,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_setURL">setURL</a>(string $server, string $root, string $url)
+                    <a href="#method_setURL">setURL</a>($server, $root, $url, $protocol = null)
                     <p>Set the url.</p>
                 </td>
                 <td></td>
@@ -487,7 +487,7 @@
     </div>
 
                 <h3 id="method_setFiles">
-        <div class="location">at line 156</div>
+        <div class="location">at line 158</div>
         <code>            public            
     <strong>setFiles</strong>(array $files)</code>
     </h3>
@@ -514,7 +514,7 @@
     </div>
 
                 <h3 id="method_getJSON">
-        <div class="location">at line 165</div>
+        <div class="location">at line 167</div>
         <code>            public            mixed
     <strong>getJSON</strong>()</code>
     </h3>
@@ -540,7 +540,7 @@
     </div>
 
                 <h3 id="method_setJSON">
-        <div class="location">at line 176</div>
+        <div class="location">at line 178</div>
         <code>            public            
     <strong>setJSON</strong>(mixed $data)</code>
     </h3>
@@ -567,9 +567,9 @@
     </div>
 
                 <h3 id="method_setURL">
-        <div class="location">at line 186</div>
+        <div class="location">at line 188</div>
         <code>            public            
-    <strong>setURL</strong>(string $server, string $root, string $url)</code>
+    <strong>setURL</strong>($server, $root, $url, $protocol = null)</code>
     </h3>
     <div class="details">
         <p>Set the url.</p>
@@ -580,20 +580,26 @@
 
                     <table>
                     <tr>
-                <td>string</td>
+                <td></td>
                 <td>$server</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td>string</td>
+                <td></td>
                 <td>$root</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td>string</td>
+                <td></td>
                 <td>$url</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$protocol</td>
                 <td>
 </td>
             </tr>
@@ -606,7 +612,7 @@
     </div>
 
                 <h3 id="method_getParam">
-        <div class="location">at line 200</div>
+        <div class="location">at line 202</div>
         <code>            public            mixed
     <strong>getParam</strong>(string $name)</code>
     </h3>
@@ -643,7 +649,7 @@
     </div>
 
                 <h3 id="method_setParam">
-        <div class="location">at line 210</div>
+        <div class="location">at line 212</div>
         <code>            public            <a href="../../Asgard/Http/Request.html"><abbr title="Asgard\Http\Request">Request</abbr></a>
     <strong>setParam</strong>(string $name, mixed $value = null)</code>
     </h3>
@@ -685,7 +691,7 @@
     </div>
 
                 <h3 id="method_offsetSet">
-        <div class="location">at line 225</div>
+        <div class="location">at line 227</div>
         <code>            public            
     <strong>offsetSet</strong>(string $offset, mixed $value)</code>
     </h3>
@@ -718,7 +724,7 @@
     </div>
 
                 <h3 id="method_offsetExists">
-        <div class="location">at line 237</div>
+        <div class="location">at line 239</div>
         <code>            public            boolean
     <strong>offsetExists</strong>(string $offset)</code>
     </h3>
@@ -755,7 +761,7 @@
     </div>
 
                 <h3 id="method_offsetUnset">
-        <div class="location">at line 245</div>
+        <div class="location">at line 247</div>
         <code>            public            
     <strong>offsetUnset</strong>(string $offset)</code>
     </h3>
@@ -782,7 +788,7 @@
     </div>
 
                 <h3 id="method_offsetGet">
-        <div class="location">at line 254</div>
+        <div class="location">at line 256</div>
         <code>            public            mixed
     <strong>offsetGet</strong>(string $offset)</code>
     </h3>
@@ -819,7 +825,7 @@
     </div>
 
                 <h3 id="method_format">
-        <div class="location">at line 262</div>
+        <div class="location">at line 264</div>
         <code>            public            string
     <strong>format</strong>()</code>
     </h3>
@@ -845,7 +851,7 @@
     </div>
 
                 <h3 id="method_method">
-        <div class="location">at line 273</div>
+        <div class="location">at line 275</div>
         <code>            public            string
     <strong>method</strong>()</code>
     </h3>
@@ -871,7 +877,7 @@
     </div>
 
                 <h3 id="method_setMethod">
-        <div class="location">at line 281</div>
+        <div class="location">at line 283</div>
         <code>            public            
     <strong>setMethod</strong>(string $value)</code>
     </h3>
@@ -898,7 +904,7 @@
     </div>
 
                 <h3 id="method_ip">
-        <div class="location">at line 290</div>
+        <div class="location">at line 292</div>
         <code>            public            string
     <strong>ip</strong>()</code>
     </h3>
@@ -924,7 +930,7 @@
     </div>
 
                 <h3 id="method_setIP">
-        <div class="location">at line 298</div>
+        <div class="location">at line 300</div>
         <code>            public            
     <strong>setIP</strong>(string $value)</code>
     </h3>
@@ -951,7 +957,7 @@
     </div>
 
                 <h3 id="method_referer">
-        <div class="location">at line 307</div>
+        <div class="location">at line 309</div>
         <code>            public            string
     <strong>referer</strong>()</code>
     </h3>
@@ -977,7 +983,7 @@
     </div>
 
                 <h3 id="method_setReferer">
-        <div class="location">at line 315</div>
+        <div class="location">at line 317</div>
         <code>            public            
     <strong>setReferer</strong>(string $value)</code>
     </h3>
@@ -1004,7 +1010,7 @@
     </div>
 
                 <h3 id="method_getBody">
-        <div class="location">at line 324</div>
+        <div class="location">at line 326</div>
         <code>            public            string
     <strong>getBody</strong>()</code>
     </h3>
@@ -1030,7 +1036,7 @@
     </div>
 
                 <h3 id="method_setBody">
-        <div class="location">at line 332</div>
+        <div class="location">at line 334</div>
         <code>            public            
     <strong>setBody</strong>(string $value)</code>
     </h3>
@@ -1057,7 +1063,7 @@
     </div>
 
                 <h3 id="method_setRoute">
-        <div class="location">at line 419</div>
+        <div class="location">at line 421</div>
         <code>            public            
     <strong>setRoute</strong>(<a href="../../Asgard/Http/Route.html"><abbr title="Asgard\Http\Route">Route</abbr></a> $route)</code>
     </h3>
@@ -1085,7 +1091,7 @@
     </div>
 
                 <h3 id="method_getRoute">
-        <div class="location">at line 424</div>
+        <div class="location">at line 426</div>
         <code>            public            
     <strong>getRoute</strong>()</code>
     </h3>

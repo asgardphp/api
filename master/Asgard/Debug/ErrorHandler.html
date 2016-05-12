@@ -33,6 +33,27 @@
         </div>
     
     
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property__debug">
+                    static                                        
+                </td>
+                <td>$_debug</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property__display">
+                    static                                        
+                </td>
+                <td>$_display</td>
+                <td class="last">
+</td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -60,11 +81,32 @@
             </tr>
                     <tr>
                 <td class="type">
+                    <a href="../../Asgard/Debug/ErrorHandler.html"><abbr title="Asgard\Debug\ErrorHandler">ErrorHandler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setDisplay">setDisplay</a>(boolean $display)
+                    <p>Set display flag.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     static&nbsp;<a href="../../Asgard/Debug/ErrorHandler.html"><abbr title="Asgard\Debug\ErrorHandler">ErrorHandler</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_register">register</a>()
                     <p>Register the PHP error handler.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_registerShutdown">registerShutdown</a>()
+                    <p>
+</p>
                 </td>
                 <td></td>
             </tr>
@@ -123,7 +165,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_exceptionHandler">exceptionHandler</a>(<abbr title="Asgard\Debug\Exception">Exception</abbr> $e, boolean $kill = true)
+                    <a href="#method_exceptionHandler">exceptionHandler</a>(<abbr title="Asgard\Debug\Exception">Exception</abbr> $e)
                     <p>Exception handler.</p>
                 </td>
                 <td></td>
@@ -194,7 +236,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 40</div>
+        <div class="location">at line 48</div>
         <code>            public            
     <strong>__construct</strong>()</code>
     </h3>
@@ -211,7 +253,7 @@
     </div>
 
                 <h3 id="method_setDebug">
-        <div class="location">at line 49</div>
+        <div class="location">at line 58</div>
         <code>            public            <a href="../../Asgard/Debug/ErrorHandler.html"><abbr title="Asgard\Debug\ErrorHandler">ErrorHandler</abbr></a>
     <strong>setDebug</strong>(boolean $debug)</code>
     </h3>
@@ -246,8 +288,44 @@
                     </div>
     </div>
 
+                <h3 id="method_setDisplay">
+        <div class="location">at line 68</div>
+        <code>            public            <a href="../../Asgard/Debug/ErrorHandler.html"><abbr title="Asgard\Debug\ErrorHandler">ErrorHandler</abbr></a>
+    <strong>setDisplay</strong>(boolean $display)</code>
+    </h3>
+    <div class="details">
+        <p>Set display flag.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$display</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Debug/ErrorHandler.html"><abbr title="Asgard\Debug\ErrorHandler">ErrorHandler</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_register">
-        <div class="location">at line 58</div>
+        <div class="location">at line 77</div>
         <code>        static    public            <a href="../../Asgard/Debug/ErrorHandler.html"><abbr title="Asgard\Debug\ErrorHandler">ErrorHandler</abbr></a>
     <strong>register</strong>()</code>
     </h3>
@@ -272,8 +350,25 @@
                     </div>
     </div>
 
+                <h3 id="method_registerShutdown">
+        <div class="location">at line 92</div>
+        <code>            public            
+    <strong>registerShutdown</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_shutdownFunction">
-        <div class="location">at line 76</div>
+        <div class="location">at line 99</div>
         <code>            public            
     <strong>shutdownFunction</strong>()</code>
     </h3>
@@ -289,7 +384,7 @@
     </div>
 
                 <h3 id="method_ignoreDir">
-        <div class="location">at line 96</div>
+        <div class="location">at line 119</div>
         <code>            public            <a href="../../Asgard/Debug/ErrorHandler.html"><abbr title="Asgard\Debug\ErrorHandler">ErrorHandler</abbr></a>
     <strong>ignoreDir</strong>(string $dir)</code>
     </h3>
@@ -325,7 +420,7 @@
     </div>
 
                 <h3 id="method_getBacktraceFromException">
-        <div class="location">at line 106</div>
+        <div class="location">at line 129</div>
         <code>            public            array
     <strong>getBacktraceFromException</strong>(<abbr title="Asgard\Debug\Exception">Exception</abbr> $e)</code>
     </h3>
@@ -362,7 +457,7 @@
     </div>
 
                 <h3 id="method_setLogPHPErrors">
-        <div class="location">at line 147</div>
+        <div class="location">at line 170</div>
         <code>            public            
     <strong>setLogPHPErrors</strong>(boolean $log)</code>
     </h3>
@@ -389,7 +484,7 @@
     </div>
 
                 <h3 id="method_phpErrorHandler">
-        <div class="location">at line 160</div>
+        <div class="location">at line 183</div>
         <code>            public            
     <strong>phpErrorHandler</strong>(integer $errno, string $errstr, string $errfile, integer $errline)</code>
     </h3>
@@ -443,9 +538,9 @@
     </div>
 
                 <h3 id="method_exceptionHandler">
-        <div class="location">at line 176</div>
+        <div class="location">at line 198</div>
         <code>            public            
-    <strong>exceptionHandler</strong>(<abbr title="Asgard\Debug\Exception">Exception</abbr> $e, boolean $kill = true)</code>
+    <strong>exceptionHandler</strong>(<abbr title="Asgard\Debug\Exception">Exception</abbr> $e)</code>
     </h3>
     <div class="details">
         <p>Exception handler.</p>
@@ -461,11 +556,6 @@
                 <td>
 </td>
             </tr>
-                    <tr>
-                <td>boolean</td>
-                <td>$kill</td>
-                <td>kill the process</td>
-            </tr>
             </table>
 
             
@@ -475,7 +565,7 @@
     </div>
 
                 <h3 id="method_logException">
-        <div class="location">at line 211</div>
+        <div class="location">at line 232</div>
         <code>            public            
     <strong>logException</strong>(<abbr title="Asgard\Debug\Exception">Exception</abbr> $e)</code>
     </h3>
@@ -502,7 +592,7 @@
     </div>
 
                 <h3 id="method_log">
-        <div class="location">at line 245</div>
+        <div class="location">at line 266</div>
         <code>            public            
     <strong>log</strong>(integer $severity, string $message, string $file, integer $line, <a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a> $exception = null, array $trace = null)</code>
     </h3>
@@ -559,7 +649,7 @@
     </div>
 
                 <h3 id="method_isLogging">
-        <div class="location">at line 262</div>
+        <div class="location">at line 283</div>
         <code>            public            boolean
     <strong>isLogging</strong>()</code>
     </h3>
@@ -584,7 +674,7 @@
     </div>
 
                 <h3 id="method_setLogger">
-        <div class="location">at line 270</div>
+        <div class="location">at line 291</div>
         <code>            public            
     <strong>setLogger</strong>(<abbr title="Asgard\Debug\Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger)</code>
     </h3>
@@ -611,7 +701,7 @@
     </div>
 
                 <h3 id="method_getPHPErrorSeverity">
-        <div class="location">at line 280</div>
+        <div class="location">at line 301</div>
         <code>        static    public            integer
     <strong>getPHPErrorSeverity</strong>(integer $code)</code>
     </h3>
@@ -648,7 +738,7 @@
     </div>
 
                 <h3 id="method_getPHPError">
-        <div class="location">at line 304</div>
+        <div class="location">at line 325</div>
         <code>        static    public            string
     <strong>getPHPError</strong>(integer $code)</code>
     </h3>

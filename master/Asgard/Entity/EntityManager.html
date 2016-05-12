@@ -43,7 +43,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<abbr title="Asgard\Entity\Asgard\Container\ContainerInterface">ContainerInterface</abbr> $container = null)
+                    <a href="#method___construct">__construct</a>(<abbr title="Asgard\Entity\Asgard\Container\ContainerInterface">ContainerInterface</abbr> $container = null, <abbr title="Asgard\Entity\Asgard\Cache\CacheInterface">CacheInterface</abbr> $cache = null)
                     <p>Constructor.</p>
                 </td>
                 <td></td>
@@ -216,7 +216,7 @@
                         <h3 id="method___construct">
         <div class="location">at line 51</div>
         <code>            public            
-    <strong>__construct</strong>(<abbr title="Asgard\Entity\Asgard\Container\ContainerInterface">ContainerInterface</abbr> $container = null)</code>
+    <strong>__construct</strong>(<abbr title="Asgard\Entity\Asgard\Container\ContainerInterface">ContainerInterface</abbr> $container = null, <abbr title="Asgard\Entity\Asgard\Cache\CacheInterface">CacheInterface</abbr> $cache = null)</code>
     </h3>
     <div class="details">
         <p>Constructor.</p>
@@ -232,6 +232,12 @@
                 <td>
 </td>
             </tr>
+                    <tr>
+                <td><abbr title="Asgard\Entity\Asgard\Cache\CacheInterface">CacheInterface</abbr></td>
+                <td>$cache</td>
+                <td>
+</td>
+            </tr>
             </table>
 
             
@@ -241,7 +247,7 @@
     </div>
 
                 <h3 id="method_setSerializer">
-        <div class="location">at line 60</div>
+        <div class="location">at line 61</div>
         <code>            public            <a href="../../Asgard/Entity/EntityManager.html"><abbr title="Asgard\Entity\EntityManager">EntityManager</abbr></a>
     <strong>setSerializer</strong>(<a href="../../Asgard/Entity/Serializer.html"><abbr title="Asgard\Entity\Serializer">Serializer</abbr></a> $serializer)</code>
     </h3>
@@ -277,7 +283,7 @@
     </div>
 
                 <h3 id="method_getSerializer">
-        <div class="location">at line 69</div>
+        <div class="location">at line 70</div>
         <code>            public            <a href="../../Asgard/Entity/Serializer.html"><abbr title="Asgard\Entity\Serializer">Serializer</abbr></a>
     <strong>getSerializer</strong>()</code>
     </h3>
@@ -303,7 +309,7 @@
     </div>
 
                 <h3 id="method_getHookManager">
-        <div class="location">at line 78</div>
+        <div class="location">at line 79</div>
         <code>            public            <a href="../../Asgard/Hook/HookManagerInterface.html"><abbr title="Asgard\Hook\HookManagerInterface">HookManagerInterface</abbr></a>
     <strong>getHookManager</strong>()</code>
     </h3>
@@ -329,7 +335,7 @@
     </div>
 
                 <h3 id="method_setHookManager">
-        <div class="location">at line 87</div>
+        <div class="location">at line 88</div>
         <code>            public            
     <strong>setHookManager</strong>(<abbr title="Asgard\Entity\Asgard\Hook\HookManagerInterface">HookManagerInterface</abbr> $HookManager)</code>
     </h3>
@@ -356,7 +362,7 @@
     </div>
 
                 <h3 id="method_setValidatorFactory">
-        <div class="location">at line 95</div>
+        <div class="location">at line 96</div>
         <code>            public            
     <strong>setValidatorFactory</strong>(<abbr title="Asgard\Entity\Asgard\Validation\ValidatorFactoryInterface">ValidatorFactoryInterface</abbr> $validatorFactory)</code>
     </h3>
@@ -383,7 +389,7 @@
     </div>
 
                 <h3 id="method_createValidator">
-        <div class="location">at line 103</div>
+        <div class="location">at line 104</div>
         <code>            public            <a href="../../Asgard/Validation/ValidatorInterface.html"><abbr title="Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></a>
     <strong>createValidator</strong>()</code>
     </h3>
@@ -409,7 +415,7 @@
     </div>
 
                 <h3 id="method_setCache">
-        <div class="location">at line 113</div>
+        <div class="location">at line 114</div>
         <code>            public            
     <strong>setCache</strong>(<abbr title="Asgard\Entity\Asgard\Cache\CacheInterface">CacheInterface</abbr> $cache)</code>
     </h3>
@@ -436,7 +442,7 @@
     </div>
 
                 <h3 id="method_getCache">
-        <div class="location">at line 121</div>
+        <div class="location">at line 122</div>
         <code>            public            <a href="../../Asgard/Cache/CacheInterface.html"><abbr title="Asgard\Cache\CacheInterface">CacheInterface</abbr></a>
     <strong>getCache</strong>()</code>
     </h3>
@@ -462,7 +468,7 @@
     </div>
 
                 <h3 id="method_singleton">
-        <div class="location">at line 129</div>
+        <div class="location">at line 130</div>
         <code>        static    public            <a href="../../Asgard/Entity/EntityManagerInterface.html"><abbr title="Asgard\Entity\EntityManagerInterface">EntityManagerInterface</abbr></a>
     <strong>singleton</strong>()</code>
     </h3>
@@ -488,7 +494,7 @@
     </div>
 
                 <h3 id="method_setInstance">
-        <div class="location">at line 139</div>
+        <div class="location">at line 140</div>
         <code>        static    public            
     <strong>setInstance</strong>(<a href="../../Asgard/Entity/EntityManagerInterface.html"><abbr title="Asgard\Entity\EntityManagerInterface">EntityManagerInterface</abbr></a> $instance)</code>
     </h3>
@@ -515,7 +521,7 @@
     </div>
 
                 <h3 id="method_setDefaultLocale">
-        <div class="location">at line 147</div>
+        <div class="location">at line 148</div>
         <code>            public            
     <strong>setDefaultLocale</strong>(string $defaultLocale)</code>
     </h3>
@@ -542,7 +548,7 @@
     </div>
 
                 <h3 id="method_getDefaultLocale">
-        <div class="location">at line 155</div>
+        <div class="location">at line 156</div>
         <code>            public            string
     <strong>getDefaultLocale</strong>()</code>
     </h3>
@@ -568,7 +574,7 @@
     </div>
 
                 <h3 id="method_get">
-        <div class="location">at line 162</div>
+        <div class="location">at line 163</div>
         <code>            public            <a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a>
     <strong>get</strong>(string $entityClass)</code>
     </h3>
@@ -605,7 +611,7 @@
     </div>
 
                 <h3 id="method_has">
-        <div class="location">at line 172</div>
+        <div class="location">at line 173</div>
         <code>            public            boolean
     <strong>has</strong>(string $entityClass)</code>
     </h3>
@@ -642,7 +648,7 @@
     </div>
 
                 <h3 id="method_getDefinitions">
-        <div class="location">at line 202</div>
+        <div class="location">at line 203</div>
         <code>            public            array
     <strong>getDefinitions</strong>()</code>
     </h3>
@@ -668,7 +674,7 @@
     </div>
 
                 <h3 id="method_make">
-        <div class="location">at line 209</div>
+        <div class="location">at line 210</div>
         <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
     <strong>make</strong>(string $entityClass, array $attrs = null, string $locale = null)</code>
     </h3>

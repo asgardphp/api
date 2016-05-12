@@ -60,6 +60,16 @@
             </tr>
                     <tr>
                 <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_load">load</a>(mixed $id)
+                    <p>Load an entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
                 </td>
                 <td class="last">
@@ -160,10 +170,10 @@
             </tr>
                     <tr>
                 <td class="type">
-                    array
+                    <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_selectQuery">selectQuery</a>(string $sql, array $args = array())
+                    <a href="#method_query">query</a>(string $sql, array $args = array())
                     <p>Performs an SQL query and returns the entities.</p>
                 </td>
                 <td></td>
@@ -318,6 +328,176 @@
                 </td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getHaving">getHaving</a>()
+                    <p>Return the having property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getWith">getWith</a>()
+                    <p>Return the with property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getOrderBy">getOrderBy</a>()
+                    <p>Return the orderBy property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_getLimit">getLimit</a>()
+                    <p>Return the limit property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_getOffset">getOffset</a>()
+                    <p>Return the offset property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getJoin">getJoin</a>()
+                    <p>Return the join property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_getPage">getPage</a>()
+                    <p>Return the page property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    integer
+                </td>
+                <td class="last">
+                    <a href="#method_getPerPage">getPerPage</a>()
+                    <p>Return the per_page property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getLocale">getLocale</a>()
+                    <p>Return the locale property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getPrefix">getPrefix</a>()
+                    <p>Return the prefix property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getScopes">getScopes</a>()
+                    <p>Return the scopes property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_getReversed">getReversed</a>()
+                    <p>Return the reversed property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getSelects">getSelects</a>()
+                    <p>Return the selects property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getUnions">getUnions</a>()
+                    <p>Return the unions property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_groupBy">groupBy</a>(string $groupBy)
+                    <p>Set the groupBy property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resetDAL">resetDAL</a>()
+                    <p>Reset the temporary DAL.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_initializeEntityProxy">initializeEntityProxy</a>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entityProxy)
+                    <p>Initialize (fill) an entity proxy.</p>
+                </td>
+                <td></td>
+            </tr>
             </table>
 
 
@@ -411,8 +591,45 @@ $categories = $orm->categories;</p>
                     </div>
     </div>
 
+                <h3 id="method_load">
+        <div class="location">at line 45</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>load</strong>(mixed $id)</code>
+    </h3>
+    <div class="details">
+        <p>Load an entity.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_joinToEntity">
-        <div class="location">at line 48</div>
+        <div class="location">at line 55</div>
         <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
     <strong>joinToEntity</strong>(<a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>|string $relation, <abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity)</code>
     </h3>
@@ -452,7 +669,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_join">
-        <div class="location">at line 58</div>
+        <div class="location">at line 65</div>
         <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
     <strong>join</strong>(string|<a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>|array $relation, array $subrelations = null)</code>
     </h3>
@@ -491,7 +708,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_getTable">
-        <div class="location">at line 65</div>
+        <div class="location">at line 72</div>
         <code>            public            string
     <strong>getTable</strong>()</code>
     </h3>
@@ -517,7 +734,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_getTranslationTable">
-        <div class="location">at line 72</div>
+        <div class="location">at line 79</div>
         <code>            public            string
     <strong>getTranslationTable</strong>()</code>
     </h3>
@@ -543,7 +760,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_next">
-        <div class="location">at line 79</div>
+        <div class="location">at line 86</div>
         <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
     <strong>next</strong>()</code>
     </h3>
@@ -569,7 +786,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_ids">
-        <div class="location">at line 86</div>
+        <div class="location">at line 93</div>
         <code>            public            array
     <strong>ids</strong>()</code>
     </h3>
@@ -595,7 +812,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_values">
-        <div class="location">at line 95</div>
+        <div class="location">at line 102</div>
         <code>            public            array
     <strong>values</strong>(string $property)</code>
     </h3>
@@ -632,7 +849,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_first">
-        <div class="location">at line 102</div>
+        <div class="location">at line 109</div>
         <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
     <strong>first</strong>()</code>
     </h3>
@@ -658,7 +875,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_getDAL">
-        <div class="location">at line 109</div>
+        <div class="location">at line 116</div>
         <code>            public            <a href="../../Asgard/Db/DAL.html"><abbr title="Asgard\Db\DAL">DAL</abbr></a>
     <strong>getDAL</strong>()</code>
     </h3>
@@ -684,7 +901,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_get">
-        <div class="location">at line 118</div>
+        <div class="location">at line 125</div>
         <code>            public            array
     <strong>get</strong>()</code>
     </h3>
@@ -717,10 +934,10 @@ $categories = $orm->categories;</p>
                     </div>
     </div>
 
-                <h3 id="method_selectQuery">
-        <div class="location">at line 128</div>
-        <code>            public            array
-    <strong>selectQuery</strong>(string $sql, array $args = array())</code>
+                <h3 id="method_query">
+        <div class="location">at line 135</div>
+        <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
+    <strong>query</strong>(string $sql, array $args = array())</code>
     </h3>
     <div class="details">
         <p>Performs an SQL query and returns the entities.</p>
@@ -747,8 +964,8 @@ $categories = $orm->categories;</p>
 
                     <table>
         <tr>
-            <td>array</td>
-            <td>Array of \Asgard\Entity\Entity</td>
+            <td><a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a></td>
+            <td>$this</td>
         </tr>
     </table>
 
@@ -758,7 +975,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_paginate">
-        <div class="location">at line 138</div>
+        <div class="location">at line 145</div>
         <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
     <strong>paginate</strong>(integer $page = 1, integer $per_page = 10)</code>
     </h3>
@@ -798,7 +1015,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_getPaginator">
-        <div class="location">at line 145</div>
+        <div class="location">at line 152</div>
         <code>            public            <a href="../../Asgard/Common/PaginatorInterface.html"><abbr title="Asgard\Common\PaginatorInterface">PaginatorInterface</abbr></a>
     <strong>getPaginator</strong>()</code>
     </h3>
@@ -824,7 +1041,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_with">
-        <div class="location">at line 155</div>
+        <div class="location">at line 162</div>
         <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
     <strong>with</strong>(array|string $with, <abbr title="Asgard\Orm\Closure">Closure</abbr> $closure = null)</code>
     </h3>
@@ -864,7 +1081,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_where">
-        <div class="location">at line 165</div>
+        <div class="location">at line 172</div>
         <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
     <strong>where</strong>(array|string $conditions, string $val = null)</code>
     </h3>
@@ -904,7 +1121,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_offset">
-        <div class="location">at line 174</div>
+        <div class="location">at line 181</div>
         <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
     <strong>offset</strong>(integer $offset)</code>
     </h3>
@@ -940,7 +1157,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_limit">
-        <div class="location">at line 183</div>
+        <div class="location">at line 190</div>
         <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
     <strong>limit</strong>(integer $limit)</code>
     </h3>
@@ -976,7 +1193,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_orderBy">
-        <div class="location">at line 192</div>
+        <div class="location">at line 199</div>
         <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
     <strong>orderBy</strong>(string $orderBy)</code>
     </h3>
@@ -1011,7 +1228,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_delete">
-        <div class="location">at line 199</div>
+        <div class="location">at line 206</div>
         <code>            public            integer
     <strong>delete</strong>()</code>
     </h3>
@@ -1036,7 +1253,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_update">
-        <div class="location">at line 208</div>
+        <div class="location">at line 215</div>
         <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
     <strong>update</strong>(array $values)</code>
     </h3>
@@ -1071,7 +1288,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_count">
-        <div class="location">at line 217</div>
+        <div class="location">at line 224</div>
         <code>            public            integer|array
     <strong>count</strong>(string $group_by = null)</code>
     </h3>
@@ -1106,7 +1323,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_min">
-        <div class="location">at line 227</div>
+        <div class="location">at line 234</div>
         <code>            public            string|array
     <strong>min</strong>(string $what, string $group_by = null)</code>
     </h3>
@@ -1146,7 +1363,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_max">
-        <div class="location">at line 237</div>
+        <div class="location">at line 244</div>
         <code>            public            string|array
     <strong>max</strong>(string $what, string $group_by = null)</code>
     </h3>
@@ -1186,7 +1403,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_avg">
-        <div class="location">at line 247</div>
+        <div class="location">at line 254</div>
         <code>            public            string|array
     <strong>avg</strong>(string $what, string $group_by = null)</code>
     </h3>
@@ -1226,7 +1443,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_sum">
-        <div class="location">at line 257</div>
+        <div class="location">at line 264</div>
         <code>            public            string|array
     <strong>sum</strong>(string $what, string $group_by = null)</code>
     </h3>
@@ -1266,7 +1483,7 @@ $categories = $orm->categories;</p>
     </div>
 
                 <h3 id="method_reset">
-        <div class="location">at line 264</div>
+        <div class="location">at line 271</div>
         <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
     <strong>reset</strong>()</code>
     </h3>
@@ -1285,6 +1502,440 @@ $categories = $orm->categories;</p>
         </tr>
     </table>
 
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHaving">
+        <div class="location">at line 277</div>
+        <code>            public            array
+    <strong>getHaving</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the having property.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getWith">
+        <div class="location">at line 283</div>
+        <code>            public            array
+    <strong>getWith</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the with property.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrderBy">
+        <div class="location">at line 289</div>
+        <code>            public            string
+    <strong>getOrderBy</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the orderBy property.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLimit">
+        <div class="location">at line 295</div>
+        <code>            public            integer
+    <strong>getLimit</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the limit property.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOffset">
+        <div class="location">at line 301</div>
+        <code>            public            integer
+    <strong>getOffset</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the offset property.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getJoin">
+        <div class="location">at line 307</div>
+        <code>            public            array
+    <strong>getJoin</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the join property.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPage">
+        <div class="location">at line 313</div>
+        <code>            public            integer
+    <strong>getPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the page property.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPerPage">
+        <div class="location">at line 319</div>
+        <code>            public            integer
+    <strong>getPerPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the per_page property.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLocale">
+        <div class="location">at line 325</div>
+        <code>            public            string
+    <strong>getLocale</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the locale property.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrefix">
+        <div class="location">at line 331</div>
+        <code>            public            string
+    <strong>getPrefix</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the prefix property.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getScopes">
+        <div class="location">at line 337</div>
+        <code>            public            array
+    <strong>getScopes</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the scopes property.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getReversed">
+        <div class="location">at line 343</div>
+        <code>            public            boolean
+    <strong>getReversed</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the reversed property.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSelects">
+        <div class="location">at line 349</div>
+        <code>            public            array
+    <strong>getSelects</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the selects property.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUnions">
+        <div class="location">at line 355</div>
+        <code>            public            array
+    <strong>getUnions</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return the unions property.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_groupBy">
+        <div class="location">at line 361</div>
+        <code>            public            
+    <strong>groupBy</strong>(string $groupBy)</code>
+    </h3>
+    <div class="details">
+        <p>Set the groupBy property.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$groupBy</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetDAL">
+        <div class="location">at line 366</div>
+        <code>            public            
+    <strong>resetDAL</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Reset the temporary DAL.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_initializeEntityProxy">
+        <div class="location">at line 372</div>
+        <code>            public            
+    <strong>initializeEntityProxy</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entityProxy)</code>
+    </h3>
+    <div class="details">
+        <p>Initialize (fill) an entity proxy.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr></td>
+                <td>$entityProxy</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
             
             
                     </div>

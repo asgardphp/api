@@ -67,7 +67,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_setCache">setCache</a>($cache)
+                    <a href="#method_setCache">setCache</a>(<abbr title="Asgard\Core\Asgard\Cache\CacheInterface">CacheInterface</abbr> $cache)
                     <p>
 </p>
                 </td>
@@ -140,6 +140,46 @@
                 <td class="last">
                     <a href="#method_load">load</a>()
                     <p>Load the kernel.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setup">setup</a>()
+                    <p>Setup errorhandler, shutdown and load compiled classes.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Core/Kernel.html"><abbr title="Asgard\Core\Kernel">Kernel</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadBundles">loadBundles</a>()
+                    <p>Load the bundles.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_shutdownFunction">shutdownFunction</a>()
+                    <p>Called on shutdown.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addShutdownCallback">addShutdownCallback</a>(callable $cb)
+                    <p>Add a callback on shutdown.</p>
                 </td>
                 <td></td>
             </tr>
@@ -263,13 +303,33 @@
                 </td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Core/Kernel.html"><abbr title="Asgard\Core\Kernel">Kernel</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setCompiledFile">setCompiledFile</a>($compiledFile)
+                    <p>Set the compiled classes file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getCompiledFile">getCompiledFile</a>()
+                    <p>Get the compiled classes file.</p>
+                </td>
+                <td></td>
+            </tr>
             </table>
 
 
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 48</div>
+        <div class="location">at line 63</div>
         <code>            public            
     <strong>__construct</strong>(string $root = null, string $env = null)</code>
     </h3>
@@ -302,9 +362,9 @@
     </div>
 
                 <h3 id="method_setCache">
-        <div class="location">at line 53</div>
+        <div class="location">at line 68</div>
         <code>            public            
-    <strong>setCache</strong>($cache)</code>
+    <strong>setCache</strong>(<abbr title="Asgard\Core\Asgard\Cache\CacheInterface">CacheInterface</abbr> $cache)</code>
     </h3>
     <div class="details">
         <p>
@@ -316,7 +376,7 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td><abbr title="Asgard\Core\Asgard\Cache\CacheInterface">CacheInterface</abbr></td>
                 <td>$cache</td>
                 <td>
 </td>
@@ -330,7 +390,7 @@
     </div>
 
                 <h3 id="method_getContainer">
-        <div class="location">at line 61</div>
+        <div class="location">at line 76</div>
         <code>            public            <a href="../../Asgard/Container/ContainerInterface.html"><abbr title="Asgard\Container\ContainerInterface">ContainerInterface</abbr></a>
     <strong>getContainer</strong>()</code>
     </h3>
@@ -356,7 +416,7 @@
     </div>
 
                 <h3 id="method_setConfig">
-        <div class="location">at line 73</div>
+        <div class="location">at line 88</div>
         <code>            public            
     <strong>setConfig</strong>(<abbr title="Asgard\Core\Asgard\Config\ConfigInterface">ConfigInterface</abbr> $config)</code>
     </h3>
@@ -383,7 +443,7 @@
     </div>
 
                 <h3 id="method_getConfig">
-        <div class="location">at line 82</div>
+        <div class="location">at line 97</div>
         <code>            public            <a href="../../Asgard/Config/ConfigInterface.html"><abbr title="Asgard\Config\ConfigInterface">ConfigInterface</abbr></a>
     <strong>getConfig</strong>()</code>
     </h3>
@@ -409,7 +469,7 @@
     </div>
 
                 <h3 id="method_setRoot">
-        <div class="location">at line 95</div>
+        <div class="location">at line 110</div>
         <code>            public            
     <strong>setRoot</strong>(string $root)</code>
     </h3>
@@ -436,7 +496,7 @@
     </div>
 
                 <h3 id="method_setEnv">
-        <div class="location">at line 104</div>
+        <div class="location">at line 119</div>
         <code>            public            
     <strong>setEnv</strong>(string $env)</code>
     </h3>
@@ -463,7 +523,7 @@
     </div>
 
                 <h3 id="method_getEnv">
-        <div class="location">at line 113</div>
+        <div class="location">at line 128</div>
         <code>            public            string
     <strong>getEnv</strong>()</code>
     </h3>
@@ -489,7 +549,7 @@
     </div>
 
                 <h3 id="method_load">
-        <div class="location">at line 122</div>
+        <div class="location">at line 137</div>
         <code>            public            
     <strong>load</strong>()</code>
     </h3>
@@ -504,8 +564,92 @@
                     </div>
     </div>
 
+                <h3 id="method_setup">
+        <div class="location">at line 148</div>
+        <code>            public            
+    <strong>setup</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Setup errorhandler, shutdown and load compiled classes.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadBundles">
+        <div class="location">at line 167</div>
+        <code>            public            <a href="../../Asgard/Core/Kernel.html"><abbr title="Asgard\Core\Kernel">Kernel</abbr></a>
+    <strong>loadBundles</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Load the bundles.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Core/Kernel.html"><abbr title="Asgard\Core\Kernel">Kernel</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_shutdownFunction">
+        <div class="location">at line 192</div>
+        <code>            public            
+    <strong>shutdownFunction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Called on shutdown.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addShutdownCallback">
+        <div class="location">at line 201</div>
+        <code>            public            
+    <strong>addShutdownCallback</strong>(callable $cb)</code>
+    </h3>
+    <div class="details">
+        <p>Add a callback on shutdown.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>callable</td>
+                <td>$cb</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_getCache">
-        <div class="location">at line 183</div>
+        <div class="location">at line 237</div>
         <code>            public            <a href="../../Asgard/Cache/CacheInterface.html"><abbr title="Asgard\Cache\CacheInterface">CacheInterface</abbr></a>
     <strong>getCache</strong>()</code>
     </h3>
@@ -531,7 +675,7 @@
     </div>
 
                 <h3 id="method_getAllBundles">
-        <div class="location">at line 232</div>
+        <div class="location">at line 286</div>
         <code>            public            array
     <strong>getAllBundles</strong>()</code>
     </h3>
@@ -557,7 +701,7 @@
     </div>
 
                 <h3 id="method_getHooksAnnotationReader">
-        <div class="location">at line 242</div>
+        <div class="location">at line 296</div>
         <code>            public            <a href="../../Asgard/Hook/AnnotationReader.html"><abbr title="Asgard\Hook\AnnotationReader">AnnotationReader</abbr></a>
     <strong>getHooksAnnotationReader</strong>()</code>
     </h3>
@@ -583,7 +727,7 @@
     </div>
 
                 <h3 id="method_getControllersAnnotationReader">
-        <div class="location">at line 254</div>
+        <div class="location">at line 308</div>
         <code>            public            <a href="../../Asgard/Http/AnnotationReader.html"><abbr title="Asgard\Http\AnnotationReader">AnnotationReader</abbr></a>
     <strong>getControllersAnnotationReader</strong>()</code>
     </h3>
@@ -609,7 +753,7 @@
     </div>
 
                 <h3 id="method_addBundles">
-        <div class="location">at line 340</div>
+        <div class="location">at line 394</div>
         <code>            public            
     <strong>addBundles</strong>(array $bundles)</code>
     </h3>
@@ -636,7 +780,7 @@
     </div>
 
                 <h3 id="method_getVersion">
-        <div class="location">at line 348</div>
+        <div class="location">at line 402</div>
         <code>        static    public            float
     <strong>getVersion</strong>()</code>
     </h3>
@@ -662,7 +806,7 @@
     </div>
 
                 <h3 id="method_get">
-        <div class="location">at line 357</div>
+        <div class="location">at line 411</div>
         <code>            public            mixed
     <strong>get</strong>(string $name)</code>
     </h3>
@@ -699,7 +843,7 @@
     </div>
 
                 <h3 id="method_set">
-        <div class="location">at line 369</div>
+        <div class="location">at line 423</div>
         <code>            public            <a href="../../Asgard/Core/Kernel.html"><abbr title="Asgard\Core\Kernel">Kernel</abbr></a>
     <strong>set</strong>(string $name, mixed $value)</code>
     </h3>
@@ -741,7 +885,7 @@
     </div>
 
                 <h3 id="method_offsetSet">
-        <div class="location">at line 380</div>
+        <div class="location">at line 434</div>
         <code>            public            
     <strong>offsetSet</strong>(integer $offset, mixed $value)</code>
     </h3>
@@ -783,7 +927,7 @@
     </div>
 
                 <h3 id="method_offsetExists">
-        <div class="location">at line 392</div>
+        <div class="location">at line 446</div>
         <code>            public            boolean
     <strong>offsetExists</strong>(integer $offset)</code>
     </h3>
@@ -819,7 +963,7 @@
     </div>
 
                 <h3 id="method_offsetUnset">
-        <div class="location">at line 400</div>
+        <div class="location">at line 454</div>
         <code>            public            
     <strong>offsetUnset</strong>(integer $offset)</code>
     </h3>
@@ -846,7 +990,7 @@
     </div>
 
                 <h3 id="method_offsetGet">
-        <div class="location">at line 409</div>
+        <div class="location">at line 463</div>
         <code>            public            mixed
     <strong>offsetGet</strong>(integer $offset)</code>
     </h3>
@@ -872,6 +1016,68 @@
                     <table>
         <tr>
             <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setCompiledFile">
+        <div class="location">at line 473</div>
+        <code>            public            <a href="../../Asgard/Core/Kernel.html"><abbr title="Asgard\Core\Kernel">Kernel</abbr></a>
+    <strong>setCompiledFile</strong>($compiledFile)</code>
+    </h3>
+    <div class="details">
+        <p>Set the compiled classes file.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$compiledFile</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Core/Kernel.html"><abbr title="Asgard\Core\Kernel">Kernel</abbr></a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCompiledFile">
+        <div class="location">at line 482</div>
+        <code>            public            string
+    <strong>getCompiledFile</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the compiled classes file.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
             <td>
 </td>
         </tr>

@@ -192,6 +192,26 @@
             </tr>
                     <tr>
                 <td class="type">
+                    <a href="../../Asgard/Orm/DataMapper.html"><abbr title="Asgard\Orm\DataMapper">DataMapper</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addSqlInput">addSqlInput</a>(string $class, <a href="../../Asgard/Orm/SQLPropertyTransformerInterface.html"><abbr title="Asgard\Orm\SQLPropertyTransformerInterface">SQLPropertyTransformerInterface</abbr></a> $spi)
+                    <p>Add a transformer to prepare SQL input.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getSqlInput">getSqlInput</a>(string $class)
+                    <p>Return a transformer to prepare SQL input.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
                 </td>
                 <td class="last">
@@ -310,13 +330,63 @@
                 </td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Orm/DataMapperInterface.html"><abbr title="Asgard\Orm\DataMapperInterface">DataMapperInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setDB">setDB</a>(<abbr title="Asgard\Orm\Asgard\Db\DBInterface">DBInterface</abbr> $db)
+                    <p>Return the database instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getEntityDefinition">getEntityDefinition</a>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity)
+                    <p>Return the definition of an entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createEntityProxy">createEntityProxy</a>(string $class, integer $id)
+                    <p>Create an entity proxy.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_initializeEntityProxy">initializeEntityProxy</a>(<a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a> $entityProxy)
+                    <p>[initializeEntityProxy description]</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setProxyGenerator">setProxyGenerator</a>(<a href="../../Asgard/Orm/Proxy/ProxyGenerator.html"><abbr title="Asgard\Orm\Proxy\ProxyGenerator">ProxyGenerator</abbr></a> $proxyGenerator)
+                    <p>Set the proxy generator dependency.</p>
+                </td>
+                <td></td>
+            </tr>
             </table>
 
 
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 49</div>
+        <div class="location">at line 59</div>
         <code>            public            
     <strong>__construct</strong>(<abbr title="Asgard\Orm\Asgard\Db\DBInterface">DBInterface</abbr> $db, <abbr title="Asgard\Orm\Asgard\Entity\EntityManagerInterface">EntityManagerInterface</abbr> $entityManager = null, string $locale = &#039;en&#039;, string $prefix = null, <a href="../../Asgard/Orm/ORMFactoryInterface.html"><abbr title="Asgard\Orm\ORMFactoryInterface">ORMFactoryInterface</abbr></a> $ormFactory = null, <a href="../../Asgard/Orm/CollectionORMFactoryInterface.html"><abbr title="Asgard\Orm\CollectionORMFactoryInterface">CollectionORMFactoryInterface</abbr></a> $collectionOrmFactory = null)</code>
     </h3>
@@ -371,7 +441,7 @@
     </div>
 
                 <h3 id="method_load">
-        <div class="location">at line 61</div>
+        <div class="location">at line 71</div>
         <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
     <strong>load</strong>(string $entityClass, integer $id)</code>
     </h3>
@@ -412,7 +482,7 @@
     </div>
 
                 <h3 id="method_orm">
-        <div class="location">at line 79</div>
+        <div class="location">at line 81</div>
         <code>            public            <a href="../../Asgard/Orm/ORMInterface.html"><abbr title="Asgard\Orm\ORMInterface">ORMInterface</abbr></a>
     <strong>orm</strong>(string $entityClass)</code>
     </h3>
@@ -449,7 +519,7 @@
     </div>
 
                 <h3 id="method_getPrefix">
-        <div class="location">at line 84</div>
+        <div class="location">at line 86</div>
         <code>            public            
     <strong>getPrefix</strong>()</code>
     </h3>
@@ -466,7 +536,7 @@
     </div>
 
                 <h3 id="method_destroyAll">
-        <div class="location">at line 91</div>
+        <div class="location">at line 93</div>
         <code>            public            integer
     <strong>destroyAll</strong>(string $entityClass)</code>
     </h3>
@@ -503,7 +573,7 @@
     </div>
 
                 <h3 id="method_destroyOne">
-        <div class="location">at line 101</div>
+        <div class="location">at line 103</div>
         <code>            public            boolean
     <strong>destroyOne</strong>(string $entityClass, integer $id)</code>
     </h3>
@@ -543,7 +613,7 @@
     </div>
 
                 <h3 id="method_destroy">
-        <div class="location">at line 110</div>
+        <div class="location">at line 112</div>
         <code>            public            boolean
     <strong>destroy</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity)</code>
     </h3>
@@ -579,7 +649,7 @@
     </div>
 
                 <h3 id="method_getEntityManager">
-        <div class="location">at line 153</div>
+        <div class="location">at line 155</div>
         <code>            public            <a href="../../Asgard/Entity/EntityManagerInterface.html"><abbr title="Asgard\Entity\EntityManagerInterface">EntityManagerInterface</abbr></a>
     <strong>getEntityManager</strong>()</code>
     </h3>
@@ -605,7 +675,7 @@
     </div>
 
                 <h3 id="method_create">
-        <div class="location">at line 162</div>
+        <div class="location">at line 164</div>
         <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
     <strong>create</strong>(string $entityClass, array $values = array(), array|null $groups = array())</code>
     </h3>
@@ -652,7 +722,7 @@
     </div>
 
                 <h3 id="method_createValidator">
-        <div class="location">at line 168</div>
+        <div class="location">at line 170</div>
         <code>            public            
     <strong>createValidator</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity)</code>
     </h3>
@@ -680,7 +750,7 @@
     </div>
 
                 <h3 id="method_getValidator">
-        <div class="location">at line 176</div>
+        <div class="location">at line 178</div>
         <code>            public            <a href="../../Asgard/Validation/ValidatorInterface.html"><abbr title="Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></a>
     <strong>getValidator</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity)</code>
     </h3>
@@ -717,7 +787,7 @@
     </div>
 
                 <h3 id="method_prepareValidator">
-        <div class="location">at line 186</div>
+        <div class="location">at line 188</div>
         <code>            public            
     <strong>prepareValidator</strong>(<a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a> $entity, <a href="../../Asgard/Validation/ValidatorInterface.html"><abbr title="Asgard\Validation\ValidatorInterface">ValidatorInterface</abbr></a> $validator)</code>
     </h3>
@@ -750,7 +820,7 @@
     </div>
 
                 <h3 id="method_valid">
-        <div class="location">at line 203</div>
+        <div class="location">at line 199</div>
         <code>            public            boolean
     <strong>valid</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, $groups = array())</code>
     </h3>
@@ -792,7 +862,7 @@
     </div>
 
                 <h3 id="method_relationsErrors">
-        <div class="location">at line 216</div>
+        <div class="location">at line 212</div>
         <code>            public            <a href="../../Asgard/Validation/Report.html"><abbr title="Asgard\Validation\Report">Report</abbr></a>
     <strong>relationsErrors</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, array|null $groups = array())</code>
     </h3>
@@ -835,7 +905,7 @@
     </div>
 
                 <h3 id="method_errors">
-        <div class="location">at line 235</div>
+        <div class="location">at line 231</div>
         <code>            public            <a href="../../Asgard/Validation/Report.html"><abbr title="Asgard\Validation\Report">Report</abbr></a>
     <strong>errors</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, $groups = array())</code>
     </h3>
@@ -877,8 +947,76 @@
                     </div>
     </div>
 
+                <h3 id="method_addSqlInput">
+        <div class="location">at line 265</div>
+        <code>            public            <a href="../../Asgard/Orm/DataMapper.html"><abbr title="Asgard\Orm\DataMapper">DataMapper</abbr></a>
+    <strong>addSqlInput</strong>(string $class, <a href="../../Asgard/Orm/SQLPropertyTransformerInterface.html"><abbr title="Asgard\Orm\SQLPropertyTransformerInterface">SQLPropertyTransformerInterface</abbr></a> $spi)</code>
+    </h3>
+    <div class="details">
+        <p>Add a transformer to prepare SQL input.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td>Entity property class.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Asgard/Orm/SQLPropertyTransformerInterface.html"><abbr title="Asgard\Orm\SQLPropertyTransformerInterface">SQLPropertyTransformerInterface</abbr></a></td>
+                <td>$spi</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/DataMapper.html"><abbr title="Asgard\Orm\DataMapper">DataMapper</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSqlInput">
+        <div class="location">at line 274</div>
+        <code>            public            
+    <strong>getSqlInput</strong>(string $class)</code>
+    </h3>
+    <div class="details">
+        <p>Return a transformer to prepare SQL input.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td>Entity property class.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_save">
-        <div class="location">at line 246</div>
+        <div class="location">at line 282</div>
         <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
     <strong>save</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, array $values = array(), array|null $groups = array())</code>
     </h3>
@@ -924,7 +1062,7 @@
     </div>
 
                 <h3 id="method_related">
-        <div class="location">at line 385</div>
+        <div class="location">at line 456</div>
         <code>            public            <abbr title="Asgrd\Entity\Entity">Entity</abbr>|<a href="../../Asgard/Orm/CollectionORMInterface.html"><abbr title="Asgard\Orm\CollectionORMInterface">CollectionORMInterface</abbr></a>
     <strong>related</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, string $name)</code>
     </h3>
@@ -966,7 +1104,7 @@
     </div>
 
                 <h3 id="method_getCollectionOrmFactory">
-        <div class="location">at line 392</div>
+        <div class="location">at line 463</div>
         <code>            public            <a href="../../Asgard/Orm/CollectionORMFactoryInterface.html"><abbr title="Asgard\Orm\CollectionORMFactoryInterface">CollectionORMFactoryInterface</abbr></a>
     <strong>getCollectionOrmFactory</strong>()</code>
     </h3>
@@ -992,7 +1130,7 @@
     </div>
 
                 <h3 id="method_getOrmFactory">
-        <div class="location">at line 401</div>
+        <div class="location">at line 472</div>
         <code>            public            <a href="../../Asgard/Orm/ORMFactoryInterface.html"><abbr title="Asgard\Orm\ORMFactoryInterface">ORMFactoryInterface</abbr></a>
     <strong>getOrmFactory</strong>()</code>
     </h3>
@@ -1018,7 +1156,7 @@
     </div>
 
                 <h3 id="method_getRelated">
-        <div class="location">at line 410</div>
+        <div class="location">at line 481</div>
         <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>|array
     <strong>getRelated</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, string $name)</code>
     </h3>
@@ -1061,7 +1199,7 @@
     </div>
 
                 <h3 id="method_getTranslationTable">
-        <div class="location">at line 435</div>
+        <div class="location">at line 506</div>
         <code>            public            string
     <strong>getTranslationTable</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Definition">Definition</abbr> $definition)</code>
     </h3>
@@ -1098,7 +1236,7 @@
     </div>
 
                 <h3 id="method_getTable">
-        <div class="location">at line 442</div>
+        <div class="location">at line 513</div>
         <code>            public            string
     <strong>getTable</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Definition">Definition</abbr> $definition)</code>
     </h3>
@@ -1135,7 +1273,7 @@
     </div>
 
                 <h3 id="method_getTranslations">
-        <div class="location">at line 452</div>
+        <div class="location">at line 523</div>
         <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
     <strong>getTranslations</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity, string $locale = null)</code>
     </h3>
@@ -1178,7 +1316,7 @@
     </div>
 
                 <h3 id="method_relations">
-        <div class="location">at line 468</div>
+        <div class="location">at line 539</div>
         <code>            public            array
     <strong>relations</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Definition">Definition</abbr> $definition)</code>
     </h3>
@@ -1215,7 +1353,7 @@
     </div>
 
                 <h3 id="method_relation">
-        <div class="location">at line 485</div>
+        <div class="location">at line 556</div>
         <code>            public            <a href="../../Asgard/Orm/EntityRelation.html"><abbr title="Asgard\Orm\EntityRelation">EntityRelation</abbr></a>
     <strong>relation</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Definition">Definition</abbr> $definition, string $name)</code>
     </h3>
@@ -1257,7 +1395,7 @@
     </div>
 
                 <h3 id="method_hasRelation">
-        <div class="location">at line 506</div>
+        <div class="location">at line 577</div>
         <code>            public            boolean
     <strong>hasRelation</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Definition">Definition</abbr> $definition, string $name)</code>
     </h3>
@@ -1300,7 +1438,7 @@
     </div>
 
                 <h3 id="method_getDB">
-        <div class="location">at line 529</div>
+        <div class="location">at line 585</div>
         <code>            public            <a href="../../Asgard/Db/DBInterface.html"><abbr title="Asgard\Db\DBInterface">DBInterface</abbr></a>
     <strong>getDB</strong>()</code>
     </h3>
@@ -1320,6 +1458,177 @@
         </tr>
     </table>
 
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDB">
+        <div class="location">at line 592</div>
+        <code>            public            <a href="../../Asgard/Orm/DataMapperInterface.html"><abbr title="Asgard\Orm\DataMapperInterface">DataMapperInterface</abbr></a>
+    <strong>setDB</strong>(<abbr title="Asgard\Orm\Asgard\Db\DBInterface">DBInterface</abbr> $db)</code>
+    </h3>
+    <div class="details">
+        <p>Return the database instance.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Db\DBInterface">DBInterface</abbr></td>
+                <td>$db</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Orm/DataMapperInterface.html"><abbr title="Asgard\Orm\DataMapperInterface">DataMapperInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getEntityDefinition">
+        <div class="location">at line 600</div>
+        <code>            public            <a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a>
+    <strong>getEntityDefinition</strong>(<abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr> $entity)</code>
+    </h3>
+    <div class="details">
+        <p>Return the definition of an entity.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Asgard\Orm\Asgard\Entity\Entity">Entity</abbr></td>
+                <td>$entity</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Definition.html"><abbr title="Asgard\Entity\Definition">Definition</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createEntityProxy">
+        <div class="location">at line 604</div>
+        <code>            public            <a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a>
+    <strong>createEntityProxy</strong>(string $class, integer $id)</code>
+    </h3>
+    <div class="details">
+        <p>Create an entity proxy.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_initializeEntityProxy">
+        <div class="location">at line 617</div>
+        <code>            public            
+    <strong>initializeEntityProxy</strong>(<a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a> $entityProxy)</code>
+    </h3>
+    <div class="details">
+        <p>[initializeEntityProxy description]</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Entity/Entity.html"><abbr title="Asgard\Entity\Entity">Entity</abbr></a></td>
+                <td>$entityProxy</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setProxyGenerator">
+        <div class="location">at line 625</div>
+        <code>            public            
+    <strong>setProxyGenerator</strong>(<a href="../../Asgard/Orm/Proxy/ProxyGenerator.html"><abbr title="Asgard\Orm\Proxy\ProxyGenerator">ProxyGenerator</abbr></a> $proxyGenerator)</code>
+    </h3>
+    <div class="details">
+        <p>Set the proxy generator dependency.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Asgard/Orm/Proxy/ProxyGenerator.html"><abbr title="Asgard\Orm\Proxy\ProxyGenerator">ProxyGenerator</abbr></a></td>
+                <td>$proxyGenerator</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
             
             
                     </div>
